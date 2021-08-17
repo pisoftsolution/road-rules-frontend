@@ -6,12 +6,12 @@ import history from '../../../History';
 function NewTab(){
     return(
         <Router history={history}>
-        <div className="App">
-        <Link exact to = "/Signup"></Link>
+        {/* <div className="App"> */}
+        {/* <Link exact to = "/Signup"></Link> */}
         <Switch>
-        <Route exact path="/Signup" component={Signup} />
+        <Route exact path="/signup" component={Signup} ></Route>
         </Switch>
-        </div>
+        {/* </div> */}
       </Router>
     )
 }
