@@ -48,9 +48,9 @@ function Signin() {
                                     </div>
                                   </div>
             <div class="input-group ">
-              <input type="password" class="form-control"  aria-describedby="addon-wrapping" />
+            <input type="password" class="form-control"  aria-describedby="addon-wrapping" />
             </div>
-            <button type="button" class="btn">Signin</button>
+            <button type="button" class="btn" >Signin</button>
             </div>
             {/* <button onClick={handleRoute} type="button" class="btn signup" id="signup">Become a member <a id="signUp" href="" >Signup</a></button> */}
             </div>

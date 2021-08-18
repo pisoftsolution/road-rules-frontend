@@ -4,6 +4,7 @@ import Signin from './components/client/auth/Signin';
 import  { BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom';
 import history from './History';
 import Signup from './components/client/auth/Signup';
+import PhoneOtp from './components/client/auth/PhoneOtp';
 
 
 
@@ -16,8 +17,10 @@ function App() {
         {/* <div className="App"> */}
         {/* <Link exact to = "/Signup"></Link> */}
         <Switch>
-          <Route exact path="/" component={Signin}></Route>
+        <Route exact path="/" component={Signin}></Route>
         <Route exact path="/signup" component={Signup} ></Route>
+        <Route exact path="/phoneotp" component={PhoneOtp} ></Route>
+        <Route exact path="/signin" component={Signin} ></Route>
         </Switch>
         {/* </div> */}
       </Router> 

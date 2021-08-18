@@ -1,0 +1,119 @@
+#body{
+    min-height: 1000px;
+    background-image: url("https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png");
+    background-repeat: no-repeat;
+    background-position-y: 150px;
+}
+.mm{
+    padding-top: 50px;
+}
+#card{
+    
+    height: 480px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+  }
+.container-fluid {
+      background-color: white;
+  }
+#email{
+    font-size: 17px;
+    display: flex;
+    /* margin-left: 40px; */
+    margin-top: 45px;
+    font-weight: 500;
+    color: #264861;
+}
+
+#password{
+  font-size: 17px;
+  display: flex;
+  /* margin-left: 40px; */
+  margin-top: 15px;
+  font-weight: 500;
+  color: #264861;
+}
+#signin{
+    font-weight: 770;
+    color: #264861;
+    font-size: 42px;
+    padding-left: 15px;
+   padding-right: 20px;
+ }
+
+.m{
+    /* width: 85%!important; */
+    /* margin-left: 40px; */
+    padding-right: 40px;
+  padding-left: 41px;
+}
+ button.btn {
+  width: 100%;
+   background-color: #04b1ed;
+  color: white;
+  margin-top: 55px;
+  height: 45px;
+}
+input.form-control{
+  background-color: #e0f6ff;
+  height: 45px;
+}
+
+a {
+  /* margin-left: -60px; */
+  text-decoration: none!important;
+}
+.u{
+  padding-left: 0px!important;
+}
+#logo{
+  width: 380px;
+  height: 80px;
+  /* padding-left: 34px; */
+  margin-top: 4px;
+}
+
+.navComponents{
+  display: flex;
+}
+#logo2{
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+#signup{
+  width: 81%;
+  /* margin-left: 21px; */
+  background-color: white;
+  color: #264861;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#logo {
+  width: 380px;
+  height: 79px;
+  margin-top: 4px;
+  margin-left: -30px;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-left: 60px;
+  font-size: 17px;
+}
+ul.u {
+  margin-left: 75px;
+}
+li {
+  padding-right: 35px!important;
+  padding-top: 20px!important;
+}
+li:hover{
+  cursor: pointer;
+
+}
