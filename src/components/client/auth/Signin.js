@@ -48,7 +48,7 @@ function Signin() {
                                     </div>
                                   </div>
             <div class="input-group ">
-              <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" />
+              <input type="password" class="form-control"  aria-describedby="addon-wrapping" />
             </div>
             <button type="button" class="btn">Signin</button>
             </div>
