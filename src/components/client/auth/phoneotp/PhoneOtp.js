@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 function PhoneOtp() {
     const history = useHistory();
     const handleRoute = () => {
-        history.push(`/signin`);
+        history.push(`/email-otp`); 
     };
     return (
         <div class="container-fluid p-0 mt-5.5rem" id="body">

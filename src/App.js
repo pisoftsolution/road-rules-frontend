@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Signin from './components/client/auth/Signin';
+import Signin from './components/client/auth/login/Signin';
 import  { BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom';
 import history from './History';
-import Signup from './components/client/auth/Signup';
-import PhoneOtp from './components/client/auth/PhoneOtp';
+import Signup from './components/client/auth/signup/Signup';
+import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
+import EmailOtp from './components/client/auth/emailotp/EmailOtp'; 
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/signup" component={Signup} ></Route>
         <Route exact path="/phoneotp" component={PhoneOtp} ></Route>
         <Route exact path="/signin" component={Signin} ></Route>
+        <Route exact path="/email-otp" component={EmailOtp} ></Route>
         </Switch>
         {/* </div> */}
       </Router> 
