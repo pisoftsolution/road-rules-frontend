@@ -1,31 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
-
+import { emailOtpVerify } from '../../../../redux/actions/verify';
+import Navbar from '../../../navbar/Navbar';
 
 function EmailOtp() {
+
+    const initialState = { emailOtp : ""}
+    const [formData, setFormData] = useState(initialState)
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(emailOtpVerify(formData.emailOtp,history))
+    }
+
     const history = useHistory();
     const handleRoute = () => {
         history.push(`/signin`);
     };
     return (
         <div class="container-fluid p-0 mt-5.5rem" id="body">
-            <nav class="navbar navbar-light">
-                <div class="container-fluid">
-                    <div class="col-md-4">
-                        <img src="https://www.roadrules.info/images/logo-roadrules.svg" class="img-fluid" id="logo" alt="LOGO"></img>
-                    </div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-4">
-                        <ul class="u">
-                            <li>Home</li>
-                            <li>Booking</li>
-                            <li>Contact Us</li>
-                            <img src="https://www.roadrules.info/images/profile_avatar.png" class="img-fluid" id="logo2" alt="LOGO"></img>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
             <div class="container mm">
                 <div class="row">
                     <div class="col-md-3"></div>
@@ -34,14 +31,36 @@ function EmailOtp() {
                             <div>
                                 <h4 class="mb-4 mt-5" id="signin">Please enter the Email OTP</h4>
                                 <div class="m">
-                                    <label id="email">OTP</label>
+                                    <form onSubmit={handleSubmit}>
+                                    <label 
+                                    id="email"
+                                    >
+                                        OTP
+                                    </label>
                                     <div class="input-group ">
-                                        <input type="text" class="form-control " aria-label="Username" aria-describedby="addon-wrapping" />
+                                        <input type="text"
+                                          name="emailOtp"
+                                          placeholder="Enter the 6 digit OTP" 
+                                          class="form-control " 
+                                          aria-label="Username" aria-describedby="addon-wrapping"
+                                          value={formData.emailOtp}
+                                          onChange={(e)=>{
+                                            setFormData({
+                                                ...formData,
+                                                [e.target.name] : e.target.value
+                                            })
+                                          }} 
+                                         />
                                     </div>
-                                    <button type="submit" class="btn"  onClick={handleRoute} >Submit</button>
+                                    <button
+                                      type="submit"
+                                      class="btn" 
+                                     >
+                                         Submit
+                                    </button>
+                                    </form>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-md-2">
                         </div>
@@ -51,4 +70,5 @@ function EmailOtp() {
         </div>
     )
 }
+
 export default EmailOtp;

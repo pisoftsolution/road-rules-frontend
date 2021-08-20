@@ -1,8 +1,6 @@
 import * as api from '../api';
 import { SIGNUP, LOGIN, LOGOUT } from '../constants';
 
-
-
 export const signup = (formData, history) => async (dispatch) => {
     try {
         const { data } = await api.signup(formData);
@@ -14,7 +12,6 @@ export const signup = (formData, history) => async (dispatch) => {
       alert(e?.response?.data?.msg);
     }
 };
-
 
 export const login = (formData, history) => async (dispatch) => {
     try {
@@ -28,6 +25,7 @@ export const login = (formData, history) => async (dispatch) => {
         alert(e?.response?.data?.msg);
     }
 };
+
 // export const logout = (history) => async (dispatch) => {
 //     try {
 //         dispatch({ type: LOGOUT });

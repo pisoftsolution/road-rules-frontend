@@ -4,9 +4,11 @@
     background-repeat: no-repeat;
     background-position-y: 150px;
 }
+
 .mm{
     padding-top: 50px;
 }
+
 #card{
     
     height: 480px;
@@ -14,13 +16,14 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
   }
+
 .container-fluid {
       background-color: white;
   }
+
 #email{
     font-size: 17px;
     display: flex;
-    /* margin-left: 40px; */
     margin-top: 45px;
     font-weight: 500;
     color: #264861;
@@ -29,11 +32,11 @@
 #password{
   font-size: 17px;
   display: flex;
-  /* margin-left: 40px; */
   margin-top: 15px;
   font-weight: 500;
   color: #264861;
 }
+
 #signin{
     font-weight: 770;
     color: #264861;
@@ -43,11 +46,10 @@
  }
 
 .m{
-    /* width: 85%!important; */
-    /* margin-left: 40px; */
     padding-right: 40px;
-  padding-left: 41px;
+    padding-left: 41px;
 }
+
  button.btn {
   width: 100%;
    background-color: #04b1ed;
@@ -55,36 +57,38 @@
   margin-top: 55px;
   height: 45px;
 }
+
 input.form-control{
   background-color: #e0f6ff;
   height: 45px;
 }
 
 a {
-  /* margin-left: -60px; */
   text-decoration: none!important;
 }
+
 .u{
   padding-left: 0px!important;
 }
+
 #logo{
   width: 380px;
   height: 80px;
-  /* padding-left: 34px; */
   margin-top: 4px;
 }
 
 .navComponents{
   display: flex;
 }
+
 #logo2{
   width: 30px;
   height: 30px;
   margin-top: 20px;
 }
+
 #signup{
   width: 81%;
-  /* margin-left: 21px; */
   background-color: white;
   color: #264861;
   font-weight: 500;
@@ -98,6 +102,7 @@ a {
   margin-top: 4px;
   margin-left: -30px;
 }
+
 ul {
   list-style-type: none;
   display: flex;
@@ -106,14 +111,16 @@ ul {
   margin-left: 60px;
   font-size: 17px;
 }
+
 ul.u {
   margin-left: 75px;
 }
+
 li {
   padding-right: 35px!important;
   padding-top: 20px!important;
 }
+
 li:hover{
   cursor: pointer;
-
 }

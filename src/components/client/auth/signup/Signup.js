@@ -1,30 +1,35 @@
-import React from 'react';
+import React,{ useState } from 'react';
+import { useDispatch } from 'react-redux';
 import './signup.css';
 import { useHistory } from 'react-router-dom';
+import { signup } from '../../../../redux/actions/auth';
+import { emailOtp } from '../../../../redux/actions/verify';
+import Navbar from '../../../navbar/Navbar';
 
 function Signup() {
+
+    const initialState = { email : "" ,  password : "", phone: "", fullName: ""}
+    const [formData, setFormData] = useState(initialState)
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(signup(formData, history))
+        .then(res=>{
+            console.log(res);
+            localStorage.setItem("email", formData.email);
+            localStorage.setItem("phone", formData.phone);
+            dispatch(emailOtp());
+        })
+    }
     const history = useHistory();
-  const handleRoute = () => {
+    const handleRoute = () => {
     history.push(`/phoneotp`);
   };
   return (
         <div class="container-fluid p-0 mt-5.5rem" id="body2">
-            <nav class="navbar navbar-light">
-                <div class="container-fluid">
-                    <div class="col-md-4">
-                        <img src="https://www.roadrules.info/images/logo-roadrules.svg" class="img-fluid" id="logo" alt="LOGO"></img>
-                    </div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-4">
-                        <ul class="u">
-                        <li>Home</li>
-                        <li>Booking</li>
-                        <li>Contact Us</li>
-                        <img src="https://www.roadrules.info/images/profile_avatar.png" class="img-fluid" id="logo2" alt="LOGO"></img>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
             <div class="container mm">
                 <div class="row">
                     <div class="col-md-3"></div>
@@ -33,9 +38,28 @@ function Signup() {
                         <div>
                             <h4 class="mb-4 mt-5" id="signin2">Welcome to Road-Rules, Signup here...</h4>
                             <div class="m">
-                                <label id="email">Full Name</label>
+                                <form onSubmit={handleSubmit}>
+                                <label 
+                                id="email"
+                                >
+                                    Full Name
+                                </label>
                                 <div class="input-group ">
-                                <input type="text" class="form-control " aria-label="Username" aria-describedby="addon-wrapping" />
+                                <input
+                                 name="fullName"  
+                                 type="text"
+                                 placeholder="Enter your fullName" 
+                                 class="form-control " 
+                                 aria-label="Username" 
+                                 aria-describedby="addon-wrapping"
+                                 value={formData.fullName}
+                                 onChange={(e)=>{
+                                 setFormData({
+                                   ...formData,
+                                   [e.target.name] : e.target.value
+                                    })
+                                }} 
+                                />
                                 </div>
                                 <div class="row">
                                 <div class="col-md-4">
@@ -44,24 +68,88 @@ function Signup() {
                                 <div class="col-md-4"></div>
                                </div>
                                 <div class="input-group ">
-                                <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" />
+                                <input
+                                 name="email" 
+                                 type="text"
+                                 placeholder="Enter your e-mail" 
+                                 class="form-control" 
+                                 aria-label="Username" 
+                                 aria-describedby="addon-wrapping"
+                                 value={formData.email}
+                                 onChange={(e)=>{
+                                 setFormData({
+                                    ...formData,
+                                    [e.target.name] : e.target.value
+                                     })
+                                }} 
+                                />
                                 </div>
-                                <label id="email" class="mt-4">Phone Number</label>
+                                <label 
+                                id="email" 
+                                class="mt-4"
+                                >
+                                    Phone Number
+                                </label>
                                 <div class="input-group ">
-                                <input type="text" class="form-control" aria-label="Phone Number" aria-describedby="addon-wrapping" />
+                                <input
+                                 name="phone" 
+                                 type="text"
+                                 placeholder="Enter your Phone Number (with country code)" 
+                                 class="form-control" 
+                                 aria-label="Phone Number" 
+                                 aria-describedby="addon-wrapping"
+                                 value={formData.phone}
+                                 onChange={(e)=>{
+                                 setFormData({
+                                   ...formData,
+                                   [e.target.name] : e.target.value
+                                    })
+                                }} 
+                                />
                                 </div>
                                 <label id="password" class="mt-4">Password</label>
                                 <div class="input-group ">
-                                <input type="Password" class="form-control" aria-label="Password" aria-describedby="addon-wrapping" />
+                                <input
+                                 name="password" 
+                                 type="Password"
+                                 placeholder="Enter your password" 
+                                 class="form-control" 
+                                 aria-label="Password" 
+                                 aria-describedby="addon-wrapping"
+                                 value={formData.password}
+                                 onChange={(e)=>{
+                                 setFormData({
+                                  ...formData,
+                                  [e.target.name] : e.target.value
+                                 })
+                                }} 
+                                />
                                 </div>                               
-                                <button type="button" class="btn"  onClick={handleRoute}>Signup</button>
+                                <button 
+                                 type="submit"
+                                 class="btn"
+                                >
+                                    Signup
+                                </button>
+                                </form>
                             </div>
-                            
-                            {/* <button onClick={handleRoute} type="button" class="btn signup" id="signup">Become a member <a id="signUp" href="" >Signup</a></button> */}
                         </div>
                     </div>
                 <div>
-                <button id="signUp" class="btn signup" id="signup" type="submit" >Already a member <a id="signUp">Signin</a></button>
+                <button 
+                 type="submit" 
+                 id="signUp" 
+                 class="btn signup" 
+                 id="signup" 
+                 type="submit"
+                 >
+                     Already a member 
+                <a 
+                 id="signUp"
+                >
+                    Signin
+                </a>
+                </button>
             </div>
             <div class="col-md-2">
             </div>
@@ -72,6 +160,7 @@ function Signup() {
 
     )
 }
+
 export default Signup;
 
 

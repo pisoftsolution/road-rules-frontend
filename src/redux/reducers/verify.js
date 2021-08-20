@@ -8,24 +8,24 @@ export default (state = { verifyData: null }, action) => {
             ...state,
             verifyData: action?.data
         }
-        // case EMAIL_OTP_VERIFY:
-        // console.log(action?.data);
-        // return {
-        //     ...state,
-        //     verifyData: action?.data
-        // }
+        case EMAIL_OTP_VERIFY:
+        console.log(action?.data);
+        return {
+            ...state,
+            verifyData: action?.data
+        }
         case PHONE_OTP:
         console.log(action?.data);
         return {
             ...state,
             verifyData: action?.data
         }
-        // case PHONE_OTP_VERIFY:
-        // console.log(action?.data);
-        // return {
-        //     ...state,
-        //     verifyData: action?.data
-        // }
+        case PHONE_OTP_VERIFY:
+        console.log(action?.data);
+        return {
+            ...state,
+            verifyData: action?.data
+        }
         default:
         return {
             ...state

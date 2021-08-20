@@ -1,30 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import { phoneOtpVerify } from '../../../../redux/actions/verify';
+import Navbar from '../../../navbar/Navbar';
 
 function PhoneOtp() {
+
+    const initialState = { phoneOtp : ""}
+    const [formData, setFormData] = useState(initialState)
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(phoneOtpVerify(formData.phoneOtp))
+    .then((res)=>{
+        if (res) {
+            history.push('/');
+        }
+    })
+    }
     const history = useHistory();
     const handleRoute = () => {
         history.push(`/email-otp`); 
     };
     return (
         <div class="container-fluid p-0 mt-5.5rem" id="body">
-            <nav class="navbar navbar-light">
-                <div class="container-fluid">
-                    <div class="col-md-4">
-                        <img src="https://www.roadrules.info/images/logo-roadrules.svg" class="img-fluid" id="logo" alt="LOGO"></img>
-                    </div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-4">
-                        <ul class="u">
-                            <li>Home</li>
-                            <li>Booking</li>
-                            <li>Contact Us</li>
-                            <img src="https://www.roadrules.info/images/profile_avatar.png" class="img-fluid" id="logo2" alt="LOGO"></img>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
             <div class="container mm">
                 <div class="row">
                     <div class="col-md-3"></div>
@@ -33,14 +35,33 @@ function PhoneOtp() {
                             <div>
                                 <h4 class="mb-4 mt-5" id="signin">Please enter the phone OTP</h4>
                                 <div class="m">
+                                    <form onSubmit={handleSubmit}>
                                     <label id="email">OTP</label>
                                     <div class="input-group ">
-                                        <input type="text" class="form-control " aria-label="Username" aria-describedby="addon-wrapping" />
+                                        <input
+                                         name="phoneOtp" 
+                                         type="text"
+                                         placeholder="Enter the 6 digit OTP" 
+                                         class="form-control " 
+                                         aria-label="Username" aria-describedby="addon-wrapping"
+                                         value={formData.phoneOtp}
+                                         onChange={(e)=>{
+                                            setFormData({
+                                                ...formData,
+                                                [e.target.name] : e.target.value
+                                            })
+                                        }} 
+                                        />
                                     </div>
-                                    <button type="submit" class="btn"  onClick={handleRoute} >Submit</button>
+                                    <button 
+                                     type="submit" 
+                                     class="btn" 
+                                    >
+                                        Submit
+                                    </button>
+                                    </form>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-md-2">
                         </div>
@@ -50,4 +71,5 @@ function PhoneOtp() {
         </div>
     )
 }
+
 export default PhoneOtp;
