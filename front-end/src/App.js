@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/signup" component={Signup} ></Route>
         <Route exact path="/phoneotp" component={PhoneOtp} ></Route>
         <Route exact path="/signin" component={Signin} ></Route>
-        <Route exact path="/email-otp" component={EmailOtp} ></Route>
+        <Route exact path="/email-otp" component={EmailOtp} ></Route> 
         </Switch>
       </Router> 
     </div>
