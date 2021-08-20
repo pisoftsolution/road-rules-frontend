@@ -7,6 +7,10 @@ import Signup from './components/client/auth/signup/Signup';
 import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
 import EmailOtp from './components/client/auth/emailotp/EmailOtp'; 
 import Home from './components/home/Home';
+import Success from './stripeComponent/Success';
+import Cancel from './stripeComponent/Cancel';
+import Stripe from './stripeComponent/Stripe';
+
 
 function App() { 
   return (
@@ -19,6 +23,9 @@ function App() {
         <Route exact path="/phoneotp" component={PhoneOtp} ></Route>
         <Route exact path="/signin" component={Signin} ></Route>
         <Route exact path="/email-otp" component={EmailOtp} ></Route> 
+        <Route exact path="/success" component={Success} ></Route> 
+        <Route exact path="/cancel" component={Cancel} ></Route> 
+        <Route exact path="/stripe" component={Stripe} ></Route> 
         </Switch>
       </Router> 
     </div>
