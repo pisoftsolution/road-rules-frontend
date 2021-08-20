@@ -10,7 +10,10 @@ import Home from './components/home/Home';
 
 function App() { 
   return (
+ javeed-eslint
+    <div className="App"> 
     <div className="App">
+ master
    <Router history={history}>
         <Switch>
         <Route exact path="/" component={Signin}></Route>
@@ -18,7 +21,7 @@ function App() {
         <Route exact path="/signup" component={Signup} ></Route>
         <Route exact path="/phoneotp" component={PhoneOtp} ></Route>
         <Route exact path="/signin" component={Signin} ></Route>
-        <Route exact path="/email-otp" component={EmailOtp} ></Route>
+        <Route exact path="/email-otp" component={EmailOtp} ></Route> 
         </Switch>
       </Router> 
     </div>
