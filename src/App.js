@@ -10,7 +10,10 @@ import Home from './components/home/Home';
 
 function App() { 
   return (
+ javeed-eslint
     <div className="App"> 
+    <div className="App">
+ master
    <Router history={history}>
         <Switch>
         <Route exact path="/" component={Signin}></Route>
