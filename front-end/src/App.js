@@ -10,7 +10,7 @@ import Home from './components/home/Home';
 
 function App() { 
   return (
-    <div className="App">
+    <div className="App"> 
    <Router history={history}>
         <Switch>
         <Route exact path="/" component={Signin}></Route>
