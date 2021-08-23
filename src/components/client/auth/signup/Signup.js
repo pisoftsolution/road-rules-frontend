@@ -4,7 +4,7 @@ import './signup.css';
 import { useHistory } from 'react-router-dom';
 import { signup } from '../../../../redux/actions/auth';
 import { emailOtp } from '../../../../redux/actions/verify';
-import Navbar from '../../../navbar/Navbar';
+import Navbar from '../../../common/navbar/Navbar';
 
 function Signup() {
 
