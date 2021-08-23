@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../../../../redux/actions/auth';
 import Navbar from '../../../common/navbar/Navbar';
+// import Navbar from '../../../common/navbar/Navbar';
 import './signin.css';
 
 function Signin() {
@@ -23,7 +24,7 @@ function Signin() {
   };
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body">
-      <Navbar />
+      <Navbar/>
         <div className="container mm">
       <div className="row">
         <div className="col-md-3"></div>
