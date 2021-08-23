@@ -6,12 +6,11 @@ import history from './History';
 import Signup from './components/client/auth/signup/Signup';
 import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
 import EmailOtp from './components/client/auth/emailotp/EmailOtp'; 
-import Home from './components/home/Home';
-import Success from './components/client/auth/stripe/success/Success';
-import Cancel from './components/client/auth/stripe/cancel/Cancel';
-import Stripe from './components/client/auth/stripe/payment/Stripe';
-
-
+import Home from './components/client/auth/home/Home';
+import Success from './components/client/Payment/success/success';
+import Cancel from './components/client/Payment/Cancel/cancel';
+import Stripe from './components/client/Payment/payment/stripe';
+import Payment from './components/client/Payment/payment/payment';
 
 function App() { 
   return (
@@ -26,7 +25,8 @@ function App() {
         <Route exact path="/email-otp" component={EmailOtp} ></Route> 
         <Route exact path="/success" component={Success} ></Route> 
         <Route exact path="/cancel" component={Cancel} ></Route> 
-        <Route exact path="/stripe" component={Stripe} ></Route> 
+        <Route exact path="/stripe" component={Stripe} ></Route>
+        <Route exact path="/payment" component={Payment} ></Route> 
         </Switch>
       </Router> 
     </div>

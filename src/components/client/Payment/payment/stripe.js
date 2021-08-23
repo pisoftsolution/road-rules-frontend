@@ -19,11 +19,11 @@ function Stripe(){
                      <form className="" action="/paynow" method="post">
                         <div className="form-group">
                             <label >Name: </label>
-                            <input className="form-control" type="text" />
+                            <input className="form-control" type="text"/>
                         </div>
                         <div className="form-group">
                             <label >Email: </label>
-                            <input className="form-control" type="text" />
+                            <input className="form-control" type="text"/>
                         </div>
                         <div className="form-group">
                             <label >Phone: </label>
