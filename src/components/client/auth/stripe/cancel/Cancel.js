@@ -1,9 +1,7 @@
 import React from 'react';
-import "./success.css";
-import "./images/checked.png";
+import "./cancel.css";
 
-function Success() {
-
+function Cancel(){
     return (
         <div className="container-fluid p-0 mt-5.5rem" >
          <div className="container mm">
@@ -12,7 +10,7 @@ function Success() {
                 <div className="col-md-6 ">
                     <div className="card box-shadow-lg bg-white" id="card" >
                         <div>
-                            <h4 className="mb-4 mt-5" id="signin">Payment Success</h4>
+                            <h4 className="mb-4 mt-5" id="signin">Oops payment got cancelled</h4>
 
                             <div className="suc">
                                 <img src="https://cdn.pixabay.com/photo/2016/10/10/01/49/hook-1727484_960_720.png" className="img-responsive"></img>
@@ -29,4 +27,4 @@ function Success() {
     )
 }
 
-export default Success;
+export default Cancel;

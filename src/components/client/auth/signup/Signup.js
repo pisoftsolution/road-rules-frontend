@@ -4,13 +4,13 @@ import './signup.css';
 import { useHistory } from 'react-router-dom';
 import { signup } from '../../../../redux/actions/auth';
 import { emailOtp } from '../../../../redux/actions/verify';
-import Navbar from '../../../navbar/Navbar';
+import Navbar from '../../../common/navbar/Navbar';
+// import Navbar from '../../../common/navbar/Navbar';
 
 function Signup() {
 
     const initialState = { email : "" ,  password : "", phone: "", fullName: ""}
     const [formData, setFormData] = useState(initialState)
-
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
@@ -29,7 +29,7 @@ function Signup() {
   };
   return (
         <div className="container-fluid p-0 mt-5.5rem" id="body2">
-            <Navbar />
+            <Navbar/>
             <div className="container mm">
                 <div className="row">
                     <div className="col-md-3"></div>

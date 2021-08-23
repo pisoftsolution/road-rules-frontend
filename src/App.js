@@ -7,9 +7,10 @@ import Signup from './components/client/auth/signup/Signup';
 import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
 import EmailOtp from './components/client/auth/emailotp/EmailOtp'; 
 import Home from './components/home/Home';
-import Success from './stripeComponent/Success';
-import Cancel from './stripeComponent/Cancel';
-import Stripe from './stripeComponent/Stripe';
+import Success from './components/client/auth/stripe/success/Success';
+import Cancel from './components/client/auth/stripe/cancel/Cancel';
+import Stripe from './components/client/auth/stripe/payment/Stripe';
+
 
 
 function App() { 
@@ -34,5 +35,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
