@@ -71,5 +71,4 @@ function Stripe(){
     )
 }
 
-
 export default Stripe;
