@@ -1,6 +1,5 @@
 import React from 'react';
 import "./cancel.css";
-
 function Cancel(){
     return (
         <div className="container-fluid p-0 mt-5.5rem" >

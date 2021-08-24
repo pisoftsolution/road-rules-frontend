@@ -1,5 +1,5 @@
 import React from 'react';
-import "./success.css";
+import "./success.css"
 
 function Success() {
 
