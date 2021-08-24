@@ -13,7 +13,6 @@ function EmailOtp() {
     e.preventDefault();
     dispatch(emailOtpVerify(formData.emailOtp,history))
     }
-
     const history = useHistory();
     const handleRoute = () => {
     history.push(`/signin`);
