@@ -10,7 +10,6 @@ function Cancel(){
                     <div className="card box-shadow-lg bg-white" id="card" >
                         <div>
                             <h4 className="mb-4 mt-5" id="signin">Oops payment got cancelled</h4>
-
                             <div className="suc">
                                 <img src="https://cdn.pixabay.com/photo/2016/10/10/01/49/hook-1727484_960_720.png" className="img-responsive"></img>
                                                            

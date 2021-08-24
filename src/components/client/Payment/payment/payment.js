@@ -14,8 +14,8 @@ function Payment() {
         const {session , user} = await response.json();
         // When the customer clicks on the button, redirect them to Checkout.
         const result = await stripe.redirectToCheckout({
-          session_Id: session.id,
-          user_Id:user.id
+          sessionId: session.id,
+          userId:user.id
         });
         if (result.error) {  
             console.log("error");
@@ -23,11 +23,7 @@ function Payment() {
       };
     return (
     <div >       
-        <h4>You have selected T-shirt</h4>
-        <h4>Amount: 200 (INR)</h4>
-        <p>Once click on pay, you will be redirected to our Payment gateway.</p>
         <button  onClick={handleClick}>
-        
         Click here to Pay
         </button>
     </div>
