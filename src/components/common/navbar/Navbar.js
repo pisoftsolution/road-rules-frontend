@@ -6,9 +6,9 @@ function Navbar(){
             <div className="container-fluid">
                 <div className="col-md-4">
                     <img src="https://www.roadrules.info/images/logo-roadrules.svg" 
-                        className="img-fluid" 
-                        id="logo" 
-                        alt="LOGO"
+                       className="img-fluid" 
+                       id="logo" 
+                       alt="LOGO"
                     >
                     </img>
                 </div>
