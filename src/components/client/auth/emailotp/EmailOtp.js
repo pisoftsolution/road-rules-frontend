@@ -13,13 +13,13 @@ function EmailOtp() {
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        dispatch(emailOtpVerify(formData.emailOtp,history))
+    e.preventDefault();
+    dispatch(emailOtpVerify(formData.emailOtp,history))
     }
 
     const history = useHistory();
     const handleRoute = () => {
-        history.push(`/signin`);
+    history.push(`/signin`);
     };
     return (
         <div className="container-fluid p-0 mt-5.5rem" id="body">
@@ -58,7 +58,7 @@ function EmailOtp() {
                                       type="submit"
                                       className="btn" 
                                      >
-                                         Submit
+                                        Submit
                                     </button>
                                     </form>
                                 </div>
