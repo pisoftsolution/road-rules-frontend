@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { phoneOtpVerify } from '../../../../redux/actions/verify';
 import Navbar from '../../../common/navbar/Navbar';
-
+// import Navbar from '../../../common/navbar/Navbar';
 
 function PhoneOtp() {
 
