@@ -11,7 +11,7 @@ function Signup() {
     const initialState = { email : "" ,  password : "", phone: "", fullName: ""}
     const [formData, setFormData] = useState(initialState)
 
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();  
 
     const handleSubmit = (e) => {
         e.preventDefault();
