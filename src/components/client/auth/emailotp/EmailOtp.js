@@ -58,7 +58,7 @@ function EmailOtp() {
                                       type="submit"
                                       className="btn" 
                                      >
-                                         Submit
+                                        Submit
                                     </button>
                                     </form>
                                 </div>
