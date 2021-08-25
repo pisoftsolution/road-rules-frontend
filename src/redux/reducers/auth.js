@@ -1,4 +1,4 @@
-import { SIGNUP, LOGIN } from "../constants";
+import { SIGNUP, LOGIN, LOGOUT } from "../constants";
 
 export default (state = { authData: null }, action) => {
     switch (action.type) {

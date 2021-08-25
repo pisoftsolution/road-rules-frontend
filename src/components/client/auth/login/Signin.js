@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../../../../redux/actions/auth';
-import Navbar from '../../../common/navbar/Navbar';
-// import Navbar from '../../../common/navbar/Navbar';
+import Navbar from '../../../navbar/Navbar';
 import './signin.css';
 
 function Signin() {
@@ -23,24 +22,24 @@ function Signin() {
     history.push(`/signup`);
   };
   return (
-    <div className="container-fluid p-0 mt-5.5rem" id="body">
-      <Navbar/>
-        <div className="container mm">
-      <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col-md-6 ">
-          <div className="card box-shadow-lg bg-white" id="card" >
+    <div class="container-fluid p-0 mt-5.5rem" id="body">
+      <Navbar />
+        <div class="container mm">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 ">
+          <div class="card box-shadow-lg bg-white" id="card" >
             <div>
-            <h4 className="mb-4 mt-5" id="signin">Sign in to your account</h4>
-            <div className="m">     
+            <h4 class="mb-4 mt-5" id="signin">Sign in to your account</h4>
+            <div class="m">     
             <form onSubmit={handleSubmit}>    
             <label id="email">Email</label>
-            <div className="input-group ">
+            <div class="input-group ">
               <input
                name="email" 
                type="text"
                placeholder="Enter your e-mail" 
-               className="form-control " 
+               class="form-control " 
                aria-label="Username" 
                aria-describedby="addon-wrapping"
                value={formData.email}
@@ -52,15 +51,15 @@ function Signin() {
                 }} 
               />
             </div>
-            <div className="row">
-            <div className="col-md-4">
-            <label id="password" className="mt-4">Password</label>
+            <div class="row">
+            <div class="col-md-4">
+            <label id="password" class="mt-4">Password</label>
             </div>
-           <div className="col-md-4"></div>
-            <div className="col-md-4">
+           <div class="col-md-4"></div>
+            <div class="col-md-4">
            <label 
            id="password" 
-           className="mt-4"
+           class="mt-4"
            ><a 
            href=""
            >
@@ -69,12 +68,12 @@ function Signin() {
            </label>
             </div>
             </div>
-            <div className="input-group ">
+            <div class="input-group ">
             <input
              name="password" 
              type="password"
              placeholder="Enter your password" 
-             className="form-control"  
+             class="form-control"  
              aria-describedby="addon-wrapping"
              value={formData.password}
               onChange={(e)=>{
@@ -85,7 +84,7 @@ function Signin() {
               }}
             />
             </div>
-            <button type="submit" className="btn" >Signin</button>
+            <button type="submit" class="btn" >Signin</button>
             </form>  
             </div>
             </div>   
@@ -93,7 +92,8 @@ function Signin() {
          <div>
             <button 
              id="signUp" 
-             className="btn signup" 
+             class="btn signup" 
+             id="signup" 
              type="submit" 
             >
               Become a member 
@@ -105,7 +105,7 @@ function Signin() {
               </a>
               </button>
             </div>
-        <div className="col-md-2">
+        <div class="col-md-2">
         </div>
       </div>
       </div>

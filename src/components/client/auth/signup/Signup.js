@@ -4,14 +4,14 @@ import './signup.css';
 import { useHistory } from 'react-router-dom';
 import { signup } from '../../../../redux/actions/auth';
 import { emailOtp } from '../../../../redux/actions/verify';
-import Navbar from '../../../common/navbar/Navbar';
-// import Navbar from '../../../common/navbar/Navbar';
+import Navbar from '../../../navbar/Navbar';
 
 function Signup() {
 
     const initialState = { email : "" ,  password : "", phone: "", fullName: ""}
     const [formData, setFormData] = useState(initialState)
-    const dispatch = useDispatch();
+
+    const dispatch = useDispatch();  
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,28 +28,28 @@ function Signup() {
     history.push(`/phoneotp`);
   };
   return (
-        <div className="container-fluid p-0 mt-5.5rem" id="body2">
-            <Navbar/>
-            <div className="container mm">
-                <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-6 ">
-                    <div className="card box-shadow-lg bg-white" id="card2" >
+        <div class="container-fluid p-0 mt-5.5rem" id="body2">
+            <Navbar />
+            <div class="container mm">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 ">
+                    <div class="card box-shadow-lg bg-white" id="card2" >
                         <div>
-                            <h4 className="mb-4 mt-5" id="signin2">Welcome to Road-Rules, Signup here...</h4>
-                            <div className="m">
+                            <h4 class="mb-4 mt-5" id="signin2">Welcome to Road-Rules, Signup here...</h4>
+                            <div class="m">
                                 <form onSubmit={handleSubmit}>
                                 <label 
                                 id="email"
                                 >
                                     Full Name
                                 </label>
-                                <div className="input-group ">
+                                <div class="input-group ">
                                 <input
                                  name="fullName"  
                                  type="text"
                                  placeholder="Enter your fullName" 
-                                 className="form-control " 
+                                 class="form-control " 
                                  aria-label="Username" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.fullName}
@@ -61,18 +61,18 @@ function Signup() {
                                 }} 
                                 />
                                 </div>
-                                <div className="row">
-                                <div className="col-md-4">
-                                <label id="email" className="mt-4">Email</label>
+                                <div class="row">
+                                <div class="col-md-4">
+                                <label id="email" class="mt-4">Email</label>
                                 </div>
-                                <div className="col-md-4"></div>
+                                <div class="col-md-4"></div>
                                </div>
-                                <div className="input-group ">
+                                <div class="input-group ">
                                 <input
                                  name="email" 
                                  type="text"
                                  placeholder="Enter your e-mail" 
-                                 className="form-control" 
+                                 class="form-control" 
                                  aria-label="Username" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.email}
@@ -86,16 +86,16 @@ function Signup() {
                                 </div>
                                 <label 
                                 id="email" 
-                                className="mt-4"
+                                class="mt-4"
                                 >
                                     Phone Number
                                 </label>
-                                <div className="input-group ">
+                                <div class="input-group ">
                                 <input
                                  name="phone" 
                                  type="text"
                                  placeholder="Enter your Phone Number (with country code)" 
-                                 className="form-control" 
+                                 class="form-control" 
                                  aria-label="Phone Number" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.phone}
@@ -107,13 +107,13 @@ function Signup() {
                                 }} 
                                 />
                                 </div>
-                                <label id="password" className="mt-4">Password</label>
-                                <div className="input-group ">
+                                <label id="password" class="mt-4">Password</label>
+                                <div class="input-group ">
                                 <input
                                  name="password" 
                                  type="Password"
                                  placeholder="Enter your password" 
-                                 className="form-control" 
+                                 class="form-control" 
                                  aria-label="Password" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.password}
@@ -126,9 +126,8 @@ function Signup() {
                                 />
                                 </div>                               
                                 <button 
-                                onClick={handleRoute}
                                  type="submit"
-                                 className="btn"
+                                 class="btn"
                                 >
                                     Signup
                                 </button>
@@ -140,9 +139,11 @@ function Signup() {
                 <button 
                  type="submit" 
                  id="signUp" 
-                 className="btn signup" 
-                >
-                    Already a member 
+                 class="btn signup" 
+                 id="signup" 
+                 type="submit"
+                 >
+                     Already a member 
                 <a 
                  id="signUp"
                 >
@@ -150,7 +151,7 @@ function Signup() {
                 </a>
                 </button>
             </div>
-            <div className="col-md-2">
+            <div class="col-md-2">
             </div>
          </div>
       </div>

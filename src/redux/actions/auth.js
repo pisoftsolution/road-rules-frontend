@@ -1,5 +1,5 @@
 import * as api from '../api';
-import { SIGNUP, LOGIN, } from '../constants';
+import { SIGNUP, LOGIN, LOGOUT } from '../constants';
 
 export const signup = (formData, history) => async (dispatch) => {
     try {
