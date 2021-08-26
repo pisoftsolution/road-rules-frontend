@@ -37,7 +37,7 @@ export const phoneOtp = () => async (dispatch) => {
     }
 }
 
-export const phoneOtpVerify = (otp ) => async (dispatch) => {
+export const phoneOtpVerify = (otp) => async (dispatch) => {
     try {
         const phone = localStorage.getItem('phone')
         const email = localStorage.getItem('email')

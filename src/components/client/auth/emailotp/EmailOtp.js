@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { emailOtpVerify } from '../../../../redux/actions/verify';
@@ -6,14 +6,14 @@ import Navbar from '../../../navbar/Navbar';
 
 function EmailOtp() {
 
-    const initialState = { emailOtp : ""}
+    const initialState = { emailOtp: "" }
     const [formData, setFormData] = useState(initialState)
 
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(emailOtpVerify(formData.emailOtp,history))
+        dispatch(emailOtpVerify(formData.emailOtp, history))
     }
 
     const history = useHistory();
@@ -32,32 +32,32 @@ function EmailOtp() {
                                 <h4 className="mb-4 mt-5" id="signin">Please enter the Email OTP</h4>
                                 <div className="m">
                                     <form onSubmit={handleSubmit}>
-                                    <label 
-                                    id="email"
-                                    >
-                                        OTP
-                                    </label>
-                                    <div className="input-group ">
-                                        <input type="text"
-                                          name="emailOtp"
-                                          placeholder="Enter the 6 digit OTP" 
-                                          className="form-control " 
-                                          aria-label="Username" aria-describedby="addon-wrapping"
-                                          value={formData.emailOtp}
-                                          onChange={(e)=>{
-                                            setFormData({
-                                                ...formData,
-                                                [e.target.name] : e.target.value
-                                            })
-                                          }} 
-                                         />
-                                    </div>
-                                    <button
-                                      type="submit"
-                                      className="btn" 
-                                     >
-                                         Submit
-                                    </button>
+                                        <label
+                                            id="email"
+                                        >
+                                            OTP
+                                        </label>
+                                        <div className="input-group ">
+                                            <input type="text"
+                                                name="emailOtp"
+                                                placeholder="Enter the 6 digit OTP"
+                                                className="form-control "
+                                                aria-label="Username" aria-describedby="addon-wrapping"
+                                                value={formData.emailOtp}
+                                                onChange={(e) => {
+                                                    setFormData({
+                                                        ...formData,
+                                                        [e.target.name]: e.target.value
+                                                    })
+                                                }}
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            className="btn"
+                                        >
+                                            Submit
+                                        </button>
                                     </form>
                                 </div>
                             </div>
