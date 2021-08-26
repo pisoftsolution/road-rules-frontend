@@ -71,7 +71,8 @@ a {
 }
 
 #signUp {
-  color: rgb(253, 253, 255);
+  color: blue;
+  margin-left: 10px;
 }
 
 #logo {

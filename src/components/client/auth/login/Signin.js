@@ -80,7 +80,7 @@ function Signin() {
                         }}
                       />
                     </div>
-                    <button type="submit" className="btn">
+                    <button type="submit" className="btn2">
                       Signin
                     </button>
                   </form>
@@ -88,7 +88,7 @@ function Signin() {
               </div>
             </div>
             <div>
-              <button id="signUp" className="btn signup" type="submit">
+              <button id="signUp1" className="btn1 signup" type="submit">
                 Become a member
                 <a id="signUp" onClick={handleRoute}>
                   Signup
