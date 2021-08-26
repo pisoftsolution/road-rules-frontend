@@ -24,32 +24,32 @@ function Signup() {
         })
     }
     const history = useHistory();
-    const handleRoute = () => {
-    history.push(`/phoneotp`);
-  };
+//     const handleRoute = () => {
+//     history.push(`/phoneotp`);
+//   };
   return (
-        <div class="container-fluid p-0 mt-5.5rem" id="body2">
+        <div className="container-fluid p-0 mt-5.5rem" id="body2">
             <Navbar />
-            <div class="container mm">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 ">
-                    <div class="card box-shadow-lg bg-white" id="card2" >
+            <div className="container mm">
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6 ">
+                    <div className="card box-shadow-lg bg-white" id="card2" >
                         <div>
-                            <h4 class="mb-4 mt-5" id="signin2">Welcome to Road-Rules, Signup here...</h4>
-                            <div class="m">
+                            <h4 className="mb-4 mt-5" id="signin2">Welcome to Road-Rules, Signup here...</h4>
+                            <div className="m">
                                 <form onSubmit={handleSubmit}>
                                 <label 
                                 id="email"
                                 >
                                     Full Name
                                 </label>
-                                <div class="input-group ">
+                                <div className="input-group ">
                                 <input
                                  name="fullName"  
                                  type="text"
                                  placeholder="Enter your fullName" 
-                                 class="form-control " 
+                                 className="form-control " 
                                  aria-label="Username" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.fullName}
@@ -61,18 +61,18 @@ function Signup() {
                                 }} 
                                 />
                                 </div>
-                                <div class="row">
-                                <div class="col-md-4">
-                                <label id="email" class="mt-4">Email</label>
+                                <div className="row">
+                                <div className="col-md-4">
+                                <label id="email" className="mt-4">Email</label>
                                 </div>
-                                <div class="col-md-4"></div>
+                                <div className="col-md-4"></div>
                                </div>
-                                <div class="input-group ">
+                                <div className="input-group ">
                                 <input
                                  name="email" 
                                  type="text"
                                  placeholder="Enter your e-mail" 
-                                 class="form-control" 
+                                 className="form-control" 
                                  aria-label="Username" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.email}
@@ -86,16 +86,16 @@ function Signup() {
                                 </div>
                                 <label 
                                 id="email" 
-                                class="mt-4"
+                                className="mt-4"
                                 >
                                     Phone Number
                                 </label>
-                                <div class="input-group ">
+                                <div className="input-group ">
                                 <input
                                  name="phone" 
                                  type="text"
                                  placeholder="Enter your Phone Number (with country code)" 
-                                 class="form-control" 
+                                 className="form-control" 
                                  aria-label="Phone Number" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.phone}
@@ -107,13 +107,13 @@ function Signup() {
                                 }} 
                                 />
                                 </div>
-                                <label id="password" class="mt-4">Password</label>
-                                <div class="input-group ">
+                                <label id="password" className="mt-4">Password</label>
+                                <div className="input-group ">
                                 <input
                                  name="password" 
                                  type="Password"
                                  placeholder="Enter your password" 
-                                 class="form-control" 
+                                 className="form-control" 
                                  aria-label="Password" 
                                  aria-describedby="addon-wrapping"
                                  value={formData.password}
@@ -127,7 +127,7 @@ function Signup() {
                                 </div>                               
                                 <button 
                                  type="submit"
-                                 class="btn"
+                                 className="btn"
                                 >
                                     Signup
                                 </button>
@@ -139,9 +139,7 @@ function Signup() {
                 <button 
                  type="submit" 
                  id="signUp" 
-                 class="btn signup" 
-                 id="signup" 
-                 type="submit"
+                 className="btn signup"  
                  >
                      Already a member 
                 <a 
@@ -151,7 +149,7 @@ function Signup() {
                 </a>
                 </button>
             </div>
-            <div class="col-md-2">
+            <div className="col-md-2">
             </div>
          </div>
       </div>

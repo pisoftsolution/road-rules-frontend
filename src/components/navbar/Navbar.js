@@ -3,24 +3,24 @@ import React from 'react'
 function Navbar(){
     
     return(
-        <nav class="navbar navbar-light">
-                <div class="container-fluid">
-                    <div class="col-md-4">
+        <nav className="navbar navbar-light">
+                <div className="container-fluid">
+                    <div className="col-md-4">
                         <img src="https://www.roadrules.info/images/logo-roadrules.svg" 
-                         class="img-fluid" 
+                         className="img-fluid" 
                          id="logo" 
                          alt="LOGO"
                         >
                         </img>
                     </div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-4">
-                        <ul class="u">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-4">
+                        <ul className="u">
                         <li>Home</li>
                         <li>Booking</li>
                         <li>Contact Us</li> 
                         <img src="https://www.roadrules.info/images/profile_avatar.png" 
-                         class="img-fluid" 
+                         className="img-fluid" 
                          id="logo2" 
                          alt="LOGO"
                         >

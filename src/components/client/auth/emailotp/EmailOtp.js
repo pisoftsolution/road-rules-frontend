@@ -17,31 +17,31 @@ function EmailOtp() {
     }
 
     const history = useHistory();
-    const handleRoute = () => {
-        history.push(`/signin`);
-    };
+    // const handleRoute = () => {
+    //     history.push(`/signin`);
+    // };
     return (
-        <div class="container-fluid p-0 mt-5.5rem" id="body">
+        <div className="container-fluid p-0 mt-5.5rem" id="body">
             <Navbar />
-            <div class="container mm">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 ">
-                        <div class="card box-shadow-lg bg-white" id="card" >
+            <div className="container mm">
+                <div className="row">
+                    <div className="col-md-3"></div>
+                    <div className="col-md-6 ">
+                        <div className="card box-shadow-lg bg-white" id="card" >
                             <div>
-                                <h4 class="mb-4 mt-5" id="signin">Please enter the Email OTP</h4>
-                                <div class="m">
+                                <h4 className="mb-4 mt-5" id="signin">Please enter the Email OTP</h4>
+                                <div className="m">
                                     <form onSubmit={handleSubmit}>
                                     <label 
                                     id="email"
                                     >
                                         OTP
                                     </label>
-                                    <div class="input-group ">
+                                    <div className="input-group ">
                                         <input type="text"
                                           name="emailOtp"
                                           placeholder="Enter the 6 digit OTP" 
-                                          class="form-control " 
+                                          className="form-control " 
                                           aria-label="Username" aria-describedby="addon-wrapping"
                                           value={formData.emailOtp}
                                           onChange={(e)=>{
@@ -54,7 +54,7 @@ function EmailOtp() {
                                     </div>
                                     <button
                                       type="submit"
-                                      class="btn" 
+                                      className="btn" 
                                      >
                                          Submit
                                     </button>
@@ -62,7 +62,7 @@ function EmailOtp() {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div className="col-md-2">
                         </div>
                     </div>
                 </div>
