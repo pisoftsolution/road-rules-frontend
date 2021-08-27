@@ -82,18 +82,12 @@ a {
   color: blue;
 }
 
-.u {
-  padding-left: 0px !important;
-}
-
-#logo {
-  width: 380px;
-  height: 80px;
-  margin-top: 4px;
-}
-
 .navComponents {
   display: flex;
+}
+.bb {
+  width: 100%;
+  margin: auto;
 }
 
 #logo2 {
@@ -109,13 +103,6 @@ a {
   font-weight: 500;
   margin-top: 20px;
   font-size: 18px;
-}
-
-#logo {
-  width: 380px;
-  height: 79px;
-  margin-top: 4px;
-  margin-left: -30px;
 }
 
 ul {
@@ -138,4 +125,31 @@ li {
 
 li:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .mk {
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .bb {
+    width: 100%;
+  }
+  .pic {
+    width: 260px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pic {
+    width: 380px;
+    height: 79px;
+    margin-top: 4px;
+  }
+  .wid {
+    display: flex;
+  }
+  .nj {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }

@@ -4,27 +4,28 @@ function Navbar() {
   return (
     <nav className="navbar navbar-light">
       <div className="container-fluid">
-        <div className="col-md-4">
-          <img
-            src="https://www.roadrules.info/images/logo-roadrules.svg"
-            className="img-fluid"
-            id="logo"
-            alt="LOGO"
-          ></img>
-        </div>
-        <div className="col-md-3"></div>
-        <div className="col-md-4">
-          <ul className="u">
-            <li>Home</li>
-            <li>Booking</li>
-            <li>Contact Us</li>
+        <div className="row bb">
+          <div className="col-md-6 wid">
             <img
-              src="https://www.roadrules.info/images/profile_avatar.png"
-              className="img-fluid"
-              id="logo2"
+              src="https://www.roadrules.info/images/logo-roadrules.svg"
+              className="pic"
               alt="LOGO"
             ></img>
-          </ul>
+          </div>
+
+          <div className="col-md-6 nj">
+            <ul className="mk">
+              <li>Home</li>
+              <li>Booking</li>
+              <li>Contact Us</li>
+              <img
+                src="https://www.roadrules.info/images/profile_avatar.png"
+                className="img-fluid"
+                id="logo2"
+                alt="LOGO"
+              ></img>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
