@@ -48,14 +48,21 @@
   padding-right: 40px;
   padding-left: 41px;
 }
-
-button.btn {
+button.btn3 {
   width: 100%;
   background-color: #04b1ed;
   color: white;
   margin-top: 55px;
   height: 45px;
 }
+
+/* button.btnphone {
+  width: 100%;
+  background-color: #04b1ed;
+  color: white;
+  margin-top: 55px;
+  height: 45px;
+} */
 
 input.form-control {
   background-color: #e0f6ff;

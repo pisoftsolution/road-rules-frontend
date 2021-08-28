@@ -118,7 +118,11 @@ function Signup() {
                         }}
                       />
                     </div>
-                    <button onClick={handleRoute} type="submit" className="btn">
+                    <button
+                      onClick={handleRoute}
+                      type="submit"
+                      className="btn2"
+                    >
                       Signup
                     </button>
                   </form>

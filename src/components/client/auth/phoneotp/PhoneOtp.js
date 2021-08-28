@@ -51,7 +51,11 @@ function PhoneOtp() {
                         }}
                       />
                     </div>
-                    <button onClick={handleRoute} type="submit" className="btn">
+                    <button
+                      onClick={handleRoute}
+                      type="submit"
+                      className="btn3"
+                    >
                       Submit
                     </button>
                   </form>

@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../../../../redux/actions/auth';
-
 import './signin.css';
 
 function Signin() {
   const initialState = { email: '', password: '' };
   const [formData, setFormData] = useState(initialState);
-
   const dispatch = useDispatch();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);

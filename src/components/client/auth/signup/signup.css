@@ -103,3 +103,43 @@ li {
 li:hover {
   cursor: pointer;
 }
+button.btn2 {
+  width: 100%;
+  color: #f0f4f7;
+  margin-top: 55px;
+  height: 45px;
+  background-color: blue;
+}
+@media only screen and (max-width: 768px) {
+  .mk {
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .bb {
+    width: 100%;
+  }
+  .pic {
+    width: 260px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pic {
+    width: 380px;
+    height: 79px;
+    margin-top: 4px;
+  }
+  .wid {
+    display: flex;
+  }
+  .nj {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #card2 {
+    height: 760px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+  }
+}
