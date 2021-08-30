@@ -1,5 +1,5 @@
 import axios from "axios";
-export const url = "http://localhost:8092/api";
+export const url = "http://localhost:8090/api";
 
 export const signup = (formData) => {
     return axios.post(`${url}/auth/signup`, formData)
