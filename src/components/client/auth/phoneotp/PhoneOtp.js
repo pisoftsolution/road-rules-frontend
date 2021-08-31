@@ -6,7 +6,7 @@ import('../emailotp/emailotp.css');
 
 function PhoneOtp() {
   const initialState = { phoneOtp: '' };
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(initialState); 
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
