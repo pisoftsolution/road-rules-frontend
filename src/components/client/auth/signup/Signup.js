@@ -19,9 +19,9 @@ function Signup() {
     });
   };
   const history = useHistory();
-  const handleRoute = () => {
-    history.push(`/phoneotp`);
-  };
+  // const handleRoute = () => {
+  //   history.push(`/phoneotp`);
+  // };
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body2">
       <div className="container mm">
@@ -119,7 +119,7 @@ function Signup() {
                       />
                     </div>
                     <button
-                      onClick={handleRoute}
+                      // onClick={handleRoute}
                       type="submit"
                       className="btn2"
                     >
