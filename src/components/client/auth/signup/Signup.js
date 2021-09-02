@@ -11,7 +11,8 @@ function Signup() {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signup(formData, history)).then((res) => {
+    dispatch(signup(formData, history))
+    .then((res) => {
       console.log(res);
       localStorage.setItem('email', formData.email);
       localStorage.setItem('phone', formData.phone);
@@ -19,11 +20,11 @@ function Signup() {
     });
   };
   const history = useHistory();
-  const handleRoute = () => {
-    history.push(`/phoneotp`);
-  };
+  // const handleRoute = () => {
+  //   history.push(`/phoneotp`);
+  // };
   return (
-    <div className="container-fluid p-0 mt-5.5rem" id="body2">
+    <div className="container-fluid p-0 mt-5.5rem" id="body2"> 
       <div className="container mm">
         <div className="row">
           <div className="col-md-3"></div>
@@ -119,7 +120,6 @@ function Signup() {
                       />
                     </div>
                     <button
-                      onClick={handleRoute}
                       type="submit"
                       className="btn2"
                     >
@@ -130,7 +130,7 @@ function Signup() {
               </div>
             </div>
             <div>
-              <button type="submit" id="signUp" className="btn signup">
+              <button className="btn signup">
                 Already a member
                 <a id="signUp">Signin</a>
               </button>
