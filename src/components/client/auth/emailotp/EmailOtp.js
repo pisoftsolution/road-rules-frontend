@@ -12,9 +12,9 @@ function EmailOtp() {
     dispatch(emailOtpVerify(formData.emailOtp, history));
   };
   const history = useHistory();
-  const handleRoute = () => {
-    history.push(`/signin`);
-  };
+  // const handleRoute = () => { 
+  //   history.push(`/signin`);
+  // };
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body">
       <div className="container mm">
@@ -47,7 +47,6 @@ function EmailOtp() {
                       />
                     </div>
                     <button
-                      onClick={handleRoute}
                       type="submit"
                       className="btn3"
                     >
