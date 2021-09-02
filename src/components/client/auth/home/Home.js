@@ -53,7 +53,7 @@ function Home() {
                   <div className="col">
                     <div className="card h-100">
                       <div className="card-body">
-                        <h4 className=" mb-5 text-center">
+                        <h4 className=" mb-5 text-center2">
                           1-Hour Auto Package
                         </h4>
                         <div className="font-demi text-muted text-center mb-3">
@@ -62,7 +62,7 @@ function Home() {
                         </div>
                         <p id="mny">45$</p>
                         <div>
-                          <button className="text-white bg-primary submit-button">
+                          <button type="button" className="btn btn-primary">
                             Book Now
                           </button>
                         </div>
@@ -72,7 +72,7 @@ function Home() {
                   <div className="col">
                     <div className="card h-100">
                       <div className="card-body">
-                        <h4 className=" mb-5 text-center">
+                        <h4 className=" mb-5 text-center2">
                           6-Hour Auto Package
                         </h4>
                         <div className="font-demi text-muted text-center mb-3">
@@ -81,7 +81,7 @@ function Home() {
                         </div>
                         <p id="mny">240$</p>
                         <div>
-                          <button className="text-white bg-primary submit-button">
+                          <button type="button" className="btn btn-primary">
                             Book Now
                           </button>
                         </div>
@@ -91,7 +91,7 @@ function Home() {
                   <div className="col">
                     <div className="card h-100">
                       <div className="card-body">
-                        <h4 className=" mb-5 text-center">
+                        <h4 className=" mb-5 text-center2">
                           10-Hour Auto Package
                         </h4>
                         <div className="font-demi text-muted text-center mb-3">
@@ -100,11 +100,93 @@ function Home() {
                         </div>
                         <p id="mny">400$</p>
                         <div>
-                          <button className="text-white bg-primary submit-button">
+                          <button type="button" className="btn">
                             Book Now
                           </button>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div className="btncheckprices">
+                    <button type="button" className="btn btn-lg ">
+                      Check 1All Prices
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container-fluid" id="homesecondimg1">
+              <h2 id="three">Booking In Three Easy Steps</h2>
+              <div className="container">
+                <div className="card mb-2" id="k">
+                  <h4 id="step1"> Step 1</h4>
+                  <h5 id="step2">Go to Login/Signup and create an account.</h5>
+                </div>
+              </div>
+
+              <div className="container">
+                <div className="card mb-2" id="k">
+                  <h4 id="stepa"> Step 2</h4>
+                  <h5 id="step2">
+                    Go to the Bookings tab and select a suitable time slot.
+                  </h5>
+                </div>
+              </div>
+
+              <div className="container">
+                <div className="card mb-2" id="k">
+                  <h4 id="stepb"> Step 3</h4>
+                  <h5 id="step2">Go to Login/Signup and create an account.</h5>
+                </div>
+              </div>
+            </div>
+            <div className="container" id="gif">
+              <img
+                className="img-fluid"
+                src="https://www.roadrules.info/images/about.gif"
+              />
+            </div>
+            <div className="container">
+              <h2 className="mb-5">Your Key To Safe Driving</h2>
+              <div className="row" id="key">
+                <div className="col-sm-3">
+                  <div className="card">
+                    <div className="card-body"></div>
+                  </div>
+                  {/* <svg
+                    className="MuiSvgIcon-root text-primaryColor mb-2 MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"></path>
+                  </svg> */}
+                </div>
+                <div className="col-sm-3">
+                  <div className="card">
+                    <div className="card-body">
+                      <h5 className="card-title">Special title treatment</h5>
+                      <p className="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="#" className="btn btn-primary">
+                        Go somewhere
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="card">
+                    <div className="card-body">
+                      <h5 className="card-title">Special title treatment</h5>
+                      <p className="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="#" className="btn btn-primary">
+                        Go somewhere
+                      </a>
                     </div>
                   </div>
                 </div>
