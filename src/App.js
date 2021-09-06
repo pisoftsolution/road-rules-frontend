@@ -11,7 +11,7 @@ import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
 import Payment from './components/client/Payment/payment/payment';
-// import Navbar from './components/common/navbar/Navbar';
+import Navbar from './components/common/navbar/navbar';
 import Sidebar from './components/admin/Sidebar';
 import About from './components/admin/home/About';
 import AboutCards from './components/admin/home/AboutCards';
@@ -36,20 +36,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Router history={history}>
-        <Switch>
-          <Route exact path="/" component={Signin}></Route>
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/signup" component={Signup}></Route>
-          <Route exact path="/phoneotp" component={PhoneOtp}></Route>
-          <Route exact path="/signin" component={Signin}></Route>
-          <Route exact path="/email-otp" component={EmailOtp}></Route>
-          <Route exact path="/success" component={Success}></Route>
-          <Route exact path="/cancel" component={Cancel}></Route>
-          <Route exact path="/stripe" component={Stripe}></Route>
-          <Route exact path="/payment" component={Payment}></Route>
-        </Switch>
-      </Router>
       {/* <Navbar /> */}
       <Switch>
         <Route exact path="/" component={Signin}></Route>
