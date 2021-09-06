@@ -6,7 +6,7 @@ div#root {
   min-height: 800px;
   background-image: url('https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png');
   background-repeat: no-repeat;
-  background-position-y: 150px;
+  background-position-y: 90px;
 }
 
 .mm {
@@ -14,7 +14,7 @@ div#root {
 }
 
 #card {
-  height: 500px;
+  height: 480px;
   line-height: 1.5;
   box-sizing: border-box;
   box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
@@ -70,6 +70,7 @@ button.btn2 {
 button#signUp1 {
   background-color: white;
   border: none;
+  margin-top: 20px;
 }
 
 input.form-control {
@@ -136,6 +137,17 @@ li:hover {
   }
   .pic {
     width: 260px;
+  }
+  #card {
+    height: 524px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+  }
+  button#signUp1 {
+    background-color: white;
+    border: none;
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) {

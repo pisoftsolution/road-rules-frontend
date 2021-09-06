@@ -34,6 +34,21 @@ function App() {
   const classes = useStyles();
   return (
     <div className="App">
+      <Navbar />
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={Signin}></Route>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/signup" component={Signup}></Route>
+          <Route exact path="/phoneotp" component={PhoneOtp}></Route>
+          <Route exact path="/signin" component={Signin}></Route>
+          <Route exact path="/email-otp" component={EmailOtp}></Route>
+          <Route exact path="/success" component={Success}></Route>
+          <Route exact path="/cancel" component={Cancel}></Route>
+          <Route exact path="/stripe" component={Stripe}></Route>
+          <Route exact path="/payment" component={Payment}></Route>
+        </Switch>
+      </Router>
       {/* <Navbar /> */}
       <Switch>
         <Route exact path="/" component={Signin}></Route>
