@@ -3,13 +3,14 @@ import axios from 'axios';
 export const url = 'http://localhost:8095/api';
 
 export const signup = (formData) => {
-return axios.post(`${url}/auth/signup`, formData);
+  return axios.post(`${url}/auth/signup`, formData);
 
 import axios from "axios";
 export const url = "http://localhost:8092/api";
 
 export const signup = (formData) => {
     return axios.post(`${url}/auth/signup`, formData)
+
 };
 
 export const login = (formData) => {

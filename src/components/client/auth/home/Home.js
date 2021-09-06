@@ -116,7 +116,7 @@ function Home() {
               </div>
             </div>
             <div className="container-fluid" id="homesecondimg1">
-              <h2 id="three">Booking In Three Easy Steps</h2>
+              <h2 id="three">Booking in threee EasysSteps</h2>
               <div className="container">
                 <div className="card mb-2" id="k">
                   <h4 id="step1"> Step 1</h4>
@@ -146,53 +146,222 @@ function Home() {
                 src="https://www.roadrules.info/images/about.gif"
               />
             </div>
+          </div>
+
+          <div className="container-fluid">
+            <h2 className=" mb-5 text-center">Your Key to safe Driving</h2>
             <div className="container">
-              <h2 className="mb-5">Your Key To Safe Driving</h2>
-              <div className="row" id="key">
-                <div className="col-sm-3">
-                  <div className="card">
-                    <div className="card-body"></div>
-                  </div>
-                  {/* <svg
-                    className="MuiSvgIcon-root text-primaryColor mb-2 MuiSvgIcon-fontSizeSmall"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"></path>
-                  </svg> */}
-                </div>
-                <div className="col-sm-3">
-                  <div className="card">
-                    <div className="card-body">
-                      <h5 className="card-title">Special title treatment</h5>
-                      <p className="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
+              <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className=" mt-5 text-center2">Choice</h4>
+
+                      <p>
+                        We are the best in terms of services that we offer you.
+                        We ensure safety as our main priority therefore we are
+                        well equipped with professional and well trained
+                        instructors.
                       </p>
-                      <a href="#" className="btn btn-primary">
-                        Go somewhere
-                      </a>
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-3">
-                  <div className="card">
-                    <div className="card-body">
-                      <h5 className="card-title">Special title treatment</h5>
-                      <p className="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className=" mt-5 text-center2">95% PASS RATE</h4>
+
+                      <p>Success rate of our students is very high.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className=" mt-5 text-center2">Best Cars</h4>
+
+                      <p>
+                        Both the classroom driving classes as well as online
+                        sessions are available with a wide range of cars.
                       </p>
-                      <a href="#" className="btn btn-primary">
-                        Go somewhere
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="container-fluid mt-4">
+            <div className="container">
+              <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className=" mt-5 text-center2">Pickup</h4>
+
+                      <p>
+                        We provide door pickup for our students at no extra
+                        cost!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className=" mt-5 text-center2">We train all ages</h4>
+
+                      <p>
+                        We have driving instructors who are certified. Apart
+                        from that, they are also fit both mentally as well as
+                        physically who train classes 5 and 7.{' '}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice ">
+                      <h4 className=" mt-5 text-center2">Road Rules</h4>
+
+                      <p>
+                        We will train you correctly with all road rules and
+                        regulations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container-fluid" id="homesecondimg1">
+            <div className="container">
+              <h2 id="three">What our students have to say about us.</h2>
+              <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body" id="students">
+                      <h4 className="  text-center2">Pickup</h4>
+
+                      <p>
+                        I am writing this review on behalf of my daughter, she
+                        took lessons from this place and I only heard good
+                        things about it. She had her class 7 road test coming up
+                        and was worried she would fail, but the instructor made
+                        it easy for her to understand and told her to stay
+                        confident and you can do it. She ended up passing her
+                        road test and want to give a huge thank you to Road
+                        Rules Driving School, for teaching in a well-mannered
+                        environment and staying professional.
+                      </p>
+                      <div>
+                        <img
+                          src="https://www.roadrules.info/images/testimonial-2.svg"
+                          alt="about"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className="  text-center2">We train all ages</h4>
+                      <p className="mb-10">
+                        I took the 10-lesson package with this driving school. I
+                        had a pleasant experience all the way through and
+                        instructor made everything really easy to do. Her
+                        techniques and tips really helped me understand better,
+                        and passed my Class 5 test on the first attempt.Thank
+                        you to Road Rules Driving School, and I would 100%
+                        recommend it.
+                      </p>
+                      <div className="bottom">
+                        <img
+                          src="https://www.roadrules.info/images/testimonial-2.svg"
+                          alt="about"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100">
+                    <div className="card-body keychoice">
+                      <h4 className="  text-center2">Road Rules</h4>
+                      <p>
+                        We will train you correctly with all road rules and
+                        regulations.
+                      </p>
+                      <div className="bottom">
+                        <img
+                          src="https://www.roadrules.info/images/testimonial-2.svg"
+                          alt="about"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid" id="footer">
+          <footer className="container">
+            <div className="row">
+              <div className="col-lg-4 col-md-4 col-sm-12 col-12 mt-4">
+                <div className=" footer-card px-3">
+                  <h3 className="text-primaryColor font-bold mb-4">Company</h3>
+                  <div className="text-primaryColor font-demi font-15 mb-3  hoverable">
+                    Work with us
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-3  hoverable">
+                    Privacy Notice
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-3  hoverable">
+                    Term of Service
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-3  hoverable">
+                    {' '}
+                    +1&nbsp;(778)&nbsp;889-7804
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-3  hoverable">
+                    roadrulescanada@gmail.com
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-4 col-sm-12 col-12 mt-4">
+                <div className=" footer-card px-3">
+                  <h3 className="text-primaryColor font-bold mb-4">Support</h3>
+                  <div className="text-primaryColor font-demi font-15 mb-lg-3 mb-2 hoverable">
+                    Help Center
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-lg-3 mb-2 hoverable">
+                    Contact Us
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-lg-3 mb-2 hoverable">
+                    Request a New Feature
+                  </div>
+                  <div className="text-primaryColor font-demi font-15 mb-lg-3 mb-2 hoverable">
+                    Report an Outage
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-4 col-sm-12 col-12 my-4">
+                <div className=" footer-card px-3"></div>
+                <div>
+                  <img
+                    src="https://www.roadrules.info/images/logo-roadrules.svg"
+                    className="pic"
+                  ></img>
+                </div>
+              </div>
+            </div>
+            <div className="text-primaryColor text-center font-demi font-15 ">
+              <span>@ 2021 all rights reserved</span>
+            </div>
+          </footer>
         </div>
       </div>
     </>
