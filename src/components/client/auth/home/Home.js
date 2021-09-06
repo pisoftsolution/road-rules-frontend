@@ -156,7 +156,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Choice</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         We are the best in terms of services that we offer you.
                         We ensure safety as our main priority therefore we are
@@ -170,7 +170,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">95% PASS RATE</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>Success rate of our students is very high.</p>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Best Cars</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         Both the classroom driving classes as well as online
                         sessions are available with a wide range of cars.
@@ -197,7 +197,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Pickup</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         We provide door pickup for our students at no extra
                         cost!
@@ -209,7 +209,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">We train all ages</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         We have driving instructors who are certified. Apart
                         from that, they are also fit both mentally as well as
@@ -222,7 +222,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice ">
                       <h4 className=" mt-5 text-center2">Road Rules</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         We will train you correctly with all road rules and
                         regulations.
@@ -241,7 +241,7 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body" id="students">
                       <h4 className="  text-center2">Pickup</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
+
                       <p>
                         I am writing this review on behalf of my daughter, she
                         took lessons from this place and I only heard good
@@ -266,7 +266,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className="  text-center2">We train all ages</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
                       <p className="mb-10">
                         I took the 10-lesson package with this driving school. I
                         had a pleasant experience all the way through and
@@ -289,7 +288,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className="  text-center2">Road Rules</h4>
-                      {/* <div className="font-demi  text-center ">Choice</div> */}
                       <p>
                         We will train you correctly with all road rules and
                         regulations.

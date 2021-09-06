@@ -14,14 +14,7 @@
 .footer-card {
   text-align: initial;
 }
-h2 {
-  color: #264861;
-  padding-top: 90px;
-  padding-bottom: 10px;
-  line-height: 1.2;
-  font-size: 40px;
-  font-weight: 750 !important;
-}
+
 p3 {
   font-size: 20px;
   padding: 10px 70px 0px;
@@ -31,15 +24,14 @@ p3 {
   justify-content: center;
   align-items: center;
 }
-/* #left {
-  background-image: url(https://www.roadrules.info/images/test.jpg);
-  background-position: 60%;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  width: 50%;
+h2 {
   color: #264861;
-  min-height: 85vh;
-} */
+  padding-top: 90px;
+  padding-bottom: 10px;
+  line-height: 1.2;
+  font-size: 40px;
+  font-weight: 750 !important;
+}
 .left {
   padding: 5px;
   color: #264861;
