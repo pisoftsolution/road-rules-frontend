@@ -27,6 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+ 
+.MuiList-root {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  display: block;
+}
 
 @keyframes App-logo-spin {
   from {
