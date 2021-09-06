@@ -11,6 +11,9 @@
   min-height: 85vh;
   margin-bottom: 120px;
 }
+.footer-card {
+  text-align: initial;
+}
 h2 {
   color: #264861;
   padding-top: 90px;
@@ -174,14 +177,35 @@ div#homesecondimg1 {
 }
 
 #gif {
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 
 #three {
   padding-top: 50px !important;
   padding-bottom: 40px;
 }
-#key {
-  display: flex;
-  justify-content: center;
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+.keychoice {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 1px 0px 5px 6px rgb(0 0 0 / 5%);
+}
+#students {
+  overflow: hidden;
+  height: 470px;
+  padding: 20px;
+  box-shadow: 1px 0px 5px 6px rgb(0 0 0 / 5%);
+}
+#footer {
+  background-image: linear-gradient(
+    130deg,
+    #eff7fa 20%,
+    #e3e8eb 40%,
+    #dbe3e9 50%,
+    #e3eaf0 60%
+  );
 }
