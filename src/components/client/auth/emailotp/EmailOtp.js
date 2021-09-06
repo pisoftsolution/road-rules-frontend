@@ -21,7 +21,7 @@ function EmailOtp() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-6 ">
-            <div className="card box-shadow-lg bg-white" id="card">
+            <div className="card box-shadow-lg bg-white" id="cardemail">
               <div>
                 <h4 className="mb-4 mt-5" id="signin">
                   Please enter the Email OTP
