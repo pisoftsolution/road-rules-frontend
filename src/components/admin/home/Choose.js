@@ -5,28 +5,28 @@ import Modal from 'react-bootstrap/Modal'
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import './All.css'
-import { addTestimonial, editTestimonial, getTestimonial } from '../../../redux/actions/testimonial';
+import { addChoose, editChoose, getChoose } from '../../../redux/actions/choose';
 
-function Testimonials() {
+function Choose() {
 
-  const initialState = { name: "", comment: "" };
+  const initialState = { point: "" };
   const [formData, setFormData] = useState(initialState);
   const [editId, setEditId] = useState("");
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
-  const testimonials = useSelector(state => state.testimonialReducer?.testimonialData?.b);
+  const choice = useSelector(state => state.chooseReducer?.chooseData?.b);
 
   const editHandler = () => {
-    dispatch(editTestimonial());
+    dispatch(editChoose());
   }
   useEffect(() => {
-    dispatch(getTestimonial())
+    dispatch(getChoose())
   }, [shouldCall])
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    dispatch(editTestimonial(formData, editId))
+    dispatch(editChoose(formData, editId))
       .then(res => {
         console.log(res);
         setShouldCall(!shouldCall);
@@ -38,7 +38,7 @@ function Testimonials() {
   const handleAddSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
-    dispatch(addTestimonial(formData, testimonials))
+    dispatch(addChoose(formData, choice))
       .then(res => {
         console.log(res);
         setShouldCall(!shouldCall);
@@ -47,62 +47,41 @@ function Testimonials() {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = (id, name, comment) => {
+  const handleShow = (id, point) => {
     setEditId(id)
     setFormData({
-      name: name,
-      comment: comment
+      point: point,
     })
     setShow(true);
   }
 
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
-  const handleShows = (name, comment) => {
+  const handleShows = (point) => {
     setFormData({
-      name: name,
-      comment: comment
+      point: point,
     })
     setShows(true);
   }
   return (
     <div className="Apps">
-      <h1 className="headline">Testimonials</h1>
+      <h1 className="headline">Why Choose Us</h1>
       <Modal show={show} onHide={handleClose}  >
         <Modal.Header>
-          <Modal.Title>Edit a Testimonial</Modal.Title>
+          <Modal.Title>Edit a Choice</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={handleEditSubmit}>
             <div className="form-group">
-              <label>name</label>
+              <label>Add a Choice</label>
               <InputGroup className="mb-3">
                 <FormControl
-                  name="name"
-                  type="comment"
-                  placeholder="Enter name"
+                  name="point"
+                  type="text"
+                  placeholder="Enter Choice"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
-                  value={formData.name}
-                  onChange={(e) => {
-                    setFormData({
-                      ...formData,
-                      [e.target.name]: e.target.value,
-                    })
-                  }}
-                  required
-                />
-              </InputGroup>
-
-              <label>comment</label>
-              <InputGroup className="mb-3">
-                <FormControl
-                  name="comment"
-                  placeholder="Enter comment Here"
-                  type="comment"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                  value={formData.comment}
+                  value={formData.point}
                   onChange={(e) => {
                     setFormData({
                       ...formData,
@@ -113,7 +92,7 @@ function Testimonials() {
                 />
               </InputGroup>
               <Button
-                className="sub"
+                classpoint="sub"
                 type="submit"
               >
                 Update
@@ -132,33 +111,18 @@ function Testimonials() {
       <div>
         <Modal show={shows} onHide={handleCloses}  >
           <Modal.Header>
-            <Modal.Title>Add a Testimonial</Modal.Title>
+            <Modal.Title>Add a Choice</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleAddSubmit}>
               <div className="form-group">
-                <label>Heading</label>
+                <label>Choice</label>
                 <InputGroup className="mb-3">
                   <FormControl
-                    name="name"
-                    placeholder="Enter Name"
-                    type="comment"
+                    name="point"
+                    placeholder="Enter Choice"
+                    type="text"
                     className=""
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        [e.target.name]: e.target.value,
-                      })
-                    }}
-                    required
-                  />
-                </InputGroup>
-
-                <label>Comment</label>
-                <InputGroup className="mb-3">
-                  <FormControl
-                    name="comment"
-                    placeholder="Enter Comment Here"
                     onChange={(e) => {
                       setFormData({
                         ...formData,
@@ -189,28 +153,25 @@ function Testimonials() {
           className="add"
           onClick={() => handleShows()}
         >
-          Add Testimonial
+          Add Choice
         </Button>
       </div>
       <Table striped bordered hover>
-
         <tr>
-          <th>Name</th>
-          <th >Comment</th>
+          <th>point</th>
           <th >Actions </th>
         </tr>
 
-        {testimonials && testimonials.length > 0 ?
-          testimonials.map(b => {
+        {choice && choice.length > 0 ?
+          choice.map(b => {
             return (
               <>
                 <tr key={b._id}>
-                  <td>{b.name}</td>
-                  <td>{b.comment}</td>
+                  <td>{b.point}</td>
                   <Button
                     onClick={() => {
                       editHandler(b._id)
-                      handleShow(b._id, b.name, b.comment)
+                      handleShow(b._id, b.point)
                     }}
                     className="btn1"
 
@@ -227,4 +188,4 @@ function Testimonials() {
   )
 }
 
-export default Testimonials;
+export default Choose;

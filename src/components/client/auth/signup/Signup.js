@@ -120,7 +120,6 @@ function Signup() {
                       />
                     </div>
                     <button
-                      // onClick={handleRoute}
                       type="submit"
                       className="btn2"
                     >

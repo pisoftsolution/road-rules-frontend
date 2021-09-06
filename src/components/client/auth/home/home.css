@@ -11,6 +11,7 @@
   min-height: 85vh;
   margin-bottom: 120px;
 }
+
 .footer-card {
   text-align: initial;
 }
@@ -32,6 +33,7 @@ h2 {
   font-size: 40px;
   font-weight: 750 !important;
 }
+
 .left {
   padding: 5px;
   color: #264861;
@@ -200,4 +202,7 @@ div#homesecondimg1 {
     #dbe3e9 50%,
     #e3eaf0 60%
   );
+#key {
+  display: flex;
+  justify-content: center;
 }

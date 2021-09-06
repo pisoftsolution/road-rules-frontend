@@ -15,7 +15,7 @@ import Payment from './components/client/Payment/payment/payment';
 import Sidebar from './components/admin/Sidebar';
 import About from './components/admin/home/About';
 import AboutCards from './components/admin/home/AboutCards';
-import Choice from './components/admin/home/Choice';
+// import Choice from './components/admin/home/Choose';
 import Testimonials from './components/admin/home/Testimonials';
 import User from './components/admin/home/User';
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,6 +23,7 @@ import Instructor from './components/admin/home/Instructor';
 import Slots from './components/admin/home/Slots';
 import AllRides from './components/admin/home/AllRides';
 import Logout from './components/admin/home/Logout';
+import Choose from './components/admin/home/Choose';
 
 const useStyles = makeStyles({
   container: {
@@ -67,7 +68,7 @@ function App() {
           <Route exact path="/about" render={props => <About {...props} />} />
           <Route exact path="/aboutcards" render={props => <AboutCards {...props} />} />
           <Route exact path="/testimonial" render={props => <Testimonials {...props} />} />
-          <Route exact path="/choice" render={props => <Choice {...props} />} />
+          <Route exact path="/choice" render={props => <Choose {...props} />} />
           <Route exact path="/user" render={props => <User {...props} />} />
           <Route exact path="/instructor" render={props => <Instructor {...props} />} />
           <Route exact path="/slots" render={props => <Slots {...props} />} />
