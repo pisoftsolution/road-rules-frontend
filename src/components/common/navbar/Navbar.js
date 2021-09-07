@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
   return (
     <nav className="navbar navbar-light">
       <div className="container-fluid">
@@ -14,7 +15,10 @@ function Navbar() {
           </div>
 
           <div className="col-md-6 nj">
-            <ul className="mk">
+            <ul
+              className={isMobile ? 'nav-links-mobile' : 'nav-links'}
+              onClick={() => setIsMobile(false)}
+            >
               <li>Home</li>
               <li>Booking</li>
               <li>Contact Us</li>
@@ -25,6 +29,13 @@ function Navbar() {
                 alt="LOGO"
               ></img>
             </ul>
+            <button className="mobile-menu-icon">
+              {isMobile ? (
+                <i className="fas fa-times"></i>
+              ) : (
+                <i className="fas fa-bars"></i>
+              )}
+            </button>
           </div>
         </div>
       </div>
