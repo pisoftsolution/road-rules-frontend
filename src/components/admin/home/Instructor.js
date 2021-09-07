@@ -7,4 +7,5 @@ function Instructor() {
         </div>
     )
 }
+
 export default Instructor;

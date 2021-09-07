@@ -7,4 +7,5 @@ function AllRides() {
         </div>
     )
 }
+
 export default AllRides;

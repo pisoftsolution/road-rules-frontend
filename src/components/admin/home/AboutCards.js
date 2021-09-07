@@ -15,14 +15,12 @@ function AboutCards() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const aboutcard = useSelector(state => state.aboutcardsReducer?.aboutcardsData?.b);
-
   const editHandler = () => {
     dispatch(editAboutcards());
   }
   useEffect(() => {
     dispatch(getAboutcards())
   }, [shouldCall])
-
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -34,7 +32,6 @@ function AboutCards() {
         setFormData(initialState);
       })
   }
-
   const handleAddSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
@@ -44,7 +41,6 @@ function AboutCards() {
         setShouldCall(!shouldCall);
       })
   }
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (id, subHeading, text) => {
@@ -55,7 +51,6 @@ function AboutCards() {
     })
     setShow(true);
   }
-
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
   const handleShows = (subHeading, text) => {
@@ -118,7 +113,7 @@ function AboutCards() {
                 Update
               </Button>
               <Button
-                className="cancel"
+                className="cancel" id="close"
                 onClick={handleClose}
               >
                 Close
@@ -174,7 +169,7 @@ function AboutCards() {
                   Update
                 </Button>
                 <Button
-                  className="cancel"
+                  className="cancel" id="closes"
                   onClick={handleCloses}
                 >
                   Close
@@ -190,7 +185,7 @@ function AboutCards() {
           Add AboutCards
         </Button>
       </div>
-      <Table striped bordered hover>
+      <Table striped bordered hover mt-10>
         <tr>
           <th>subHeading</th>
           <th >Text</th>
@@ -208,13 +203,11 @@ function AboutCards() {
                       editHandler(b._id)
                       handleShow(b._id, b.subHeading, b.text)
                     }}
-                    className="btn1"
-
+                    className="btn1" id="edit"
                   >
                     Edit
                   </Button>
                 </tr>
-
               </>
             )
           }) : ''}
