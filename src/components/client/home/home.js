@@ -125,7 +125,6 @@ function Home() {
                   <h5 id="step2">Go to Login/Signup and create an account.</h5>
                 </div>
               </div>
-
               <div className="container">
                 <div className="card mb-2" id="k">
                   <h4 id="stepa"> Step 2</h4>
@@ -134,7 +133,6 @@ function Home() {
                   </h5>
                 </div>
               </div>
-
               <div className="container">
                 <div className="card mb-2" id="k">
                   <h4 id="stepb"> Step 3</h4>
@@ -149,7 +147,6 @@ function Home() {
               />
             </div>
           </div>
-
           <div className="container-fluid">
             <h2 className=" mb-5 text-center">Your Key to safe Driving</h2>
             <div className="container">
@@ -158,7 +155,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Choice</h4>
-
                       <p>
                         We are the best in terms of services that we offer you.
                         We ensure safety as our main priority therefore we are
@@ -181,7 +177,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Best Cars</h4>
-
                       <p>
                         Both the classroom driving classes as well as online
                         sessions are available with a wide range of cars.
@@ -199,7 +194,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">Pickup</h4>
-
                       <p>
                         We provide door pickup for our students at no extra
                         cost!
@@ -211,7 +205,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice">
                       <h4 className=" mt-5 text-center2">We train all ages</h4>
-
                       <p>
                         We have driving instructors who are certified. Apart
                         from that, they are also fit both mentally as well as
@@ -224,7 +217,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body keychoice ">
                       <h4 className=" mt-5 text-center2">Road Rules</h4>
-
                       <p>
                         We will train you correctly with all road rules and
                         regulations.
@@ -243,7 +235,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body" id="students">
                       <h4 className="  text-center2">Pickup</h4>
-
                       <p>
                         I am writing this review on behalf of my daughter, she
                         took lessons from this place and I only heard good
@@ -349,7 +340,6 @@ function Home() {
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-4 col-md-4 col-sm-12 col-12 my-4">
                 <div className=" footer-card px-3"></div>
                 <div>
