@@ -1,35 +1,38 @@
-#body{
-    min-height: 1000px;
-    background-image: url("https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png");
-    background-repeat: no-repeat;
-    background-position-y: 150px;
+div#root {
+  margin: auto;
+  width: 100%;
+}
+#body {
+  min-height: 800px;
+  background-image: url('https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png');
+  background-repeat: no-repeat;
+  background-position-y: 90px;
 }
 
-.mm{
-    padding-top: 50px;
+.mm {
+  padding-top: 50px;
 }
 
-#card{
-    
-    height: 480px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
-  }
+#card {
+  height: 480px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+}
 
 .container-fluid {
-      background-color: white;
-  }
-
-#email{
-    font-size: 17px;
-    display: flex;
-    margin-top: 45px;
-    font-weight: 500;
-    color: #264861;
+  background-color: white;
 }
 
-#password{
+#email {
+  font-size: 17px;
+  display: flex;
+  margin-top: 45px;
+  font-weight: 500;
+  color: #264861;
+}
+
+#password {
   font-size: 17px;
   display: flex;
   margin-top: 15px;
@@ -37,70 +40,70 @@
   color: #264861;
 }
 
-#signin{
-    font-weight: 770;
-    color: #264861;
-    font-size: 42px;
-    padding-left: 15px;
-   padding-right: 20px;
- }
-
-.m{
-    padding-right: 40px;
-    padding-left: 41px;
+#signin {
+  font-weight: 770;
+  color: #264861;
+  font-size: 42px;
+  padding-left: 15px;
+  padding-right: 20px;
 }
 
- button.btn {
+.m {
+  padding-right: 40px;
+  padding-left: 41px;
+}
+
+button.btn1 {
   width: 100%;
-   background-color: #04b1ed;
-  color: white;
+  color: #264861;
   margin-top: 55px;
   height: 45px;
+  font-size: 22px;
+}
+button.btn2 {
+  width: 100%;
+  color: #f0f4f7;
+  margin-top: 55px;
+  height: 45px;
+  background-color: blue;
+}
+button#signUp1 {
+  background-color: white;
+  border: none;
+  margin-top: 20px;
 }
 
-input.form-control{
+input.form-control {
   background-color: #e0f6ff;
   height: 45px;
 }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
+  color: blue;
 }
 
-.u{
-  padding-left: 0px!important;
-}
-
-#logo{
-  width: 380px;
-  height: 80px;
-  margin-top: 4px;
-}
-
-.navComponents{
+.navComponents {
   display: flex;
 }
+.bb {
+  width: 100%;
+  margin: auto;
+}
 
-#logo2{
+#logo2 {
   width: 30px;
   height: 30px;
   margin-top: 20px;
 }
 
-#signup{
+#signup {
   width: 81%;
   background-color: white;
   color: #264861;
   font-weight: 500;
   margin-top: 20px;
   font-size: 18px;
-}
-
-#logo {
-  width: 380px;
-  height: 79px;
-  margin-top: 4px;
-  margin-left: -30px;
 }
 
 ul {
@@ -117,10 +120,47 @@ ul.u {
 }
 
 li {
-  padding-right: 35px!important;
-  padding-top: 20px!important;
+  padding-right: 35px !important;
+  padding-top: 20px !important;
 }
 
-li:hover{
+li:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .mk {
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .bb {
+    width: 100%;
+  }
+  .pic {
+    width: 260px;
+  }
+  #card {
+    height: 524px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+  }
+  button#signUp1 {
+    background-color: white;
+    border: none;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .pic {
+    width: 380px;
+    height: 79px;
+    margin-top: 4px;
+  }
+  .wid {
+    display: flex;
+  }
+  .nj {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
