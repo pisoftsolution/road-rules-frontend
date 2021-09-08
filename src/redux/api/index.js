@@ -64,3 +64,6 @@ export const editChoose = (data, id) => {
   return axios.put(`${url}/choose/update-choose?id=${id}`, data)
 };
 
+export const getUsers = () => {
+  return axios.get(`${url}/admin/admin/get-users`)
+};
