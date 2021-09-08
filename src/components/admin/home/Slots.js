@@ -7,4 +7,5 @@ function Slots() {
         </div>
     )
 }
+
 export default Slots;

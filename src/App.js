@@ -11,7 +11,7 @@ import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
 import Payment from './components/client/Payment/payment/payment';
-import Navbar from './components/common/navbar/navbar';
+// import Navbar from './components/common/navbar/navbar';
 import Sidebar from './components/admin/Sidebar';
 import About from './components/admin/home/About';
 import AboutCards from './components/admin/home/AboutCards';
@@ -35,7 +35,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Navbar /> */}
       <Switch>
         <Route exact path="/" component={Signin}></Route>

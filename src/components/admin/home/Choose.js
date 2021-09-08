@@ -15,14 +15,12 @@ function Choose() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const choice = useSelector(state => state.chooseReducer?.chooseData?.b);
-
   const editHandler = () => {
     dispatch(editChoose());
   }
   useEffect(() => {
     dispatch(getChoose())
   }, [shouldCall])
-
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -34,7 +32,6 @@ function Choose() {
         setFormData(initialState);
       })
   }
-
   const handleAddSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
@@ -44,7 +41,6 @@ function Choose() {
         setShouldCall(!shouldCall);
       })
   }
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (id, point) => {
@@ -54,7 +50,6 @@ function Choose() {
     })
     setShow(true);
   }
-
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
   const handleShows = (point) => {
@@ -98,7 +93,7 @@ function Choose() {
                 Update
               </Button>
               <Button
-                className="cancel"
+                className="cancel" id="close"
                 onClick={handleClose}
               >
                 Close
@@ -107,7 +102,6 @@ function Choose() {
           </form>
         </Modal.Body>
       </Modal>
-
       <div>
         <Modal show={shows} onHide={handleCloses}  >
           <Modal.Header>
@@ -140,7 +134,7 @@ function Choose() {
                   Update
                 </Button>
                 <Button
-                  className="cancel"
+                  className="cancel" id="closes"
                   onClick={handleCloses}
                 >
                   Close
@@ -161,7 +155,6 @@ function Choose() {
           <th>point</th>
           <th >Actions </th>
         </tr>
-
         {choice && choice.length > 0 ?
           choice.map(b => {
             return (
@@ -173,13 +166,12 @@ function Choose() {
                       editHandler(b._id)
                       handleShow(b._id, b.point)
                     }}
-                    className="btn1"
+                    className="btn1" id="edit"
 
                   >
                     Edit
                   </Button>
                 </tr>
-
               </>
             )
           }) : ''}

@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import './All.css'
+
 function User() {
+
   return (
     <div className="tab">
       <h4>Users</h4>
@@ -46,4 +48,5 @@ function User() {
     </div>
   )
 }
+
 export default User;
