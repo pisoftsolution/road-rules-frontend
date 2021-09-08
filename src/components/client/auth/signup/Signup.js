@@ -8,20 +8,18 @@ import { emailOtp } from '../../../../redux/actions/verify';
 function Signup() {
   const initialState = { email: '', password: '', phone: '', fullName: '' };
   const [formData, setFormData] = useState(initialState);
+  const history = useHistory();
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signup(formData, history)).then((res) => {
-      console.log(res);
-      localStorage.setItem('email', formData.email);
-      localStorage.setItem('phone', formData.phone);
-      dispatch(emailOtp());
-    });
+    dispatch(signup(formData, history))
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem('email', formData.email);
+        localStorage.setItem('phone', formData.phone);
+        dispatch(emailOtp());
+      });
   };
-  const history = useHistory();
-  // const handleRoute = () => {
-  //   history.push(`/phoneotp`);
-  // };
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body2">
       <div className="container mm">
@@ -119,7 +117,6 @@ function Signup() {
                       />
                     </div>
                     <button
-                      // onClick={handleRoute}
                       type="submit"
                       className="btn2"
                     >
@@ -130,7 +127,7 @@ function Signup() {
               </div>
             </div>
             <div>
-              <button type="submit" id="signUp" className="btn signup">
+              <button className="btn signup">
                 Already a member
                 <a id="signUp">Signin</a>
               </button>
