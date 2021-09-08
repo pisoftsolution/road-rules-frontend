@@ -331,7 +331,6 @@ function Home() {
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-4 col-md-4 col-sm-12 col-12 mt-4">
                 <div className=" footer-card px-3">
                   <h3 className="text-primaryColor font-bold mb-4">Support</h3>

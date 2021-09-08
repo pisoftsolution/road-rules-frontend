@@ -6,7 +6,6 @@ import history from './History';
 import Signup from './components/client/auth/signup/signup';
 import PhoneOtp from './components/client/auth/phoneotp/phoneOtp';
 import EmailOtp from './components/client/auth/emailotp/emailOtp';
-// import Home from './components/client/auth/home/home';
 import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
