@@ -6,13 +6,15 @@ function Home() {
     <>
       <div className="homie">
         <div className="background">
-          <h1>Road Rules Driving School</h1>
-          <p3>
-            We offer a selection of ICBC driving test lessons in Surrey and
-            neighboring cities. Each of our driving lessons is conducted with an
-            experienced, friendly and supportive driving instructor who is ICBC
-            accredited.
-          </p3>
+          <div id="htext">
+            <h1>Road Rules Driving School</h1>
+            <p3>
+              We offer a selection of ICBC driving test lessons in Surrey and
+              neighboring cities. Each of our driving lessons is conducted with
+              an experienced, friendly and supportive driving instructor who is
+              ICBC accredited.
+            </p3>
+          </div>
         </div>
         <div className="conatiner-fluid">
           <div className="row">
