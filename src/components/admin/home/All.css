@@ -92,6 +92,14 @@ button.cancel {
   margin: 6px 93px 0px 0px;
 }
 
+#view {
+  margin-right: 88px;
+  width: 148px;
+  color: white;
+  height: 40px;
+  margin: 6px 93px 0px 0px;
+}
+
 #close {
   margin-left: 262px;
   background-color: red;
@@ -112,6 +120,11 @@ h1.headline {
   margin-right: 525px;
   margin-top: 61px;
   margin-bottom: -51px;
+}
+
+h1.headlines {
+  margin-right: 525px;
+  margin-top: 61px;
 }
 
 Table {
