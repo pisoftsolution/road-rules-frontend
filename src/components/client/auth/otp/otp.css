@@ -1,0 +1,12 @@
+#inpt {
+  margin-right: 10px;
+}
+.inputStyle {
+  border: '1px solid transparent';
+  border-radius: '8px';
+  width: '54px';
+  height: '54px';
+  font-size: '12px';
+  color: '#000';
+  font-weight: '400';
+}
