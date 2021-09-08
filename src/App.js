@@ -1,35 +1,38 @@
 import React from 'react';
 import './App.css';
+import Signin from './components/client/auth/login/signin';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import history from './History';
+import Signup from './components/client/auth/signup/signup';
+import PhoneOtp from './components/client/auth/phoneotp/phoneOtp';
+import EmailOtp from './components/client/auth/emailotp/emailOtp';
 import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
 import Payment from './components/client/Payment/payment/payment';
-// import Navbar from './components/common/navbar/navbar';
-import Sidebar from './components/admin/Sidebar';
-import About from './components/admin/home/About';
-import AboutCards from './components/admin/home/AboutCards';
-// import Choice from './components/admin/home/Choose';
-import Testimonials from './components/admin/home/Testimonials';
-import User from './components/admin/home/User';
-import { makeStyles } from "@material-ui/core/styles";
-import Instructor from './components/admin/home/Instructor';
-import Slots from './components/admin/home/Slots';
-import AllRides from './components/admin/home/AllRides';
-import Logout from './components/admin/home/Logout';
-import Choose from './components/admin/home/Choose';
+import Navbar from './components/common/navbar/navbar';
 import OTPBox from './components/client/auth/otp/otp';
 import Home from './components/client/home/home';
 
-const useStyles = makeStyles({
-  container: {
-    display: "flex"
-  }
-});
-
 function App() {
-  const classes = useStyles();
   return (
     <div className="App">
+      <Navbar />
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={Signin}></Route>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/signup" component={Signup}></Route>
+          <Route exact path="/phoneotp" component={PhoneOtp}></Route>
+          <Route exact path="/signin" component={Signin}></Route>
+          <Route exact path="/email-otp" component={EmailOtp}></Route>
+          <Route exact path="/success" component={Success}></Route>
+          <Route exact path="/cancel" component={Cancel}></Route>
+          <Route exact path="/stripe" component={Stripe}></Route>
+          <Route exact path="/payment" component={Payment}></Route>
+          <Route exact path="/otp" component={OTPBox}></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

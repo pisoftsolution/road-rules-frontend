@@ -1,24 +1,24 @@
-import OtpInput from 'react-otp-input';
-import React, { useState } from 'react';
+// import OtpInput from 'react-otp-input';
+import React from 'react';
 import './otp.css';
 
 export default function App() {
-  const [code, setCode] = useState('');
+  // const [code, setCode] = useState('');
 
-  const handleChange = (code) => setCode(code);
+  // const handleChange = (code) => setCode(code);
 
   return (
     <div className="Otp">
-      <h1>Hello CodeSandbox</h1>
+      <h1>Hello</h1>
       <div id="inpt">
-        <OtpInput
+        {/* <OtpInput
           size="large"
           value={code}
           onChange={handleChange}
           numInputs={6}
           isInputNum={true}
           shouldAutoFocus={true}
-        />
+        /> */}
       </div>
 
       <input

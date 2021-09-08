@@ -8,7 +8,7 @@ const stripePromise = loadStripe(
 );
 
 function Payment() {
-  // console.log(stripePromise); 
+  // console.log(stripePromise);
   const handleClick = async () => {
     const stripe = await stripePromise;
     const response = await axios.post(
