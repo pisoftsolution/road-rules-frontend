@@ -28,6 +28,18 @@ export const phoneOtpVerify = (formData, email, phone) => {
   );
 };
 
+export const getAbout = () => {
+  return axios.get(`${url}/about/about`)
+};
+
+export const addAbout = (formData) => {
+  return axios.post(`${url}/about/add-about`, formData)
+};
+
+export const editAbout = (data, id) => {
+  return axios.put(`${url}/about/update-about?id=${id}`, data)
+};
+
 export const getAboutcards = () => {
   return axios.get(`${url}/aboutcards/about-cards`)
 };
@@ -66,4 +78,28 @@ export const editChoose = (data, id) => {
 
 export const getUsers = () => {
   return axios.get(`${url}/admin/admin/get-users`)
+};
+
+export const getInstructor = () => {
+  return axios.get(`${url}/instructor/get-instructors`)
+};
+
+export const addInstructor = (formData) => {
+  return axios.post(`${url}/instructor/add-instructor`, formData)
+};
+
+export const editInstructor = (data, id) => {
+  return axios.put(`${url}/instructor/update-instructor?id=${id}`, data)
+};
+
+export const getSlot = () => {
+  return axios.get(`${url}/slot/all-slots`)
+};
+
+export const addSlot = (formData) => {
+  return axios.post(`${url}/slot/add-slot`, formData)
+};
+
+export const editSlot = (data, id) => {
+  return axios.put(`${url}/slot/modify-slot?id=${id}`, data)
 };

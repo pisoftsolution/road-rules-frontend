@@ -15,9 +15,6 @@ function Choose() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const choice = useSelector(state => state.chooseReducer?.chooseData?.b);
-  const editHandler = () => {
-    dispatch(editChoose());
-  }
   useEffect(() => {
     dispatch(getChoose())
   }, [shouldCall])
@@ -34,7 +31,6 @@ function Choose() {
   }
   const handleAddSubmit = (e) => {
     e.preventDefault();
-    // console.log(formData);
     dispatch(addChoose(formData, choice))
       .then(res => {
         console.log(res);
@@ -93,7 +89,7 @@ function Choose() {
                 Update
               </Button>
               <Button
-                className="cancel" id="close"
+                className="cancel" id="closeMT"
                 onClick={handleClose}
               >
                 Close
@@ -160,10 +156,9 @@ function Choose() {
             return (
               <>
                 <tr key={b._id}>
-                  <td>{b.point}</td>
+                  <td className="tabledata">{b.point}</td>
                   <Button
                     onClick={() => {
-                      editHandler(b._id)
                       handleShow(b._id, b.point)
                     }}
                     className="btn1" id="edit"

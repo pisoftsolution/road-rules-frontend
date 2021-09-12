@@ -15,9 +15,6 @@ function Testimonials() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const testimonials = useSelector(state => state.testimonialReducer?.testimonialData?.b);
-  const editHandler = () => {
-    dispatch(editTestimonial());
-  }
   useEffect(() => {
     dispatch(getTestimonial())
   }, [shouldCall])
@@ -88,7 +85,6 @@ function Testimonials() {
                   required
                 />
               </InputGroup>
-
               <label>comment</label>
               <InputGroup className="mb-3">
                 <FormControl
@@ -196,15 +192,13 @@ function Testimonials() {
             return (
               <>
                 <tr key={b._id}>
-                  <td>{b.name}</td>
-                  <td>{b.comment}</td>
+                  <td className="tabledata">{b.name}</td>
+                  <td className="tabledata">{b.comment}</td>
                   <Button
                     onClick={() => {
-                      editHandler(b._id)
                       handleShow(b._id, b.name, b.comment)
                     }}
                     className="btn1" id="edit"
-
                   >
                     Edit
                   </Button>
