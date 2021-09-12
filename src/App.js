@@ -3,7 +3,7 @@ import './App.css';
 import Signin from './components/client/auth/login/Signin';
 import { Route, Switch } from 'react-router-dom';
 import Signup from './components/client/auth/signup/Signup';
-import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
+import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp'; 
 import EmailOtp from './components/client/auth/emailotp/EmailOtp';
 import Home from './components/home/Home'
 import Success from './components/client/Payment/success/success';
