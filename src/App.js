@@ -9,7 +9,7 @@ import Home from './components/home/Home'
 import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
-import Payment from './components/client/Payment/payment/payment'; 
+import Payment from './components/client/Payment/payment/payment';  
 // import Navbar from './components/common/navbar/navbar';
 import HomeUI from './components/homeui/home';
 import AdminRouting from './components/admin/home/adminRouting';
