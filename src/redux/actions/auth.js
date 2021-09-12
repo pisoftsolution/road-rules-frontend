@@ -37,3 +37,13 @@ export const login = (formData, history) => async (dispatch) => {
 //         alert(e?.response?.data?.msg);
 //     }
 // };
+
+// export const getUsers = () => async (dispatch)=>{
+//     try {
+//         const { data } = await api.getUsers();
+//         dispatch({type: GET_USERS, data});
+//         return data;
+//     } catch (e){
+//         alert(e?.response?.data?.msg);
+//       }
+// }

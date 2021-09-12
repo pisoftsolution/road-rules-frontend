@@ -15,14 +15,9 @@ function Testimonials() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const testimonials = useSelector(state => state.testimonialReducer?.testimonialData?.b);
-
-  const editHandler = () => {
-    dispatch(editTestimonial());
-  }
   useEffect(() => {
     dispatch(getTestimonial())
   }, [shouldCall])
-
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -34,7 +29,6 @@ function Testimonials() {
         setFormData(initialState);
       })
   }
-
   const handleAddSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
@@ -44,7 +38,6 @@ function Testimonials() {
         setShouldCall(!shouldCall);
       })
   }
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (id, name, comment) => {
@@ -55,7 +48,6 @@ function Testimonials() {
     })
     setShow(true);
   }
-
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
   const handleShows = (name, comment) => {
@@ -93,7 +85,6 @@ function Testimonials() {
                   required
                 />
               </InputGroup>
-
               <label>comment</label>
               <InputGroup className="mb-3">
                 <FormControl
@@ -119,7 +110,7 @@ function Testimonials() {
                 Update
               </Button>
               <Button
-                className="cancel"
+                className="cancel" id="close"
                 onClick={handleClose}
               >
                 Close
@@ -128,7 +119,6 @@ function Testimonials() {
           </form>
         </Modal.Body>
       </Modal>
-
       <div>
         <Modal show={shows} onHide={handleCloses}  >
           <Modal.Header>
@@ -153,7 +143,6 @@ function Testimonials() {
                     required
                   />
                 </InputGroup>
-
                 <label>Comment</label>
                 <InputGroup className="mb-3">
                   <FormControl
@@ -176,7 +165,7 @@ function Testimonials() {
                   Update
                 </Button>
                 <Button
-                  className="cancel"
+                  className="cancel" id="closes"
                   onClick={handleCloses}
                 >
                   Close
@@ -193,32 +182,27 @@ function Testimonials() {
         </Button>
       </div>
       <Table striped bordered hover>
-
         <tr>
           <th>Name</th>
           <th >Comment</th>
           <th >Actions </th>
         </tr>
-
         {testimonials && testimonials.length > 0 ?
           testimonials.map(b => {
             return (
               <>
                 <tr key={b._id}>
-                  <td>{b.name}</td>
-                  <td>{b.comment}</td>
+                  <td className="tabledata">{b.name}</td>
+                  <td className="tabledata">{b.comment}</td>
                   <Button
                     onClick={() => {
-                      editHandler(b._id)
                       handleShow(b._id, b.name, b.comment)
                     }}
-                    className="btn1"
-
+                    className="btn1" id="edit"
                   >
                     Edit
                   </Button>
                 </tr>
-
               </>
             )
           }) : ''}

@@ -19,7 +19,6 @@ export const addAboutcards = (formData) => async (dispatch) => {
     }
 }
 
-
 export const editAboutcards = (formData, id) => async (dispatch) => {
     try {
         const { data } = await api.editAboutcards(formData, id);
