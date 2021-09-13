@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { emailOtpVerify } from '../../../../redux/actions/verify';
+// import OTPInput, { ResendOTP } from 'otp-input-react';
 
 function EmailOtp() {
+  // const [OTP, setOTP] = useState('');
   const initialState = { emailOtp: '' };
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
@@ -28,6 +30,18 @@ function EmailOtp() {
                 </h4>
                 <div className="m">
                   <form onSubmit={handleSubmit}>
+                    {/* <OTPInput
+                      value={OTP}
+                      onChange={setOTP}
+                      autoFocus
+                      OTPLength={4}
+                      otpType="number"
+                      disabled={false}
+                      secure
+                    />
+                    <ResendOTP
+                      onResendClick={() => console.log('Resend clicked')}
+                    /> */}
                     <label id="email">OTP</label>
                     <div className="input-group ">
                       <input

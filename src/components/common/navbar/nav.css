@@ -1,0 +1,8 @@
+div#navbarSupportedContent {
+  justify-content: end;
+  flex-grow: inherit;
+  border-color: none;
+}
+img {
+  cursor: pointer;
+}
