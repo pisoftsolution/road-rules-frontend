@@ -20,7 +20,7 @@ function App() {
       {/* <Navbar /> */}
       {/* <Navbar /> */}
       <Switch>
-        <Route exact path="/" component={Signin}></Route>
+        <Route exact path="/" component={Signin}></Route> 
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={HomeUI} />
         <Route exact path="/signup" component={Signup}></Route>
