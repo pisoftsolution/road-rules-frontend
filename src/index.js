@@ -7,6 +7,7 @@ import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 ReactDOM.render(
   <Provider store={store}>
