@@ -99,47 +99,47 @@ const Sidebar = () => {
     {
       text: "About",
       icon: <InboxIcon />,
-      onClick: () => history.push("/about")
+      onClick: () => history.push("/admin/about")
     },
     {
       text: "AboutCards",
       icon: <MailIcon />,
-      onClick: () => history.push("/aboutcards")
+      onClick: () => history.push("/admin/aboutcards")
     },
     {
       text: "Testimonial",
       icon: <MailIcon />,
-      onClick: () => history.push("/testimonial")
+      onClick: () => history.push("/admin/testimonial")
     },
     {
       text: "Choice",
       icon: <MailIcon />,
-      onClick: () => history.push("/choice")
+      onClick: () => history.push("/admin/choice")
     },
     {
       text: "User",
       icon: <MailIcon />,
-      onClick: () => history.push("/user")
+      onClick: () => history.push("/admin/user")
     },
     {
       text: "Instructor",
       icon: <MailIcon />,
-      onClick: () => history.push("/instructor")
+      onClick: () => history.push("/admin/instructor")
     },
     {
       text: "Slots",
       icon: <MailIcon />,
-      onClick: () => history.push("/slots")
+      onClick: () => history.push("/admin/slots")
     },
     {
       text: "All Rides",
       icon: <MailIcon />,
-      onClick: () => history.push("/allrides")
+      onClick: () => history.push("/admin/allrides")
     },
     {
       text: "Logout",
       icon: <MailIcon />,
-      onClick: () => history.push("/logout")
+      onClick: () => history.push("/admin/logout")
     }
   ];
   return (

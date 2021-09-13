@@ -1,8 +1,36 @@
 .tab{
-    width: 800px;
+    width: 800px; 
     margin-left: 61px;
     margin-bottom: 107px;
     margin-top: 92px;
+}
+
+/* textarea {
+  width: 464px;
+  padding-bottom: 207px;
+  margin-top: 10px;
+  background-color: rgb(176, 219, 236);
+  border-color: rgb(176, 219, 236);
+} */
+
+textarea {
+  width: 427px;
+  padding-bottom: 199px;
+  margin-top: 10px;
+  background-color: rgb(191 243 251);
+  border-color: rgb(176, 219, 236);
+}
+
+textarea :hover {
+  border-color: rgb(176, 219, 236);
+}
+
+label.subheading {
+  font-size: 38px;
+  font-weight: 500;
+  color: unset;
+  margin-top: 155px;
+  padding-top: 8px;
 }
 
 #sec3 {
@@ -32,6 +60,8 @@ button.cancel {
 }
 
 #sec2 {
+    margin-right: -173px;
+    margin-top: 53px;
     width: 70%;
     position: relative;
     display: flex;
@@ -46,12 +76,27 @@ button.cancel {
     box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
 }
 
+/* #sec2 {
+  margin-right: -173px;
+ 
+  padding-top: 34px;
+  margin-top: 53px;
+  
+} */
+
+#parra{
+  height: -1px;
+  margin-top: 24px;
+  /* border-style: solid;
+  border-color: rgb(176, 219, 236); */
+}
+/*  */
 #sec3{
     display: contents;
 }
 
 #sec2 {
-    padding-top: 65px;
+    padding-top: 35px;
 }
 
 #seeprofile{
@@ -60,10 +105,13 @@ button.cancel {
 
 #seeprofile {
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background-color: #04b1ed;
+    border-color: #04b1ed;
     width: 80%;
-    margin: auto;
+    /* margin: auto; */
+    /* margin-top: 99px; */
+    margin-bottom: 150px;
+    margin-top: 34px;
 }
 
 #sec4 {
@@ -88,23 +136,24 @@ button.cancel {
   margin-right: 88px;
   width: 80px;
   color: white;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
   height: 40px;
   margin: 6px 93px 0px 0px;
+  font-size: 20px;
 }
 
 #view {
-  margin-right: 88px;
   width: 148px;
   color: white;
   height: 40px;
-  margin: 6px 93px 0px 0px;
 }
 
 #close {
   margin-left: 262px;
   background-color: red;
   text-decoration: none;
-  margin-top: 0px;
+  margin-top: -63px;
   width: 90px;
 }
 
@@ -114,6 +163,10 @@ button.cancel {
   text-decoration: none;
   margin-top: -60px;
   width: 90px;
+}
+
+button#closeMT {
+  margin-top: 10px;
 }
 
 h1.headline {
@@ -127,6 +180,10 @@ h1.headlines {
   margin-top: 61px;
 }
 
+td.tabledata {
+  padding-right: 105px;
+}
+
 Table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -135,7 +192,7 @@ Table {
     margin-top: 20px;
   }
   table.table.table-striped.table-bordered.table-hover {
-    width: 90%;
+    width: 107%;
   }
   td, th {
     border: 1px solid #dddddd;
@@ -161,7 +218,7 @@ Table {
     
   .Apps {
     width: 70%;
-    margin-left: 62px;
+    margin-left: 26px;
     margin-bottom: 395px;
   }
     
@@ -177,6 +234,16 @@ Table {
   .form-group {
     margin-left: 34px;
   }
+
+  #card-design{
+    margin-left: 34px;
+    margin-top: -69px;
+  }
+
+  /* .form-group {
+    margin-left: 34px;
+    margin-top: -69px;
+} */
   
   .ReactModal__Content.ReactModal__Content--after-open {
     width: 37%;
@@ -276,6 +343,8 @@ Table {
         height: 80%;
         background-color: black;
   }
+
+  
     
     h1 {
       margin-left: 134px;
@@ -291,3 +360,10 @@ Table {
       border-width: 1px 0;
       margin-top: 12px;
   }
+
+  @media (min-width: 576px){
+  .modal-dialog {
+      max-width: 500px;
+      margin: 5.75rem auto;
+  }
+}

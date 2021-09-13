@@ -15,12 +15,6 @@ function User() {
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
   const adduser = useSelector(state => state.userReducer?.usersData?.b);
-  // useEffect(() => {
-  //   dispatch(getUsers());
-  // }, [])
-  const editHandler = () => {
-    dispatch();
-  }
   useEffect(() => {
     dispatch(getUsers())
   }, [shouldCall])
@@ -267,13 +261,12 @@ function User() {
             return (
               <>
                 <tr key={b._id}>
-                  <td>{b.fullName}</td>
-                  <td>{b.email}</td>
-                  <td>{b.phone}</td>
-                  <td>{b.role}</td>
+                  <td className="tabledata">{b.fullName}</td>
+                  <td className="tabledata">{b.email}</td>
+                  <td className="tabledata">{b.phone}</td>
+                  <td className="tabledata">{b.role}</td>
                   <Button
                     onClick={() => {
-                      editHandler(b._id)
                       handleShow(b._id, b.fullName, b.email, b.phone, b.role)
                     }}
                     className="btn1" id="view"
