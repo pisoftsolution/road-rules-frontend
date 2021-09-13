@@ -1,0 +1,10 @@
+.timefix{
+    width: 18%;
+    padding: 4px;
+    margin-bottom: 12px;
+}
+
+button.addevent.btn.btn-primary {
+    margin-left: 426px;
+    margin-top: -20px;
+}

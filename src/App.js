@@ -13,6 +13,7 @@ import Payment from './components/client/Payment/payment/payment';
 // import Navbar from './components/common/navbar/navbar';
 import HomeUI from './components/homeui/home';
 import AdminRouting from './components/admin/home/adminRouting';
+import Schedule from './components/pages/calendar';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/cancel" component={Cancel}></Route>
         <Route exact path="/stripe" component={Stripe}></Route>
         <Route exact path="/payment" component={Payment}></Route>
+        <Route exact path="/calendar" component={Schedule}></Route>
         < AdminRouting />
       </Switch>
     </div>
