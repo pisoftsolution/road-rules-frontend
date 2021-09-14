@@ -331,7 +331,6 @@ function Home() {
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-4 col-md-4 col-sm-12 col-12 mt-4">
                 <div className=" footer-card px-3">
                   <h3 className="text-primaryColor font-bold mb-4">Support</h3>
@@ -369,61 +368,5 @@ function Home() {
     </>
   );
 }
-// import React from 'react';
-// import { useHistory } from 'react-router-dom';
-
-// function Home() {
-//   const history = useHistory();
-//   const token = localStorage.getItem('token');
-//   return (
-//     <>
-//       <div className="card d-flex flex-row justify-content-between">
-//         {token ? (
-//           <button
-//             type="button"
-//             className="btn btn-secondary col-5"
-//             onClick={() => {
-//               history.push('/phoneotp');
-//             }}
-//           >
-//             Signup
-//           </button>
-//         ) : (
-//           <button
-//             type="button"
-//             className="btn btn-secondary col-5"
-//             onClick={() => {
-//               history.push('/email-otp');
-//             }}
-//           >
-//             Submit
-//           </button>
-//         )}
-//         {token ? (
-//           <button
-//             type="button"
-//             className="btn btn-secondary col-5"
-//             onClick={() => {
-//               history.push('/login');
-//             }}
-//           >
-//             Submit
-//           </button>
-//         ) : (
-//           <button
-//             type="button"
-//             className="btn btn-secondary col-5"
-//             onClick={() => {
-//               history.push('/login');
-//             }}
-//           >
-//             Logout
-//           </button>
-//         )}
-//       </div>
-//     </>
-//   );
-// }
-
 
 export default Home;

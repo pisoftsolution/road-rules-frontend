@@ -1,16 +1,15 @@
-import swal from 'sweetalert';
 import * as api from '../api';
-import { SIGNUP, LOGIN } from '../constants';
+import { SIGNUP, LOGIN, } from '../constants';
 
 export const signup = (formData, history) => async (dispatch) => {
     try {
         const { data } = await api.signup(formData);
         dispatch({ type: SIGNUP, data });
-        swal("Signup successful");
-        history.push('/email-otp');
+        alert("Signup successful");
+        history.push('/verify/email');
         return data;
     } catch (e) {
-        swal(e?.response?.data?.msg);
+      alert(e?.response?.data?.msg);
     }
 };
 
@@ -18,12 +17,12 @@ export const login = (formData, history) => async (dispatch) => {
     try {
         const { data } = await api.login(formData);
         dispatch({ type: LOGIN, data });
-        swal("Login successful");
+        alert("Login successful");
         localStorage.setItem("token", data.token);
         history.push('/');
         return data;
     } catch (e) {
-        swal(e?.response?.data?.msg);
+        alert(e?.response?.data?.msg);
     }
 };
 
@@ -37,13 +36,3 @@ export const login = (formData, history) => async (dispatch) => {
 //         alert(e?.response?.data?.msg);
 //     }
 // };
-
-// export const getUsers = () => async (dispatch)=>{
-//     try {
-//         const { data } = await api.getUsers();
-//         dispatch({type: GET_USERS, data});
-//         return data;
-//     } catch (e){
-//         alert(e?.response?.data?.msg);
-//       }
-// }

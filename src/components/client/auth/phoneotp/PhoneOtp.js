@@ -6,7 +6,7 @@ import('../emailotp/emailotp.css');
 
 function PhoneOtp() {
   const initialState = { phoneOtp: '' };
-  const [formData, setFormData] = useState(initialState); 
+  const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,9 +17,9 @@ function PhoneOtp() {
     });
   };
   const history = useHistory();
-  // const handleRoute = () => {
-  //   history.push(`/email-otp`);
-  // };
+  const handleRoute = () => {
+    history.push(`/email-otp`);
+  };
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body">
       <div className="container mm">
@@ -52,7 +52,7 @@ function PhoneOtp() {
                       />
                     </div>
                     <button
-                      // onClick={handleRoute}
+                      onClick={handleRoute}
                       type="submit"
                       className="btn3"
                     >
