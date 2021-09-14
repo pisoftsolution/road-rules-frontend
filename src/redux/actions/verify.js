@@ -1,4 +1,3 @@
-import swal from "sweetalert";
 import * as api from "../api";
 import { EMAIL_OTP, EMAIL_OTP_VERIFY, PHONE_OTP, PHONE_OTP_VERIFY } from "../constants";
 
@@ -9,7 +8,7 @@ export const emailOtp = () => async (dispatch) => {
         const { data } = await api.emailOtp(email);
         dispatch({ type: EMAIL_OTP, data });
     } catch (e) {
-        swal(e?.response?.data?.msg);
+        alert(e?.response?.data?.msg);
     }
 }
 
@@ -23,7 +22,7 @@ export const emailOtpVerify = (otp, history) => async (dispatch) => {
         history.push('/verify/phone');
         return data;
     } catch (e) {
-        swal(e?.response?.data?.msg);
+        alert(e?.response?.data?.msg);
     }
 }
 
@@ -34,11 +33,11 @@ export const phoneOtp = () => async (dispatch) => {
         dispatch({ type: PHONE_OTP, data });
         return data;
     } catch (e) {
-        swal(e?.response?.data?.msg);
+        alert(e?.response?.data?.msg);
     }
 }
 
-export const phoneOtpVerify = (otp) => async (dispatch) => {
+export const phoneOtpVerify = (otp ) => async (dispatch) => {
     try {
         const phone = localStorage.getItem('phone')
         const email = localStorage.getItem('email')
@@ -49,6 +48,6 @@ export const phoneOtpVerify = (otp) => async (dispatch) => {
         dispatch({ type: PHONE_OTP_VERIFY, data });
         return data;
     } catch (e) {
-        swal(e?.response?.data?.msg);
+        alert(e?.response?.data?.msg);
     }
 }
