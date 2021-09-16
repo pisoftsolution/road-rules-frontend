@@ -13,13 +13,15 @@ import Payment from './components/client/Payment/payment/payment';
 // import Navbar from './components/common/navbar/navbar';
 import HomeUI from './components/homeui/home';
 import AdminRouting from './components/admin/home/adminRouting';
-import Schedule from './components/pages/calendar';
+import Schedule from './components/client/pages/calendar';
+import Navbar from './components/common/navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Signin}></Route>
         <Route exact path="/" component={Home} />
