@@ -6,9 +6,11 @@ export const getSlot = () => async (dispatch) => {
         const { data } = await api.getSlot();
         dispatch({ type: GET_SLOT, data });
     } catch (e) {
+        console.log(e);
         alert(e?.response?.data?.msg);
     }
 }
+
 
 export const addSlot = (formData) => async (dispatch) => {
     try {

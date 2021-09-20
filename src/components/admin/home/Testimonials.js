@@ -191,7 +191,7 @@ function Testimonials() {
           testimonials.map(b => {
             return (
               <>
-                <tr key={b._id}>
+                <tr key={b._id} className="tablecolor">
                   <td className="tabledata">{b.name}</td>
                   <td className="tabledata">{b.comment}</td>
                   <Button

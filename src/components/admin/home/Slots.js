@@ -379,7 +379,7 @@ function Slots() {
           book.map(b => {
             return (
               <>
-              <tbody>
+              <tbody className="tablecolor">
                 <tr key={b._id}>
                   <td className="tabledata">{b.date}</td>
                   <td className="tabledata">{b.time}</td>

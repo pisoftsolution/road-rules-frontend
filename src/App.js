@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Signup from './components/client/auth/signup/Signup';
 import PhoneOtp from './components/client/auth/phoneotp/PhoneOtp';
 import EmailOtp from './components/client/auth/emailotp/EmailOtp';
-import Home from './components/home/Home'
+import Home from './components/home/Home';
 import Success from './components/client/Payment/success/success';
 import Cancel from './components/client/Payment/Cancel/cancel';
 import Stripe from './components/client/Payment/payment/stripe';
@@ -15,6 +15,10 @@ import HomeUI from './components/homeui/home';
 import AdminRouting from './components/admin/home/adminRouting';
 import Schedule from './components/client/pages/calendar';
 import Navbar from './components/common/navbar/Navbar';
+import SlotDetails from './components/client/pages/slotDetails';
+import SlotView from './components/client/pages/slotView';
+import Address from './components/client/pages/address';
+import NewAddress from './components/client/pages/newAddress';
 
 function App() {
   return (
@@ -35,10 +39,16 @@ function App() {
         <Route exact path="/stripe" component={Stripe}></Route>
         <Route exact path="/payment" component={Payment}></Route>
         <Route exact path="/calendar" component={Schedule}></Route>
-        < AdminRouting />
+        <Route exact path="/slotdetails" component={SlotDetails}></Route>
+        <Route exact path="/slotview" component={SlotView}></Route>
+        <Route exact path="/pickupaddress" component={Address}></Route>
+        <Route exact path="/newaddress" component={NewAddress}></Route>
+        <AdminRouting />
       </Switch>
     </div>
   );
 }
 
 export default App;
+
+App.displayName = 'App';

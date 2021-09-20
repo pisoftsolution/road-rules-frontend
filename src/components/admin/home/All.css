@@ -204,8 +204,12 @@ Table {
     height: 50px;
   }
   
-  tr:nth-child(even) {
+  /* tr:nth-child(even) {
     background-color: #dddddd;
+  } */
+
+  .tablecolor,tr:nth-child(even) {
+    background-color: #f2f2f2;
   }
   
   .Apps {

@@ -179,7 +179,7 @@ function AboutCards() {
           ? aboutcard.map((b) => {
               return (
                 <>
-                  <tr key={b._id}>
+                  <tr key={b._id} className="tablecolor">
                     <td className="tabledata">{b.subHeading}</td>
                     <td className="tabledata">{b.text}</td>
                     <Button

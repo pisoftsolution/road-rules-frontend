@@ -155,7 +155,7 @@ function Choose() {
           choice.map(b => {
             return (
               <>
-                <tr key={b._id}>
+                <tr key={b._id} className="tablecolor">
                   <td className="tabledata">{b.point}</td>
                   <Button
                     onClick={() => {

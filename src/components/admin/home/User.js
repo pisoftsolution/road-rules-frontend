@@ -260,7 +260,7 @@ function User() {
           adduser.map(b => {
             return (
               <>
-                <tr key={b._id}>
+                <tr key={b._id} className="tablecolor">
                   <td className="tabledata">{b.fullName}</td>
                   <td className="tabledata">{b.email}</td>
                   <td className="tabledata">{b.phone}</td>
