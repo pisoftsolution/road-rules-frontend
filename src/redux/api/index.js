@@ -27,3 +27,7 @@ export const phoneOtpVerify = (formData, email, phone) => {
     formData
   );
 };
+
+// export const getTestimonial = () => {
+//   return axios.get(`${url}/testimonial/testimonial`);
+// };

@@ -1,7 +1,19 @@
 import React from 'react';
+import Slider from 'react-slick';
 import './home.css';
 
 function Home() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    // slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000
+    // cssEase: 'linear'
+  };
+
   return (
     <>
       <div className="homie">
@@ -117,7 +129,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="container-fluid" id="homesecondimg1">
+            <div className="container-fluid" id="homesecondimg">
               <h2 id="three">Booking in threee EasysSteps</h2>
               <div className="container">
                 <div className="card mb-2" id="k">
@@ -215,7 +227,7 @@ function Home() {
                       <p>
                         We have driving instructors who are certified. Apart
                         from that, they are also fit both mentally as well as
-                        physically who train classes 5 and 7.{' '}
+                        physically who train classes 5 and 7.
                       </p>
                     </div>
                   </div>
@@ -235,7 +247,8 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="container-fluid" id="homesecondimg1">
+
+          {/* <div className="container-fluid" id="homesecondimg1">
             <div className="container">
               <h2 id="three">What our students have to say about us.</h2>
               <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -243,7 +256,6 @@ function Home() {
                   <div className="card h-100">
                     <div className="card-body" id="students">
                       <h4 className="  text-center2">Pickup</h4>
-
                       <p>
                         I am writing this review on behalf of my daughter, she
                         took lessons from this place and I only heard good
@@ -305,8 +317,106 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
+
+        <div className="conatiner" id="homesecondimg2">
+          <div>
+            <h3>What our students have to say about us.</h3>
+          </div>
+          <Slider {...settings}>
+            <div className="col">
+              <div className="card vg" id="c1">
+                <div className="card-body  ">
+                  <h4 className="  text-center2">Pickup</h4>
+                  <p className="p1">
+                    I am writing this review on behalf of my daughter, she took
+                    lessons from this place and I only heard good things about
+                    it. She had her class 7 road test coming up and was worried
+                    she would fail, but the instructor made it easy for her to
+                    understand and told her to stay confident and you can do it.
+                    She ended up passing her road test and want to give a huge
+                    thank you to Road Rules Driving School, for teaching in a
+                    well-mannered environment and staying professional.
+                  </p>
+                  <div className="gt">
+                    <img
+                      src="https://www.roadrules.info/images/testimonial-2.svg"
+                      alt="about"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col ">
+              <div className="card vg" id="c2">
+                <div className="card-body  ">
+                  <h4 className="  text-center2">Pickup</h4>
+                  <p className="p1">
+                    I am writing this review on behalf of my daughter, she took
+                    lessons from this place and I only heard good things about
+                    it. She had her class 7 road test coming up and was worried
+                    she would fail, but the instructor made it easy for her to
+                    understand and told her to stay confident and you can do it.
+                    She ended up passing her road test and want to give a huge
+                    thank you to Road Rules Driving School, for teaching in a
+                    well-mannered environment and staying professional.
+                  </p>
+                  <div className="gt">
+                    <img
+                      src="https://www.roadrules.info/images/testimonial-2.svg"
+                      alt="about"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col ">
+              <div className="card vg" id="c3">
+                <div className="card-body  ">
+                  <h4 className="  text-center2">Pickup</h4>
+                  <p className="p1">
+                    I am writing this review on behalf of my daughter, she took
+                    lessons from this place and I only heard good things about
+                    it. She had her class 7 road test coming up and was worried
+                    she would fail, but the instructor made it easy for her to
+                    understand and told her to stay confident and you can do it.
+                    She ended up passing her road test and want to give a huge
+                    thank you to Road Rules Driving School, for teaching in a
+                    well-mannered environment and staying professional.
+                  </p>
+                  <div className="gt">
+                    <img
+                      src="https://www.roadrules.info/images/testimonial-2.svg"
+                      alt="about"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col ">
+              <div className="card vg" id="c4">
+                <div className="card-body ">
+                  <h4 className="  text-center2">Pickup</h4>
+                  <p className="p1">
+                    I am writing this review on behalf of my daughter, she took
+                    lessons from this place and I only heard good things about
+                    it. She had her class 7 road test coming up and was worried
+                    she would fail, but the instructor made it easy for her to
+                    understand and told her to stay confident and you can do it.
+                  </p>
+                  <div className="gt">
+                    <img
+                      src="https://www.roadrules.info/images/testimonial-2.svg"
+                      alt="about"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+
         <div className="container-fluid" id="footer">
           <footer className="container">
             <div className="row">
