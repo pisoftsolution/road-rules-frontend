@@ -1,6 +1,17 @@
 #middle {
   width: '100%';
 }
+.slick-slider.slick-initialized {
+  width: 80%;
+  margin: auto;
+}
+.slick-track {
+  height: 250px;
+}
+.slick-slider.slick-initialized {
+  padding-top: 50px;
+}
+
 .background {
   background-image: url(https://www.roadrules.info/images/home.svg);
   background-position: 50%;
@@ -11,10 +22,43 @@
   min-height: 85vh;
   margin-bottom: 120px;
 }
+.slick-slide.slick-active.slick-current {
+  width: 345px !important;
+}
+.slick-slide.slick-active {
+  margin-right: -7px;
+  width: 340px !important;
+  margin-left: 2px;
+}
 .footer-card {
   text-align: initial;
 }
+#c1 {
+  width: 84%;
+}
+#c2 {
+  width: 84%;
+}
+#c3 {
+  width: 84%;
+}
+#c4 {
+  width: 84%;
+}
+.vg {
+  overflow: hidden;
+  height: 457px !important;
+}
 
+.gt {
+  height: 136px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.p1 {
+  font-size: 14px;
+}
 p3 {
   font-size: 20px;
   padding: 10px 70px 0px;
@@ -76,6 +120,30 @@ p {
   color: #264861;
   min-height: 100vh;
 }
+
+.d3 {
+  position: relative;
+  z-index: 10;
+}
+.d4 {
+  position: relative;
+  z-index: 10;
+}
+#homesecondimg2 {
+  background-image: url(https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png);
+  background-position: 59%;
+  background-repeat: no-repeat;
+  /* background-position-x: -450px; */
+  background-position-y: -98px;
+  background-size: cover;
+  width: 100%;
+  color: #264861;
+  min-height: 116vh;
+  margin-top: 250px;
+  /* margin-top: 10px; */
+  overflow: hidden;
+}
+
 .title {
   color: #264861;
   font-weight: 600 !important;
@@ -106,13 +174,6 @@ button.btn {
   box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
 }
 
-.card-body {
-  height: 253px;
-}
-.card.h-100 {
-  border: none;
-  box-shadow: 1px 0px 5px 6px rgb(0 0 0 / 5%);
-}
 .btncheckprices {
   display: flex;
   justify-content: center;
@@ -192,6 +253,16 @@ div#homesecondimg1 {
   height: 470px;
   padding: 20px;
   box-shadow: 1px 0px 5px 6px rgb(0 0 0 / 5%);
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.slick-dots {
+  bottom: -25px;
+  width: 100%;
+  margin: 0%;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 7px;
 }
 #footer {
   background-image: linear-gradient(
@@ -201,4 +272,37 @@ div#homesecondimg1 {
     #dbe3e9 50%,
     #e3eaf0 60%
   );
+}
+@media only screen and (max-width: 768px) {
+  .mk {
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .bb {
+    width: 100%;
+  }
+  .pic {
+    width: 260px;
+  }
+  #card {
+    height: 524px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+  }
+  button#signUp1 {
+    background-color: white;
+    border: none;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .slick-slide.slick-active.slick-cloned {
+    display: none;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 800px) {
+  .slick-slide.slick-active.slick-cloned {
+    display: none;
+  }
 }
