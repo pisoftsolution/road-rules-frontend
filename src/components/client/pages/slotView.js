@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSlot } from '../../../redux/actions/slot';
+import { getSlot, getSlotById } from '../../../redux/actions/slot';
 import './slotdetails.css';
 
 function SlotView() {
@@ -12,7 +12,8 @@ function SlotView() {
   // console.log(slots);
   useEffect(() => {
     dispatch(getSlot());
-  }, [slots]);
+    dispatch(getSlotById());
+  }, []);
 
   const handleRoute = () => {
     history.push('/pickupaddress');
