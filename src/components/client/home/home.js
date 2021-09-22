@@ -1,32 +1,88 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
+import { useDispatch, useSelector } from 'react-redux';
 import './home.css';
+import { getTestimonial } from '../../../redux/actions/hometestimonial';
+import { getAboutcards } from '../../../redux/actions/aboutcards';
+import { getAbout } from '../../../redux/actions/about';
+import { getChoose } from '../../../redux/actions/choose';
 
 function Home() {
   var settings = {
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    // slidesToScroll: 1,
+    slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000
-    // cssEase: 'linear'
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
+  const dispatch = useDispatch();
+  const testimonials = useSelector(
+    (state) => state.hometestimonial?.testimonialData?.b
+  );
+  useEffect(() => {
+    dispatch(getTestimonial());
+  }, []);
+
+  const aboutcard = useSelector((state) => state.aboutcards?.aboutcardsData?.b);
+  useEffect(() => {
+    dispatch(getAboutcards());
+  }, []);
+
+  const abouts = useSelector((state) => state.about?.aboutData?.b);
+  useEffect(() => {
+    dispatch(getAbout());
+  }, []);
+
+  const choice = useSelector((state) => state.choose?.chooseData?.b);
+  useEffect(() => {
+    dispatch(getChoose());
+  }, []);
 
   return (
     <>
       <div className="homie">
         <div className="background">
-          <div id="htext">
-            <h1>Road Rules Driving School</h1>
-            <p3>
-              We offer a selection of ICBC driving test lessons in Surrey and
-              neighboring cities. Each of our driving lessons is conducted with
-              an experienced, friendly and supportive driving instructor who is
-              ICBC accredited.
-            </p3>
-          </div>
+          {abouts && abouts.length > 0
+            ? abouts.map((b) => {
+                return (
+                  <>
+                    <div id="htext">
+                      <h1>Road Rules Driving School</h1>
+                      <p3 value={b._id}>{b.text}</p3>
+                    </div>
+                  </>
+                );
+              })
+            : ''}
         </div>
         <div className="conatiner-fluid">
           <div className="row">
@@ -37,29 +93,18 @@ function Home() {
                 id="leftim"
               />
             </div>
-            <div className="col-md-7">
-              <p>
-                Road Rules Driving School offers a variety of services that will
-                be beneficial to our students, which will develop good driving
-                skills, and habits while being trained by our well educated and
-                experienced instructor.
-              </p>
-              <p>
-                Besides basic driving skills, Road Rules Driving School can also
-                assist you in overcoming your driving weaknesses. In fact we
-                pride ourselves in helping you convert your driving problems
-                into strengths.
-              </p>
-              <p>
-                We offer winter driving, parallel parking and customized courses
-                which fit your needs so that you can hone up those skills that
-                worry you most. No matter what your driving difficulty, for
-                example, reversing, snow driving, hill starts and parking or
-                anything else, our instructors will fully focus on teaching you
-                until you are confident and at ease.
-              </p>
-              <div className="col-md-2"></div>
-            </div>
+            {choice && choice.length > 0
+              ? choice.map((b) => {
+                  return (
+                    <>
+                      <div className="col-md-7">
+                        <p>{b.point}</p>
+                        <div className="col-md-2"></div>
+                      </div>
+                    </>
+                  );
+                })
+              : ''}
             <div className="container-fluid" id="homesecondimg">
               <h2 className=" mb-5 text-center">Current Offers</h2>
               <div className="container">
@@ -161,260 +206,214 @@ function Home() {
               />
             </div>
           </div>
+          {aboutcard && aboutcard.length > 0
+            ? aboutcard.map((b) => {
+                return (
+                  <>
+                    <div className="container-fluid">
+                      {/* <h2 className=" mb-5 text-center">{b.subHeading}</h2> */}
+                      <div className="container">
+                        <div className="row row-cols-1 row-cols-md-3 g-4">
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice">
+                                <h4 className=" mt-5 text-center2">
+                                  {b.subHeading}
+                                </h4>
 
-          <div className="container-fluid">
-            <h2 className=" mb-5 text-center">Your Key to safe Driving</h2>
-            <div className="container">
-              <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className=" mt-5 text-center2">Choice</h4>
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice">
+                                <h4 className=" mt-5 text-center2">
+                                  {b.subHeading}
+                                </h4>
 
-                      <p>
-                        We are the best in terms of services that we offer you.
-                        We ensure safety as our main priority therefore we are
-                        well equipped with professional and well trained
-                        instructors.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className=" mt-5 text-center2">95% PASS RATE</h4>
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice">
+                                <h4 className=" mt-5 text-center2">
+                                  {b.subHeading}
+                                </h4>
 
-                      <p>Success rate of our students is very high.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className=" mt-5 text-center2">Best Cars</h4>
-
-                      <p>
-                        Both the classroom driving classes as well as online
-                        sessions are available with a wide range of cars.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container-fluid mt-4">
-            <div className="container">
-              <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className=" mt-5 text-center2">Pickup</h4>
-
-                      <p>
-                        We provide door pickup for our students at no extra
-                        cost!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className=" mt-5 text-center2">We train all ages</h4>
-
-                      <p>
-                        We have driving instructors who are certified. Apart
-                        from that, they are also fit both mentally as well as
-                        physically who train classes 5 and 7.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice ">
-                      <h4 className=" mt-5 text-center2">Road Rules</h4>
-
-                      <p>
-                        We will train you correctly with all road rules and
-                        regulations.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <div className="container-fluid" id="homesecondimg1">
-            <div className="container">
-              <h2 id="three">What our students have to say about us.</h2>
-              <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body" id="students">
-                      <h4 className="  text-center2">Pickup</h4>
-                      <p>
-                        I am writing this review on behalf of my daughter, she
-                        took lessons from this place and I only heard good
-                        things about it. She had her class 7 road test coming up
-                        and was worried she would fail, but the instructor made
-                        it easy for her to understand and told her to stay
-                        confident and you can do it. She ended up passing her
-                        road test and want to give a huge thank you to Road
-                        Rules Driving School, for teaching in a well-mannered
-                        environment and staying professional.
-                      </p>
-                      <div>
-                        <img
-                          src="https://www.roadrules.info/images/testimonial-2.svg"
-                          alt="about"
-                        />
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className="  text-center2">We train all ages</h4>
-                      <p className="mb-10">
-                        I took the 10-lesson package with this driving school. I
-                        had a pleasant experience all the way through and
-                        instructor made everything really easy to do. Her
-                        techniques and tips really helped me understand better,
-                        and passed my Class 5 test on the first attempt.Thank
-                        you to Road Rules Driving School, and I would 100%
-                        recommend it.
-                      </p>
-                      <div className="bottom">
-                        <img
-                          src="https://www.roadrules.info/images/testimonial-2.svg"
-                          alt="about"
-                        />
+                  </>
+                );
+              })
+            : ''}
+
+          {aboutcard && aboutcard.length > 0
+            ? aboutcard.map((b) => {
+                return (
+                  <>
+                    <div className="container-fluid mt-4">
+                      <div className="container">
+                        <div className="row row-cols-1 row-cols-md-3 g-4">
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice">
+                                <h4 className=" mt-5 text-center2">
+                                  {' '}
+                                  {b.subHeading}
+                                </h4>
+
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice">
+                                <h4 className=" mt-5 text-center2">
+                                  {' '}
+                                  {b.subHeading}
+                                </h4>
+
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col">
+                            <div className="card h-100">
+                              <div className="card-body keychoice ">
+                                <h4 className=" mt-5 text-center2">
+                                  {' '}
+                                  {b.subHeading}
+                                </h4>
+
+                                <p>{b.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card h-100">
-                    <div className="card-body keychoice">
-                      <h4 className="  text-center2">Road Rules</h4>
-                      <p>
-                        We will train you correctly with all road rules and
-                        regulations.
-                      </p>
-                      <div className="bottom">
-                        <img
-                          src="https://www.roadrules.info/images/testimonial-2.svg"
-                          alt="about"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+                  </>
+                );
+              })
+            : ''}
         </div>
 
         <div className="conatiner" id="homesecondimg2">
           <div>
             <h3>What our students have to say about us.</h3>
           </div>
-          <Slider {...settings}>
-            <div className="col">
-              <div className="card vg" id="c1">
-                <div className="card-body  ">
-                  <h4 className="  text-center2">Pickup</h4>
-                  <p className="p1">
-                    I am writing this review on behalf of my daughter, she took
+          {testimonials && testimonials.length > 0
+            ? testimonials.map((b) => {
+                return (
+                  <>
+                    <Slider {...settings}>
+                      <div className="col">
+                        <div className="card vg" id="c1">
+                          <div className="card-body  ">
+                            <h4 className="  text-center2">{b.name}</h4>
+                            <p className="p1">
+                              {/* I am writing this review on behalf of my daughter, she took
                     lessons from this place and I only heard good things about
                     it. She had her class 7 road test coming up and was worried
                     she would fail, but the instructor made it easy for her to
                     understand and told her to stay confident and you can do it.
                     She ended up passing her road test and want to give a huge
                     thank you to Road Rules Driving School, for teaching in a
-                    well-mannered environment and staying professional.
-                  </p>
-                  <div className="gt">
-                    <img
-                      src="https://www.roadrules.info/images/testimonial-2.svg"
-                      alt="about"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col ">
-              <div className="card vg" id="c2">
-                <div className="card-body  ">
-                  <h4 className="  text-center2">Pickup</h4>
-                  <p className="p1">
-                    I am writing this review on behalf of my daughter, she took
+                    well-mannered environment and staying professional. */}
+                              {b.comment}
+                            </p>
+                            <div className="gt">
+                              <img
+                                src="https://www.roadrules.info/images/testimonial-2.svg"
+                                alt="about"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col ">
+                        <div className="card vg" id="c2">
+                          <div className="card-body  ">
+                            <h4 className="  text-center2">{b.name}</h4>
+                            <p className="p1">
+                              {/* I am writing this review on behalf of my daughter, she took
                     lessons from this place and I only heard good things about
                     it. She had her class 7 road test coming up and was worried
                     she would fail, but the instructor made it easy for her to
                     understand and told her to stay confident and you can do it.
                     She ended up passing her road test and want to give a huge
                     thank you to Road Rules Driving School, for teaching in a
-                    well-mannered environment and staying professional.
-                  </p>
-                  <div className="gt">
-                    <img
-                      src="https://www.roadrules.info/images/testimonial-2.svg"
-                      alt="about"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col ">
-              <div className="card vg" id="c3">
-                <div className="card-body  ">
-                  <h4 className="  text-center2">Pickup</h4>
-                  <p className="p1">
-                    I am writing this review on behalf of my daughter, she took
+                    well-mannered environment and staying professional. */}
+                              {b.comment}
+                            </p>
+                            <div className="gt">
+                              <img
+                                src="https://www.roadrules.info/images/testimonial-2.svg"
+                                alt="about"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col ">
+                        <div className="card vg" id="c3">
+                          <div className="card-body  ">
+                            <h4 className="  text-center2">{b.name}</h4>
+                            <p className="p1">
+                              {/* I am writing this review on behalf of my daughter, she took
                     lessons from this place and I only heard good things about
                     it. She had her class 7 road test coming up and was worried
                     she would fail, but the instructor made it easy for her to
                     understand and told her to stay confident and you can do it.
                     She ended up passing her road test and want to give a huge
                     thank you to Road Rules Driving School, for teaching in a
-                    well-mannered environment and staying professional.
-                  </p>
-                  <div className="gt">
-                    <img
-                      src="https://www.roadrules.info/images/testimonial-2.svg"
-                      alt="about"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col ">
-              <div className="card vg" id="c4">
-                <div className="card-body ">
-                  <h4 className="  text-center2">Pickup</h4>
-                  <p className="p1">
-                    I am writing this review on behalf of my daughter, she took
+                    well-mannered environment and staying professional. */}
+                              {b.comment}
+                            </p>
+                            <div className="gt">
+                              <img
+                                src="https://www.roadrules.info/images/testimonial-2.svg"
+                                alt="about"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col ">
+                        <div className="card vg" id="c4">
+                          <div className="card-body ">
+                            <h4 className="  text-center2">{b.name}</h4>
+                            <p className="p1">
+                              {/* I am writing this review on behalf of my daughter, she took
                     lessons from this place and I only heard good things about
                     it. She had her class 7 road test coming up and was worried
                     she would fail, but the instructor made it easy for her to
-                    understand and told her to stay confident and you can do it.
-                  </p>
-                  <div className="gt">
-                    <img
-                      src="https://www.roadrules.info/images/testimonial-2.svg"
-                      alt="about"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Slider>
+                    understand and told her to stay confident and you can do it. */}
+                              {b.comment}
+                            </p>
+                            <div className="gt">
+                              <img
+                                src="https://www.roadrules.info/images/testimonial-2.svg"
+                                alt="about"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Slider>
+                  </>
+                );
+              })
+            : ''}
         </div>
 
         <div className="container-fluid" id="footer">

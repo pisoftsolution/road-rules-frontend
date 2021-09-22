@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const url = 'http://localhost:8095/api';
+export const url = 'http://localhost:8093/api';
 
 export const signup = (formData) => {
   return axios.post(`${url}/auth/signup`, formData);
@@ -28,6 +28,18 @@ export const phoneOtpVerify = (formData, email, phone) => {
   );
 };
 
-// export const getTestimonial = () => {
-//   return axios.get(`${url}/testimonial/testimonial`);
-// };
+export const getTestimonial = () => {
+  return axios.get(`${url}/testimonial/testimonial`);
+};
+
+export const getAboutcards = () => {
+  return axios.get(`${url}/aboutcards/about-cards`);
+};
+
+export const getChoose = () => {
+  return axios.get(`${url}/choose/choose`);
+};
+
+export const getAbout = () => {
+  return axios.get(`${url}/about/about`);
+};
