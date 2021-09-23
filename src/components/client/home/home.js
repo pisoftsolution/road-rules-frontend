@@ -14,8 +14,8 @@ function Home() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 3000,
+    autoplaySpeed: 800,
     cssEase: 'linear',
     responsive: [
       {
@@ -71,18 +71,24 @@ function Home() {
     <>
       <div className="homie">
         <div className="background">
-          {abouts && abouts.length > 0
-            ? abouts.map((b) => {
-                return (
-                  <>
-                    <div id="htext">
-                      <h1>Road Rules Driving School</h1>
-                      <p3 value={b._id}>{b.text}</p3>
-                    </div>
-                  </>
-                );
-              })
-            : ''}
+          {abouts && abouts.length > 0 ? (
+            // ? abouts.map((b) => {
+            //     return (
+            //       <>
+            //         <div id="htext">
+            //           <h1>Road Rules Driving School</h1>
+            //           <p3 >{b.text}</p3>
+            //         </div>
+            //       </>
+            // //     );
+            //   })
+            <div id="htext">
+              <h1>Road Rules Driving School</h1>
+              <p3>{abouts[1].text}</p3>
+            </div>
+          ) : (
+            ''
+          )}
         </div>
         <div className="conatiner-fluid">
           <div className="row">

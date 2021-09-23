@@ -5,9 +5,12 @@
   width: 80%;
   margin: auto;
 }
-.slick-track {
-  height: 250px;
+.slick-list {
+  height: 520px;
 }
+/* .slick-track {
+  height: 250px;
+} */
 .slick-slider.slick-initialized {
   padding-top: 50px;
 }
