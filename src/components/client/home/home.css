@@ -5,8 +5,19 @@
   width: 80%;
   margin: auto;
 }
+div#k {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+nav.navbar.navbar-light.bg-faded {
+  padding-right: 30px;
+}
 .slick-list {
   height: 520px;
+}
+#ttext {
+  font-weight: 700;
 }
 /* .slick-track {
   height: 250px;
@@ -14,7 +25,19 @@
 .slick-slider.slick-initialized {
   padding-top: 50px;
 }
-
+.chosse {
+  margin-left: 2px;
+}
+.chasi {
+  margin: auto;
+  display: flex;
+}
+/* #point1 {
+  display: block;
+}
+.ch1 {
+  display: flex;
+} */
 .background {
   background-image: url(https://www.roadrules.info/images/home.svg);
   background-position: 50%;
@@ -88,10 +111,12 @@ h2 {
 }
 #leftim {
   size: 16px;
-  height: 75%;
-  width: 80%;
-  float: right;
-  margin-right: -50px;
+  height: 84%;
+  width: 120%;
+  padding-left: 23px;
+  /* float: right; */
+  /* margin-right: -50px; */
+  width: 100%;
 }
 p {
   font-size: 16px;
@@ -159,6 +184,10 @@ h5 {
   color: #264861;
 }
 
+.cstd {
+  font-weight: 700 !important;
+  color: #264861;
+}
 #mny {
   font-size: 20px;
   font-weight: 660 !important;
@@ -281,11 +310,72 @@ div#homesecondimg1 {
     margin: 0px;
     padding-left: 0px;
   }
+  .cstd {
+    font-weight: 700 !important;
+    color: #264861;
+    padding: 0px 31px;
+    font-size: 25px;
+  }
+  .img-fluid {
+    padding: 0px 10px;
+  }
+  #homesecondimg {
+    margin-bottom: 50px;
+  }
+  div#k {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    align-items: center;
+    height: 160px;
+  }
   .bb {
     width: 100%;
   }
+  .chosse {
+    /* word-break: break-all; */
+    padding: 1px 17px;
+    text-align: initial;
+    /* margin-left: 2px; */
+    /* word-spacing: 1px; */
+  }
+  p {
+    color: #264861;
+    font-weight: 700 !important;
+  }
+  .left {
+    font-size: 25px;
+  }
+  .chasi {
+    margin: auto;
+    display: block;
+  }
+  #leftim {
+    width: 100%;
+    padding: 0px 10px;
+    margin-bottom: 25px;
+  }
+  #ttext {
+    font-weight: 700;
+    padding: 17px;
+  }
+  #abt {
+    font-size: 15px;
+    font-weight: 700 !important;
+    padding: 5px;
+    margin-top: -20px;
+  }
+  #htext {
+    /* text-align: center; */
+    padding-top: 25px;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  button.mr-2.navbar-toggler {
+    margin-right: 15px;
+  }
   .pic {
-    width: 260px;
+    padding-left: 50px;
+    width: 220px;
   }
   #card {
     height: 524px;
@@ -298,6 +388,14 @@ div#homesecondimg1 {
     border: none;
     margin-top: 20px;
   }
+}
+
+.mb-5 {
+  margin-top: -45px;
+  margin-bottom: 3rem !important;
+}
+#homesecondimg2 {
+  margin-top: 100px;
 }
 /* @media only screen and (max-width: 800px) {
   .slick-slide.slick-active.slick-cloned {

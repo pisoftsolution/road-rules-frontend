@@ -13,7 +13,7 @@ function Home() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 3000,
     autoplaySpeed: 800,
     cssEase: 'linear',
@@ -83,8 +83,8 @@ function Home() {
             // //     );
             //   })
             <div id="htext">
-              <h1>Road Rules Driving School</h1>
-              <p3>{abouts[1].text}</p3>
+              <h1 id="ttext">Road Rules Driving School</h1>
+              <p3 id="abt">{abouts[1].text}</p3>
             </div>
           ) : (
             ''
@@ -93,24 +93,30 @@ function Home() {
         <div className="conatiner-fluid">
           <div className="row">
             <h2 className="left">Why Choose Us?</h2>
-            <div className="col-md-4">
-              <img
-                src="https://www.roadrules.info/images/test.jpg"
-                id="leftim"
-              />
+
+            <div className="chasi">
+              <div className="cha" id="leftim">
+                <img
+                  src="https://www.roadrules.info/images/test.jpg"
+                  id="leftim"
+                />
+              </div>
+              <div className="ch1">
+                {choice && choice.length > 0
+                  ? choice.map((b) => {
+                      return (
+                        <>
+                          <div className="chosse">
+                            <p id="point1">{b.point}</p>
+                            {/* <div className="col-md-2"></div> */}
+                          </div>
+                        </>
+                      );
+                    })
+                  : ''}
+              </div>
             </div>
-            {choice && choice.length > 0
-              ? choice.map((b) => {
-                  return (
-                    <>
-                      <div className="col-md-7">
-                        <p>{b.point}</p>
-                        <div className="col-md-2"></div>
-                      </div>
-                    </>
-                  );
-                })
-              : ''}
+
             <div className="container-fluid" id="homesecondimg">
               <h2 className=" mb-5 text-center">Current Offers</h2>
               <div className="container">
@@ -183,14 +189,14 @@ function Home() {
             <div className="container-fluid" id="homesecondimg">
               <h2 id="three">Booking in threee EasysSteps</h2>
               <div className="container">
-                <div className="card mb-2" id="k">
+                <div className="card mb-3" id="k">
                   <h4 id="step1"> Step 1</h4>
                   <h5 id="step2">Go to Login/Signup and create an account.</h5>
                 </div>
               </div>
 
               <div className="container">
-                <div className="card mb-2" id="k">
+                <div className="card mb-3" id="k">
                   <h4 id="stepa"> Step 2</h4>
                   <h5 id="step2">
                     Go to the Bookings tab and select a suitable time slot.
@@ -199,9 +205,9 @@ function Home() {
               </div>
 
               <div className="container">
-                <div className="card mb-2" id="k">
+                <div className="card mb-3" id="k">
                   <h4 id="stepb"> Step 3</h4>
-                  <h5 id="step2">Go to Login/Signup and create an account.</h5>
+                  <h5 id="step2">Pay for the booked slots.</h5>
                 </div>
               </div>
             </div>
@@ -211,6 +217,9 @@ function Home() {
                 src="https://www.roadrules.info/images/about.gif"
               />
             </div>
+          </div>
+          <div className="safe mb-5">
+            <h2>Your key to safe driving</h2>
           </div>
           {aboutcard && aboutcard.length > 0
             ? aboutcard.map((b) => {
@@ -315,7 +324,7 @@ function Home() {
 
         <div className="conatiner" id="homesecondimg2">
           <div>
-            <h3>What our students have to say about us.</h3>
+            <h3 className="cstd">What our students have to say about us.</h3>
           </div>
           {testimonials && testimonials.length > 0
             ? testimonials.map((b) => {

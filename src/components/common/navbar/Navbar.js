@@ -29,7 +29,7 @@ function Navbars() {
         <div className="nave">
           <ul className="ull ">
             <li className="lli">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#">
                 Home
               </a>
             </li>
