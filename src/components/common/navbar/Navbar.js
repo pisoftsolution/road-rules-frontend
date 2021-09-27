@@ -29,17 +29,17 @@ function Navbars() {
         <div className="nave">
           <ul className="ull ">
             <li className="lli">
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="/home">
                 Home
               </a>
             </li>
             <li className="lli">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/booking">
                 Booking
               </a>
             </li>
             <li className="lli">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/contact us">
                 Contact Us
               </a>
             </li>
@@ -50,9 +50,6 @@ function Navbars() {
               alt="LOGO"
             ></img>
           </ul>
-          {/* <NavItem>
-            <NavLink>Home</NavLink>
-          </NavItem> */}
         </div>
 
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />

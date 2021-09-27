@@ -1,0 +1,195 @@
+/* *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+.offer {
+  padding-top: 75px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #264861;
+}
+.mtt {
+  font-size: 18px;
+  font-weight: 700;
+  color: #264861;
+}
+.booki {
+  padding-top: 50px;
+  overflow: hidden;
+  min-height: 277vh;
+}
+
+/* body {
+  background: #fff;
+} */
+#bookie {
+  background-image: url(https://www.roadrules.info/_next/static/media/auth-bg.699f783a83c8bfcdca46d62a0ef0b77e.png);
+  background-position: 47%;
+  background-repeat: no-repeat;
+  /* background-position-x: -450px; */
+  background-position-y: -68px;
+  background-size: cover;
+  width: 100%;
+  /* color: #264861; */
+  min-height: 132vh;
+  /* margin-top: 250px; */
+  /* margin-top: 10px; */
+  overflow: hidden;
+}
+
+#outside {
+  color: #264861;
+  font-weight: 700;
+  padding: 0px 20px !important;
+  height: 44px !important;
+  font-size: 17px;
+}
+#tabb {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  width: 917px;
+  height: 400px;
+  background: #f1f1f1;
+  /* margin: 0px auto; */
+  margin-left: 22px;
+  word-break: break-all;
+  /* border: 1px solid rgba(0, 0, 0, 0.274); */
+}
+.rentt.mt-4 {
+  width: 1070px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* .rentt {
+  margin: auto;
+  
+  width: 1073px;
+  
+  display: flex;
+  justify-content: center;
+} */
+
+.bloc-tabs {
+  border-bottom: 2px solid beige !important;
+  display: flex;
+  justify-content: center;
+  /* border-bottom: #e0d9d9; */
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  /* width: 7.7%; */
+  background-color: transparent;
+  cursor: pointer;
+
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+#within {
+  padding: 0px 20px !important;
+  height: 44px !important;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+.tabs:not(:last-child) {
+  padding: 0px 33px;
+  height: 44px;
+  /* background-color: transparent;
+  color: #264861; */
+  /* height: 12px;
+  width: 129px; */
+  /* border-right: 1px solid rgba(0, 0, 0, 0.274); */
+  /* margin-left: 6px; */
+}
+
+.active-tabs {
+  background-color: #264861 !important;
+  /* border-bottom: 1px solid transparent; */
+  color: white !important;
+}
+
+.active-tabs::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  /* background: rgb(88, 147, 241); */
+}
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  /* padding: 20px; */
+  width: 100%;
+  height: 800px;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  /* height: 100%; */
+}
+.active-content {
+  display: block;
+}
+.button1 {
+  width: 125px;
+  margin-left: 260px;
+  background-color: #29cc97;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.button2 {
+  background-color: #e2e5e7;
+  color: #94949e;
+  border: 1px solid #94949e;
+  border-radius: 10px;
+  margin-left: 5px;
+  width: 80px;
+  margin-bottom: 5px;
+}
+#coli {
+  width: 28% !important;
+}
+@media only screen and (min-width: 375px) and (max-width: 668px) {
+  #coli {
+    width: 95% !important;
+  }
+}
+
+div#rentt {
+  /* width: 1000px; */
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 670px) and (max-width: 1024px) {
+  .rentt.mt-4 {
+    padding: 0px 9px;
+
+    display: block;
+
+    width: 1093px;
+  }
+}

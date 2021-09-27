@@ -13,7 +13,7 @@ function Home() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     speed: 3000,
     autoplaySpeed: 800,
     cssEase: 'linear',

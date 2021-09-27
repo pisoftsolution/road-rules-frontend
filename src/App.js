@@ -14,6 +14,7 @@ import Payment from './components/client/Payment/payment/payment';
 import OTPBox from './components/client/auth/otp/otp';
 import Home from './components/client/home/home';
 import Navbars from './components/common/navbar/Navbar';
+import Booking from './components/common/navbar/booking';
 // import Navbar from './components/common/Navbar1/navbar';
 // import HomeItem from './components/common/items/homeItem';
 // import Booking from './components/common/items/bookingItem';
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/stripe" component={Stripe}></Route>
           <Route exact path="/payment" component={Payment}></Route>
           <Route exact path="/otp" component={OTPBox}></Route>
+          <Route exact path="/booking" component={Booking}></Route>
         </Switch>
       </Router>
     </div>
