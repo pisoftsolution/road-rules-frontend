@@ -15,11 +15,6 @@ h1.slothead {
     color: slategrey;
 }
 
- /* tr:nth-child(even) {
-    background-color: white;
-    box-shadow: #fff;
-} */
-
 .tableRow,tr:nth-child(even){
     background-color: white;
     box-shadow: #fff;
@@ -64,18 +59,6 @@ button.linkview.btn.btn-primary {
     text-decoration: underline;
 }
 
-
-
-
-
-
-/* #sec3 {
-    margin-right: 640px;
-    margin-bottom: 40px;
-    margin-left: -11px;
-} */
-
-
   #sec7 {
     display: flex;
     justify-content: center;
@@ -100,25 +83,6 @@ button.linkview.btn.btn-primary {
     box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
 }
 
-/* #seeprofile{
-    margin-bottom: 50px;
-}
-
-#seeprofile {
-    color: #fff;
-    background-color: #04b1ed;
-    border-color: #04b1ed;
-    width: 80%;
-    margin-bottom: 150px;
-    margin-top: 346px;
-} */
-
-/* #sec4 {
-    margin: auto!important;
-    height: 201px;
-    background-color: rgb(176, 219, 236);
-} */
-
 h1.mainhead {
     margin-top: 342px;
     justify-content: center;
@@ -133,7 +97,7 @@ input#rad {
 
 p.sent {
     margin-top: -18px;
-    margin-right: 140px;
+    margin-right: 289px;
 }
 
 button.pickadd {

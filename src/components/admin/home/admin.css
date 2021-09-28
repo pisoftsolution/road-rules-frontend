@@ -1,3 +1,25 @@
+#abu {
+  margin-top: 85px;
+  display: block;
+  height: 442px;
+}
+div#aabu {
+  margin: auto;
+  width: 500px;
+}
+textarea {
+  height: 240px;
+  width: 427px;
+  margin-top: 10px;
+  background-color: rgb(191 243 251);
+  border-color: rgb(176, 219, 236);
+}
+
+#forma {
+  margin: auto;
+  padding: 0px 1px 0px 6px;
+}
+
 .tab{
     width: 800px; 
     margin-left: 61px;
@@ -5,20 +27,17 @@
     margin-top: 92px;
 }
 
-/* textarea {
-  width: 464px;
-  padding-bottom: 207px;
-  margin-top: 10px;
-  background-color: rgb(176, 219, 236);
-  border-color: rgb(176, 219, 236);
-} */
+  #inst {
+    display: table-caption;
+}
+select#cars {
+  width: 635%;
+  height: 47px;
+}
 
-textarea {
-  width: 427px;
-  padding-bottom: 199px;
-  margin-top: 10px;
-  background-color: rgb(191 243 251);
-  border-color: rgb(176, 219, 236);
+select#carss {
+  width: 100%;
+  height: 47px;
 }
 
 textarea :hover {
@@ -26,12 +45,16 @@ textarea :hover {
 }
 
 label.subheading {
+  margin-top: 35px;
   font-size: 38px;
   font-weight: 500;
   color: unset;
-  margin-top: 155px;
-  padding-top: 8px;
+
 }
+#yo {
+  width: 85%;
+}
+
 
 #sec3 {
     margin-right: 640px;
@@ -76,21 +99,11 @@ button.cancel {
     box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
 }
 
-/* #sec2 {
-  margin-right: -173px;
- 
-  padding-top: 34px;
-  margin-top: 53px;
-  
-} */
-
 #parra{
   height: -1px;
   margin-top: 24px;
-  /* border-style: solid;
-  border-color: rgb(176, 219, 236); */
 }
-/*  */
+
 #sec3{
     display: contents;
 }
@@ -108,8 +121,6 @@ button.cancel {
     background-color: #04b1ed;
     border-color: #04b1ed;
     width: 80%;
-    /* margin: auto; */
-    /* margin-top: 99px; */
     margin-bottom: 150px;
     margin-top: 34px;
 }
@@ -170,14 +181,13 @@ button#closeMT {
 }
 
 h1.headline {
-  margin-right: 525px;
-  margin-top: 61px;
-  margin-bottom: -51px;
+  float: left;
+  margin-top: 58px;
 }
 
 h1.headlines {
-  margin-right: 525px;
-  margin-top: 61px;
+  float: left;
+  margin-top: 62px;
 }
 
 td.tabledata {
@@ -203,10 +213,6 @@ Table {
    td{
     height: 50px;
   }
-  
-  /* tr:nth-child(even) {
-    background-color: #dddddd;
-  } */
 
   .tablecolor,tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -232,7 +238,7 @@ Table {
 
   button.add.btn.btn-primary {
     display: block;
-    margin-top: 60px;
+    margin-top: 146px;
 }
   
   .form-group {
@@ -243,11 +249,6 @@ Table {
     margin-left: 34px;
     margin-top: -69px;
   }
-
-  /* .form-group {
-    margin-left: 34px;
-    margin-top: -69px;
-} */
   
   .ReactModal__Content.ReactModal__Content--after-open {
     width: 37%;
@@ -347,12 +348,6 @@ Table {
         height: 80%;
         background-color: black;
   }
-
-  
-    
-    h1 {
-      margin-left: 134px;
-  }
     
     element.style {
       position: fixed;
@@ -365,9 +360,32 @@ Table {
       margin-top: 12px;
   }
 
-  @media (min-width: 576px){
+  /* @media (min-width: 576px){
   .modal-dialog {
       max-width: 500px;
       margin: 5.75rem auto;
   }
+} */
+.modal-dialog {
+  width: 484px !important;
+  margin: auto !important;
 }
+
+.modal-content {
+  width: 440px !important;
+  overflow: hidden;
+  margin: auto !important;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #000;
+}
+/* .modal-backdrop {
+  
+  background-color: transparent !important;
+} */

@@ -14,7 +14,7 @@ export const emailOtp = (email) => {
 };
 
 export const emailOtpVerify = (email, otp) => {
-  return axios.get(`${url}/verify/email-otp-verify?email=${email}&&otp=${otp}`);
+  return axios.get(`${url}/verify/email-otp-verify?email=${email}&&otp=${otp}`); 
 };
 
 export const phoneOtp = (phone) => {
@@ -106,4 +106,12 @@ export const editSlot = (data, id) => {
 
 export const getSlotById = (data, id) => {
   return axios.get(`${url}/slot/slot?id=${id}`, data);
+};
+
+export const getRide = () => {
+  return axios.get(`${url}/ride/all-rides`);
+};
+
+export const addAddress = (formData) => {
+  return axios.post(`${url}/address/add-address`, formData);
 };

@@ -1,75 +1,75 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { Table, Button } from 'react-bootstrap'
-import Modal from 'react-bootstrap/Modal'
+import { useDispatch, useSelector } from 'react-redux';
+import { Table, Button } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import './All.css'
+import './admin.css';
 import { addSlot, editSlot, getSlot } from '../../../redux/actions/slot';
+import { getInstructor } from '../../../redux/actions/instructor';
 
 function Slots() {
-
-  const initialState = { date: "", time: "", clientLimit: "", instructor: "", instructorName: "", status: "", booking: "" };
+  const initialState = { date: '', time: '', clientLimit: '', instructor: '' };
   const [formData, setFormData] = useState(initialState);
-  const [editId, setEditId] = useState("");
+  const [editId, setEditId] = useState('');
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
-  const book = useSelector(state => state.slotReducer?.slotData?.b);
+  const book = useSelector((state) => state.slotReducer?.slotData?.b);
+  const instructors = useSelector(
+(state) => state.instructorReducer?.instructorData?.b
+  );
+
   useEffect(() => {
-    dispatch(getSlot())
-  }, [shouldCall])
+    dispatch(getSlot());
+    dispatch(getInstructor());
+  }, [shouldCall]);
+
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     dispatch(editSlot(formData, editId))
-      .then(res => {
-        console.log(res);
-        setShouldCall(!shouldCall);
-        setShow(false);
-        setFormData(initialState);
-      })
-  }
+    .then((res) => {
+      console.log(res);
+      setShouldCall(!shouldCall);
+      setShow(false);
+      setFormData(initialState);
+    });
+  };
   const handleAddSubmit = (e) => {
     e.preventDefault();
     dispatch(addSlot(formData, book))
-      .then(res => {
-        console.log(res);
-        setShouldCall(!shouldCall);
-      })
-  }
+    .then((res) => {
+      console.log(res);
+      setShouldCall(!shouldCall);
+    });
+  };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = (id, date, time, clientLimit, instructor, instructorName, status, booking) => {
-    setEditId(id)
+  const handleShow = (id, date, time, clientLimit, instructor) => {
+    setEditId(id);
     setFormData({
       date: date,
       time: time,
       clientLimit: clientLimit,
-      instructor: instructor,
-      instructorName: instructorName,
-      status: status,
-      booking: booking,
-    })
+      instructor: instructor
+    });
     setShow(true);
-  }
+  };
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
-  const handleShows = (date, time, clientLimit, instructor, instructorName, status, booking) => {
+  const handleShows = (date, time, clientLimit, instructor) => {
     setFormData({
       date: date,
       time: time,
       clientLimit: clientLimit,
-      instructor: instructor,
-      instructorName: instructorName,
-      status: status,
-      booking: booking,
-    })
+      instructor: instructor
+    });
     setShows(true);
-  }
+  };
   return (
     <div className="Apps">
       <h1 className="headline">Slot</h1>
-      <Modal show={show} onHide={handleClose}  >
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Edit a Slot</Modal.Title>
         </Modal.Header>
@@ -81,15 +81,15 @@ function Slots() {
                 <FormControl
                   name="date"
                   type="text"
-                  placeholder="Enter date"
+                  placeholder="Enter Date"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                   value={formData.date}
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
@@ -106,13 +106,13 @@ function Slots() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
               </InputGroup>
-              <label>ClientLimit</label>
+              <label>Client Limit</label>
               <InputGroup className="mb-3">
                 <FormControl
                   name="clientLimit"
@@ -124,14 +124,38 @@ function Slots() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
               </InputGroup>
               <label>Instructor</label>
-              <InputGroup className="mb-3">
+              <select
+                    name="instructor"
+                    // value={formData.instructor} 
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        [e.target.name]: e.target.value
+                      });
+                    }}
+                    required
+                    id="carss"
+                  >
+                    {/* <option value="" disabled selected hidden>select the options..</option> */}
+                    {instructors && instructors.length > 0
+                      ? instructors.map((b) => {
+                          return (
+                            <>
+                            <option value="" disabled selected hidden>select the options..</option>
+                              <option value={b._id}>{b.fullName}</option>
+                            </>
+                          );
+                        })
+                      : ''}
+                  </select>
+              {/* <InputGroup className="mb-3">
                 <FormControl
                   name="instructor"
                   type="text"
@@ -142,76 +166,16 @@ function Slots() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
-              </InputGroup>
-              <label>InstructorName</label>
-              <InputGroup className="mb-3">
-                <FormControl
-                  name="instructorName"
-                  type="text"
-                  placeholder="Enter InstructorName"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                  value={formData.instructorName}
-                  onChange={(e) => {
-                    setFormData({
-                      ...formData,
-                      [e.target.name]: e.target.value,
-                    })
-                  }}
-                  required
-                />
-              </InputGroup>
-              <label>Status</label>
-              <InputGroup className="mb-3">
-                <FormControl
-                  name="status"
-                  type="text"
-                  placeholder="Enter Status"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                  value={formData.status}
-                  onChange={(e) => {
-                    setFormData({
-                      ...formData,
-                      [e.target.name]: e.target.value,
-                    })
-                  }}
-                  required
-                />
-              </InputGroup>
-              <label>Booking</label>
-              <InputGroup className="mb-3">
-                <FormControl
-                  name="booking"
-                  type="text"
-                  placeholder="Enter Booking"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                  value={formData.booking}
-                  onChange={(e) => {
-                    setFormData({
-                      ...formData,
-                      [e.target.name]: e.target.value,
-                    })
-                  }}
-                  required
-                />
-              </InputGroup>
-              <Button
-                className="sub"
-                type="submit"
-              >
-                Update
+              </InputGroup> */}
+              <Button className="sub" type="submit">
+                Save
               </Button>
-              <Button
-                className="cancel" id="close"
-                onClick={handleClose}
-              >
+              <Button className="cancel" id="close" onClick={handleClose}>
                 Close
               </Button>
             </div>
@@ -219,7 +183,7 @@ function Slots() {
         </Modal.Body>
       </Modal>
       <div>
-        <Modal show={shows} onHide={handleCloses}  >
+        <Modal show={shows} onHide={handleCloses}>
           <Modal.Header>
             <Modal.Title>Add a Slot</Modal.Title>
           </Modal.Header>
@@ -230,14 +194,14 @@ function Slots() {
                 <InputGroup className="mb-3">
                   <FormControl
                     name="date"
-                    placeholder="Enter date"
+                    placeholder="Enter Date"
                     type="text"
                     className=""
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
@@ -252,13 +216,13 @@ function Slots() {
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
                 </InputGroup>
-                <label>ClientLimit</label>
+                <label>Client Limit</label>
                 <InputGroup className="mb-3">
                   <FormControl
                     name="clientLimit"
@@ -268,142 +232,95 @@ function Slots() {
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
                 </InputGroup>
-                <label>Instructor</label>
-                <InputGroup className="mb-3">
-                  <FormControl
+                <div id="inst">
+                  <label>Instructor</label>
+                  <select
                     name="instructor"
                     placeholder="Enter Instructor"
                     type="text"
-                    className=""
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
-                  />
-                </InputGroup>
-                <label>InstructorName</label>
-                <InputGroup className="mb-3">
-                  <FormControl
-                    name="instructorName"
-                    placeholder="Enter InstructorName"
-                    type="text"
-                    className=""
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        [e.target.name]: e.target.value,
-                      })
-                    }}
-                    required
-                  />
-                </InputGroup>
-                <label>Status</label>
-                <InputGroup className="mb-3">
-                  <FormControl
-                    name="status"
-                    placeholder="Enter Status"
-                    type="text"
-                    className=""
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        [e.target.name]: e.target.value,
-                      })
-                    }}
-                    required
-                  />
-                </InputGroup>
-                <label>Booking</label>
-                <InputGroup className="mb-3">
-                  <FormControl
-                    name="booking"
-                    placeholder="Enter Booking"
-                    type="text"
-                    className=""
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        [e.target.name]: e.target.value,
-                      })
-                    }}
-                    required
-                  />
-                </InputGroup>
-                <Button
-                  className="sub"
-                  type="submit"
-                  onClick={handleCloses}
-                >
-                  Update
+                    id="cars"
+                  >
+                    {instructors && instructors.length > 0
+                      ? instructors.map((b) => {
+                          return (
+                            <>
+                              <option value="" disabled selected hidden>select the options..</option>
+                              <option value={b._id} 
+                              >{b.fullName}</option>
+                            </>
+                          );
+                        })
+                      : ''}
+                      
+                  </select>
+                </div>
+                <Button className="sub" type="submit" onClick={handleCloses}>
+                  Save
                 </Button>
-                <Button
-                  className="cancel" id="closes"
-                  onClick={handleCloses}
-                >
+                <Button className="cancel" id="closes" onClick={handleCloses}>
                   Close
                 </Button>
               </div>
             </form>
           </Modal.Body>
         </Modal>
-        <Button
-          className="add"
-          onClick={() => handleShows()}
-        >
+        <Button className="add" onClick={() => handleShows()}>
           Add Slot
         </Button>
       </div>
       <Table striped bordered hover size="lg">
-        <thead >
         <tr>
           <th>Date</th>
           <th>Time</th>
-          <th>ClientLimit</th>
+          <th>Client Limit</th>
           <th>Instructor</th>
-          <th>InstructorName</th>
-          <th>Status</th>
-          <th>Booking</th>
           <th>Actions </th>
         </tr>
-        </thead>
-        {book && book.length > 0 ?
-          book.map(b => {
-            return (
-              <>
-              <tbody className="tablecolor">
-                <tr key={b._id}>
-                  <td className="tabledata">{b.date}</td>
-                  <td className="tabledata">{b.time}</td>
-                  <td className="tabledata">{b.clientLimit}</td>
-                  <td className="tabledata">{b.instructor}</td>
-                  <td className="tabledata">{b.instructorName}</td>
-                  <td className="tabledata">{b.status}</td>
-                  <td className="tabledata">{b.booking}</td>
-                  <Button
-                    onClick={() => {
-                      handleShow(b._id, b.date, b.time, b.clientLimit, b.instructor, b.instructorName, b.status, b.booking)
-                    }}
-                    className="btn-primary" id="edit"
-                  >
-                    Edit
-                  </Button>
-                </tr>
-                </tbody>
-              </>
-            )
-          }) : ''}
+        {book && book.length > 0
+          ? book.map((b) => {
+              return (
+                <>
+                  <tr key={b._id} className="tablecolor">
+                    <td className="tabledata">{b.date}</td>
+                    <td className="tabledata">{b.time}</td>
+                    <td className="tabledata">{b.clientLimit}</td>
+                    <td className="tabledata">{b.instructorName}</td>
+                    <Button
+                      onClick={() => {
+                        handleShow(
+                          b._id,
+                          b.date,
+                          b.time,
+                          b.clientLimit,
+                          b.instructor,
+                        );
+                      }}
+                      className="btn-primary"
+                      id="edit"
+                    >
+                      Edit
+                    </Button>
+                  </tr>
+                </>
+              );
+            })
+          : ''}
       </Table>
     </div>
-  )
+  );
 }
 
 export default Slots;

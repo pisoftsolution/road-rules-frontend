@@ -1,74 +1,77 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { Table, Button } from 'react-bootstrap'
-import Modal from 'react-bootstrap/Modal'
+import { useDispatch, useSelector } from 'react-redux';
+import { Table, Button } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import './All.css'
-import { addInstructor, editInstructor, getInstructor } from '../../../redux/actions/instructor';
+import './admin.css';
+import {
+  addInstructor,
+  editInstructor,
+  getInstructor
+} from '../../../redux/actions/instructor';
 
 function Instructor() {
-
-  const initialState = { fullName: "", phone: "", email: "" };
+  const initialState = { fullName: '', phone: '', email: '' };
   const [formData, setFormData] = useState(initialState);
-  const [editId, setEditId] = useState("");
+  const [editId, setEditId] = useState('');
   const [shouldCall, setShouldCall] = useState(false);
   const dispatch = useDispatch();
-  const instructors = useSelector(state => state.instructorReducer?.instructorData?.b);
+  const instructors = useSelector(
+    (state) => state.instructorReducer?.instructorData?.b
+  );
   useEffect(() => {
-    dispatch(getInstructor())
-  }, [shouldCall])
+    dispatch(getInstructor());
+  }, [shouldCall]);
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    dispatch(editInstructor(formData, editId))
-      .then(res => {
-        console.log(res);
-        setShouldCall(!shouldCall);
-        setShow(false);
-        setFormData(initialState);
-      })
-  }
+    dispatch(editInstructor(formData, editId)).then((res) => {
+      console.log(res);
+      setShouldCall(!shouldCall);
+      setShow(false);
+      setFormData(initialState);
+    });
+  };
   const handleAddSubmit = (e) => {
     e.preventDefault();
-    dispatch(addInstructor(formData, instructors))
-      .then(res => {
-        console.log(res);
-        setShouldCall(!shouldCall);
-      })
-  }
+    dispatch(addInstructor(formData, instructors)).then((res) => {
+      console.log(res);
+      setShouldCall(!shouldCall);
+    });
+  };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = (id, fullName, phone, email) => {
-    setEditId(id)
+    setEditId(id);
     setFormData({
       fullName: fullName,
       phone: phone,
-      email: email,
-    })
+      email: email
+    });
     setShow(true);
-  }
+  };
   const [shows, setShows] = useState(false);
   const handleCloses = () => setShows(false);
   const handleShows = (fullName, phone, email) => {
     setFormData({
       fullName: fullName,
       phone: phone,
-      email: email,
-    })
+      email: email
+    });
     setShows(true);
-  }
+  };
   return (
     <div className="Apps">
       <h1 className="headline">Instructor</h1>
-      <Modal show={show} onHide={handleClose}  >
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Edit a Instructor</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={handleEditSubmit}>
             <div className="form-group">
-              <label>FullName</label>
+              <label>Full Name</label>
               <InputGroup className="mb-3">
                 <FormControl
                   name="fullName"
@@ -80,8 +83,8 @@ function Instructor() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
@@ -98,8 +101,8 @@ function Instructor() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
@@ -116,22 +119,16 @@ function Instructor() {
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      [e.target.name]: e.target.value,
-                    })
+                      [e.target.name]: e.target.value
+                    });
                   }}
                   required
                 />
               </InputGroup>
-              <Button
-                className="sub"
-                type="submit"
-              >
-                Update
+              <Button className="sub" type="submit">
+                Save
               </Button>
-              <Button
-                className="cancel" id="close"
-                onClick={handleClose}
-              >
+              <Button className="cancel" id="close" onClick={handleClose}>
                 Close
               </Button>
             </div>
@@ -139,14 +136,14 @@ function Instructor() {
         </Modal.Body>
       </Modal>
       <div>
-        <Modal show={shows} onHide={handleCloses}  >
+        <Modal show={shows} onHide={handleCloses}>
           <Modal.Header>
             <Modal.Title>Add a Instructor</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleAddSubmit}>
               <div className="form-group">
-                <label>FullName</label>
+                <label>Full Name</label>
                 <InputGroup className="mb-3">
                   <FormControl
                     name="fullName"
@@ -156,8 +153,8 @@ function Instructor() {
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
@@ -172,8 +169,8 @@ function Instructor() {
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
@@ -188,67 +185,58 @@ function Instructor() {
                     onChange={(e) => {
                       setFormData({
                         ...formData,
-                        [e.target.name]: e.target.value,
-                      })
+                        [e.target.name]: e.target.value
+                      });
                     }}
                     required
                   />
                 </InputGroup>
-                <Button
-                  className="sub"
-                  type="submit"
-                  onClick={handleCloses}
-                >
-                  Update
+                <Button className="sub" type="submit" onClick={handleCloses}>
+                  Save
                 </Button>
-                <Button
-                  className="cancel" id="closes"
-                  onClick={handleCloses}
-                >
+                <Button className="cancel" id="closes" onClick={handleCloses}>
                   Close
                 </Button>
               </div>
             </form>
           </Modal.Body>
         </Modal>
-        <Button
-          className="add"
-          onClick={() => handleShows()}
-        >
+        <Button className="add" onClick={() => handleShows()}>
           Add Instructor
         </Button>
       </div>
       <Table striped bordered hover>
         <tr>
-          <th>FullName</th>
+          <th>Full Name</th>
           <th>Phone</th>
           <th>Email</th>
-          <th >Actions </th>
+          <th>Actions </th>
         </tr>
-        {instructors && instructors.length > 0 ?
-          instructors.map(b => {
-            return (
-              <>
-                <tr key={b._id} className="tablecolor">
-                  <td className="tabledata">{b.fullName}</td>
-                  <td className="tabledata">{b.phone}</td>
-                  <td className="tabledata">{b.email}</td>
-                  <Button
-                    onClick={() => {
-                      handleShow(b._id, b.fullName, b.phone, b.email)
-                    }}
-                    className="btn1" id="edit"
-
-                  >
-                    Edit
-                  </Button>
-                </tr>
-              </>
-            )
-          }) : ''}
+        {instructors && instructors.length > 0
+          ? instructors.map((b) => {
+              return (
+                <>
+                  <tr key={b._id} className="tablecolor">
+                    <td className="tabledata">{b.fullName}</td>
+                    <td className="tabledata">{b.phone}</td>
+                    <td className="tabledata">{b.email}</td>
+                    <Button
+                      onClick={() => {
+                        handleShow(b._id, b.fullName, b.phone, b.email);
+                      }}
+                      className="btn1"
+                      id="edit"
+                    >
+                      Edit
+                    </Button>
+                  </tr>
+                </>
+              );
+            })
+          : ''}
       </Table>
     </div>
-  )
+  );
 }
 
 export default Instructor;

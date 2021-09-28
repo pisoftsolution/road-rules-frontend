@@ -9,6 +9,8 @@ import chooseReducer from "./choose"
 import userReducer from "./users"
 import instructorReducer from "./instructor"
 import slotReducer from "./slot"
+import rides from './rides';
+import addressReducer from './addaddress'
 
 const rootReducer = combineReducers({
     authReducer,
@@ -20,6 +22,8 @@ const rootReducer = combineReducers({
     userReducer,
     instructorReducer,
     slotReducer,
+    rides,
+    addressReducer,
 });
 
 export default rootReducer;

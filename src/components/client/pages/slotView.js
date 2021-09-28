@@ -2,18 +2,29 @@ import React, { useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSlot, getSlotById } from '../../../redux/actions/slot';
+import { getSlotById } from '../../../redux/actions/slot';
+import { useLocation } from 'react-router-dom';
 import './slotdetails.css';
 
 function SlotView() {
+ 
+  const search = useLocation().search;
+  const b = new URLSearchParams(search).get('_id'); 
+  console.log(b);
+
   const history = useHistory();
   const dispatch = useDispatch();
   const slots = useSelector((state) => state.slotReducer?.slotData?.b);
-  // console.log(slots);
+  console.log(slots);
+  // useEffect(() => {
+  //   dispatch(getSlot());
+  // }, []);
+
   useEffect(() => {
-    dispatch(getSlot());
     dispatch(getSlotById());
   }, []);
+
+  
 
   const handleRoute = () => {
     history.push('/pickupaddress');
@@ -23,7 +34,6 @@ function SlotView() {
       <h1 className="slothead">Slot Details</h1>
       <hr className="horizon" />
       <Table id="tab">
-        <thead></thead>
         {slots && slots.length > 0
           ? slots.map((b) => {
               return (

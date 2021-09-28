@@ -4,7 +4,7 @@ import { Table, Button } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import './All.css';
+import './admin.css';
 import {
   addAboutcards,
   editAboutcards,
@@ -26,8 +26,7 @@ function AboutCards() {
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    dispatch(editAboutcards(formData, editId))
-    .then((res) => {
+    dispatch(editAboutcards(formData, editId)).then((res) => {
       console.log(res);
       setShouldCall(!shouldCall);
       setShow(false);
@@ -62,7 +61,7 @@ function AboutCards() {
   };
   return (
     <div className="Apps">
-      <h1 className="headline">About cards</h1>
+      <h1 className="headline">About Cards</h1>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Edit Slot</Modal.Title>
@@ -70,7 +69,7 @@ function AboutCards() {
         <Modal.Body>
           <form onSubmit={handleEditSubmit}>
             <div className="form-group">
-              <label>subHeading</label>
+              <label>Sub Heading</label>
               <InputGroup className="mb-3">
                 <FormControl
                   name="subHeading"
@@ -107,7 +106,7 @@ function AboutCards() {
                 />
               </InputGroup>
               <Button className="sub" type="submit">
-                Update
+                Save
               </Button>
               <Button className="cancel" id="close" onClick={handleClose}>
                 Close
@@ -119,16 +118,16 @@ function AboutCards() {
       <div>
         <Modal show={shows} onHide={handleCloses}>
           <Modal.Header>
-            <Modal.Title>Add About-Cards</Modal.Title>
+            <Modal.Title>Add About Cards</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form onSubmit={handleAddSubmit}>
               <div className="form-group">
-                <label>subHeading</label>
+                <label>Sub Heading</label>
                 <InputGroup className="mb-3">
                   <FormControl
                     name="subHeading"
-                    placeholder="Enter subHeading"
+                    placeholder="Enter Sub Heading"
                     type="text"
                     className=""
                     onChange={(e) => {
@@ -156,7 +155,7 @@ function AboutCards() {
                   />
                 </InputGroup>
                 <Button className="sub" type="submit" onClick={handleCloses}>
-                  Update
+                  Save
                 </Button>
                 <Button className="cancel" id="closes" onClick={handleCloses}>
                   Close
@@ -166,12 +165,12 @@ function AboutCards() {
           </Modal.Body>
         </Modal>
         <Button className="add" onClick={() => handleShows()}>
-          Add AboutCards
+          Add About Cards
         </Button>
       </div>
       <Table striped bordered hover mt-10>
         <tr>
-          <th>subHeading</th>
+          <th>Sub Heading</th>
           <th>Text</th>
           <th>Actions </th>
         </tr>
