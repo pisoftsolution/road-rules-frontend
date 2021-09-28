@@ -13,20 +13,20 @@ import Payment from './components/client/Payment/payment/payment';
 // import Navbar from './components/common/navbar/navbar';
 import OTPBox from './components/client/auth/otp/otp';
 import Home from './components/client/home/home';
-// import Navbar from './components/common/navbar/navbar';
+import Navbars from './components/common/navbar/Navbar';
 // import Navbar from './components/common/Navbar1/navbar';
 // import HomeItem from './components/common/items/homeItem';
 // import Booking from './components/common/items/bookingItem';
 // import ContactUs from './components/common/items/conatactUs';
 // import ContactLogo from './components/common/items/contactLogo';
-import NavbarRouting from './components/common/navbarRouting';
+// import NavbarRouting from './components/common/navbarRouting';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbars />
       <Router history={history}>
-        <NavbarRouting />
+        {/* <NavbarRouting /> */}
         <Switch>
           <Route exact path="/" component={Signin}></Route>
           <Route exact path="/home" component={Home} />

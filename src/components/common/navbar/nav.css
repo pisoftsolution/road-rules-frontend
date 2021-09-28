@@ -1,3 +1,26 @@
+button.mr-2.navbar-toggler {
+  display: none;
+}
+a.nav-link {
+  color: #264861;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 800px) {
+  button.mr-2.navbar-toggler {
+    display: flex;
+  }
+  .nave {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  button.mr-2.navbar-toggler {
+    display: flex;
+  }
+  .nave {
+    display: none;
+  }
+}
 /* div#navbarSupportedContent {
   justify-content: end;
   flex-grow: inherit;
@@ -7,7 +30,7 @@ img {
   cursor: pointer;
 } */
 
-* {
+/* * {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
@@ -124,16 +147,14 @@ section h2 {
     line-height: 70px;
   }
 }
-/*CONTACT CSS   */
 
-/* Style the input container */
 .input-container {
   display: flex;
   width: 100%;
   margin-bottom: 15px;
 }
 
-/* Style the form icons */
+
 .icon {
   padding: 10px;
   background: dodgerblue;
@@ -142,7 +163,7 @@ section h2 {
   text-align: center;
 }
 
-/* Style the input fields */
+
 .input-field {
   width: 100%;
   padding: 10px;
@@ -153,7 +174,6 @@ section h2 {
   border: 2px solid dodgerblue;
 }
 
-/* Set a style for the submit button */
 .btn {
   background-color: dodgerblue;
   color: white;
@@ -168,7 +188,7 @@ section h2 {
   opacity: 1;
 }
 
-/* HOME CSS */
+
 
 .epic {
   font-weight: bold;
@@ -185,7 +205,7 @@ div h2 {
   text-align: center;
   padding-bottom: 20px;
 }
-/*   ABOUT   */
+
 .id p {
   font-weight: bold;
   text-align: center;
@@ -202,7 +222,7 @@ div h2 {
   width: 40%;
   margin-top: -1000px;
 }
-/* BLOG CSS   */
+
 
 .epic img {
   width: 100%;
@@ -211,4 +231,4 @@ div h2 {
 
 div#navbarSupportedContent {
   padding-left: 400px;
-}
+} */

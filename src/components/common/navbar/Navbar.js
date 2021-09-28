@@ -1,3 +1,91 @@
+import React, { useState } from 'react';
+import './nav.css';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
+
+function Navbars() {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleNavbar = () => setCollapsed(!collapsed);
+
+  return (
+    <div>
+      <Navbar color="faded" light>
+        <NavbarBrand href="/" className="mr-auto">
+          <img
+            src="https://www.roadrules.info/images/logo-roadrules.svg"
+            className="pic"
+            alt="LOGO"
+          ></img>
+        </NavbarBrand>
+
+        <div className="nave">
+          <ul className="ull ">
+            <li className="lli">
+              <a className="nav-link" aria-current="page" href="#">
+                Home
+              </a>
+            </li>
+            <li className="lli">
+              <a className="nav-link" href="#">
+                Booking
+              </a>
+            </li>
+            <li className="lli">
+              <a className="nav-link" href="#">
+                Contact Us
+              </a>
+            </li>
+            <img
+              src="https://www.roadrules.info/images/profile_avatar.png"
+              className="img-fluid"
+              id="logo2"
+              alt="LOGO"
+            ></img>
+          </ul>
+          {/* <NavItem>
+            <NavLink>Home</NavLink>
+          </NavItem> */}
+        </div>
+
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink>Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Booking</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Contact US</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                <img
+                  src="https://www.roadrules.info/images/profile_avatar.png"
+                  className="img-fluid"
+                  id="logo2"
+                  alt="LOGO"
+                ></img>
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+}
+
+export default Navbars;
+
 // import React from 'react';
 // import './nav.css';
 
@@ -54,37 +142,37 @@
 //   );
 // }
 // export default Navbar;
-// // <nav className="navbar navbar-light">
-// //   <div className="container-fluid">
-// //     <div className="row bb">
-// //       <div className="col-md-6 wid">
-// //         <img
-// //           src="https://www.roadrules.info/images/logo-roadrules.svg"
-// //           className="pic"
-// //           alt="LOGO"
-// //         ></img>
-// //       </div>
+// <nav className="navbar navbar-light">
+//   <div className="container-fluid">
+//     <div className="row bb">
+//       <div className="col-md-6 wid">
+//         <img
+//           src="https://www.roadrules.info/images/logo-roadrules.svg"
+//           className="pic"
+//           alt="LOGO"
+//         ></img>
+//       </div>
 
-// //       <div className="col-md-6 nj">
-// //         <ul className="mk">
-// //           <li>Home</li>
-// //           <li>Booking</li>
-// //           <li>Contact Us</li>
-// //           <img
-// //             src="https://www.roadrules.info/images/profile_avatar.png"
-// //             className="img-fluid"
-// //             id="logo2"
-// //             alt="LOGO"
-// //           ></img>
-// //         </ul>
-// //       </div>
-// //     </div>
-// //   </div>
-// //   <div className="burger">
-// //     <div className="line"></div>
-// //     <div className="line"></div>
-// //     <div className="line"></div>
-// //   </div>
-// // </nav>
-// //   );
-// // }
+//       <div className="col-md-6 nj">
+//         <ul className="mk">
+//           <li>Home</li>
+//           <li>Booking</li>
+//           <li>Contact Us</li>
+//           <img
+//             src="https://www.roadrules.info/images/profile_avatar.png"
+//             className="img-fluid"
+//             id="logo2"
+//             alt="LOGO"
+//           ></img>
+//         </ul>
+//       </div>
+//     </div>
+//   </div>
+//   <div className="burger">
+//     <div className="line"></div>
+//     <div className="line"></div>
+//     <div className="line"></div>
+//   </div>
+// </nav>
+//   );
+// }
