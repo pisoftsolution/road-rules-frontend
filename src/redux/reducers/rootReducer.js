@@ -6,6 +6,7 @@ import hometestimonial from './hometestimonial';
 import aboutcards from './aboutcards';
 import about from './about';
 import choose from './choose';
+import contactus from './contactus';
 
 const rootReducer = combineReducers({
   authReducer,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   hometestimonial,
   aboutcards,
   about,
-  choose
+  choose,
+  contactus
 });
 
 export default rootReducer;

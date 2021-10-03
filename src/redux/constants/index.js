@@ -12,3 +12,4 @@ export const GETTESTIMONIAL = 'GETTESTIMONIAL';
 export const GET_ABOUTCARDS = 'GET_ABOUTCARDS';
 export const GET_CHOOSE = 'GET_CHOOSE';
 export const GET_ABOUT = 'GET_ABOUT';
+export const ADD_CONTACT = 'ADD_CONTACT';

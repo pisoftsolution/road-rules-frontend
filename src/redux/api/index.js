@@ -43,3 +43,7 @@ export const getChoose = () => {
 export const getAbout = () => {
   return axios.get(`${url}/about/about`);
 };
+
+export const addContact = (formData) => {
+  return axios.post(`${url}/contact/contact-us`, formData);
+};
