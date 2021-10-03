@@ -7,7 +7,7 @@ import { addAddress } from '../../../redux/actions/addaddress';
 // import { getClient } from '../../../redux/actions/addaddress';
 // import { getAddress } from '../../../redux/actions/addaddress';
 
-function Address() {
+function Address() { 
 
   const history = useHistory();
   const handleRoute = () => {
