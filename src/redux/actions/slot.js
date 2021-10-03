@@ -29,9 +29,9 @@ export const editSlot = (formData, id) => async (dispatch) => {
   }
 };
 
-export const getSlotById = (formData, id) => async (dispatch) => {
+export const getSlotById = ( id) => async (dispatch) => {
   try {
-    const { data } = await api.getSlotById(formData, id);
+    const { data } = await api.getSlotById( id);
     dispatch({ type: GET_SLOT_BY_ID, data });
   } catch (e) {
     alert(e?.response?.data?.msg);

@@ -7,24 +7,18 @@ import { useLocation } from 'react-router-dom';
 import './slotdetails.css';
 
 function SlotView() {
- 
   const search = useLocation().search;
-  const b = new URLSearchParams(search).get('_id'); 
+  const b = new URLSearchParams(search).get('id');
   console.log(b);
 
   const history = useHistory();
   const dispatch = useDispatch();
-  const slots = useSelector((state) => state.slotReducer?.slotData?.b);
-  console.log(slots);
-  // useEffect(() => {
-  //   dispatch(getSlot());
-  // }, []);
+  const slot = useSelector((state) => state.slotReducer?.slotData?.b);
+  console.log(slot);
 
   useEffect(() => {
-    dispatch(getSlotById());
-  }, []);
-
-  
+    dispatch(getSlotById(b));
+  }, [b]);
 
   const handleRoute = () => {
     history.push('/pickupaddress');
@@ -34,40 +28,34 @@ function SlotView() {
       <h1 className="slothead">Slot Details</h1>
       <hr className="horizon" />
       <Table id="tab">
-        {slots && slots.length > 0
-          ? slots.map((b) => {
-              return (
-                <>
-                  <tbody>
-                    <tr id={b._id} className="tableRow">
-                      <td colSpan="2" className="dateBody">
-                        date
-                        <td colSpan="2" className="timeBody">
-                          time
-                        </td>
-                      </td>
-                      <td className="dateBody">
-                        {b.date}
-                        <td className="timeBody">{b.time}</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="instructorBody">
-                        Instructor
-                        <td colSpan="2" className="priceBody">
-                          Price
-                        </td>
-                      </td>
-                      <td className="instructorBody">
-                        {b.instructor}
-                        <td className="priceBody">{b.price}</td>
-                      </td>
-                    </tr>
-                  </tbody>
-                </>
-              );
-            })
-          : ''}
+        <tbody>
+          {/* <tr  className="tableRow"> */}
+          <tr>
+            <td colSpan="2" className="dateBody mr-3">
+              <div id="dat">Date</div>
+              <td colSpan="2" className="timeBody">
+                <div className="tim">Time</div>
+              </td>
+            </td>
+            <td className="dateBody">
+              {slot?.date}
+
+              <td className="timeBody">{slot?.time}</td>
+            </td>
+          </tr>
+          <tr>
+            <td colSpan="2" className="instructorBody">
+              Instructor
+              <td colSpan="2" className="priceBody">
+                Price
+              </td>
+            </td>
+            <td className="instructorBody">
+              {slot?.instructor}
+              <td className="priceBody">{slot?.price}</td>
+            </td>
+          </tr>
+        </tbody>
         <Button className="linkview">View Privacy Policy</Button>
         <Button className="continu" onClick={handleRoute}>
           Continue

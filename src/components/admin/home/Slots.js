@@ -29,8 +29,8 @@ function Slots() {
     console.log(formData);
     dispatch(editSlot(formData, editId))
     .then((res) => {
-      console.log(res);
       setShouldCall(!shouldCall);
+      console.log(res);
       setShow(false);
       setFormData(initialState);
     });
@@ -51,7 +51,7 @@ function Slots() {
       date: date,
       time: time,
       clientLimit: clientLimit,
-      instructor: instructor
+      instructor: instructor,
     });
     setShow(true);
   };
@@ -133,7 +133,7 @@ function Slots() {
               <label>Instructor</label>
               <select
                     name="instructor"
-                    // value={formData.instructor} 
+                    // value={formData.instructorName} 
                     onChange={(e) => {
                       setFormData({
                         ...formData,
@@ -143,7 +143,6 @@ function Slots() {
                     required
                     id="carss"
                   >
-                    {/* <option value="" disabled selected hidden>select the options..</option> */}
                     {instructors && instructors.length > 0
                       ? instructors.map((b) => {
                           return (
@@ -155,23 +154,6 @@ function Slots() {
                         })
                       : ''}
                   </select>
-              {/* <InputGroup className="mb-3">
-                <FormControl
-                  name="instructor"
-                  type="text"
-                  placeholder="Enter Instructor"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                  value={formData.instructor}
-                  onChange={(e) => {
-                    setFormData({
-                      ...formData,
-                      [e.target.name]: e.target.value
-                    });
-                  }}
-                  required
-                />
-              </InputGroup> */}
               <Button className="sub" type="submit">
                 Save
               </Button>
@@ -305,7 +287,8 @@ function Slots() {
                           b.date,
                           b.time,
                           b.clientLimit,
-                          b.instructor,
+                          b.instructorName,
+                          // b.instructor,
                         );
                       }}
                       className="btn-primary"

@@ -104,14 +104,18 @@ export const editSlot = (data, id) => {
   return axios.put(`${url}/slot/modify-slot?id=${id}`, data);
 };
 
-export const getSlotById = (data, id) => {
-  return axios.get(`${url}/slot/slot?id=${id}`, data);
-};
-
-export const getRide = () => {
-  return axios.get(`${url}/ride/all-rides`);
+export const getSlotById = (id) => {
+  return axios.get(`${url}/slot/slot?id=${id}`);
 };
 
 export const addAddress = (formData) => {
   return axios.post(`${url}/address/add-address`, formData);
 };
+
+// export const getAddress = () => {
+//   return axios.get(`${url}/address/get-address`);
+// };
+
+// export const getClient = () => {
+//   return axios.get(`${url}/address/get-client`);
+// };

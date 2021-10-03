@@ -4,6 +4,18 @@
     margin-left: -50%;
 }
 
+div#dat {
+    padding-right: 27px;
+}
+
+/* div#dat {
+    padding-right: 7px;
+} */
+
+.tim {
+    margin-left: 9px;
+}
+
 td.dateBody {
     background-color: white;  
     box-shadow: none;
@@ -25,7 +37,8 @@ td.timeBody {
 }
 td.timeBody {
     background-color: white;
-    padding-left: 144px;
+    /* padding-left: 148px */
+    padding-left: 139px;
 }
 td.priceBody {
     background-color: white;
