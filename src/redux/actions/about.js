@@ -8,4 +8,4 @@ export const getAbout = () => async (dispatch) => {
   } catch (e) {
     alert(e?.response?.data?.msg);
   }
-};
+}; 
