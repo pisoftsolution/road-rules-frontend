@@ -30,7 +30,7 @@ function AppRouting() {
         <Route exact path="/email-otp" component={EmailOtp}></Route>
         <Route exact path="/phoneotp" component={PhoneOtp}></Route>
         <Route exact path="/signin" component={Signin}></Route>
-        <Route exact path="/success" component={Success}></Route>
+        <Route exact path="/success" component={Success}></Route> 
         <Route exact path="/cancel" component={Cancel}></Route>
         <Route exact path="/stripe" component={Stripe}></Route>
         <Route exact path="/payment" component={Payment}></Route>
