@@ -11,12 +11,12 @@ import Cancel from '../../../components/client/Payment/Cancel/cancel';
 import Stripe from '../../../components/client/Payment/payment/stripe';
 import Payment from '../../../components/client/Payment/payment/payment';
 // import HomeUI from '../../../components/homeui/home';
-// import Schedule from '../../../components/client/pages/calendar';
+import Schedule from '../../../components/client/pages/calendar';
 import Navbar from '../../../components/common/navbar/Navbar';
-// import SlotDetails from '../../../components/client/pages/slotDetails';
-// import SlotView from '../../../components/client/pages/slotView';
-// import Address from '../../../components/client/pages/address';
-// import NewAddress from '../../../components/client/pages/newAddress';
+import SlotDetails from '../../../components/client/pages/slotDetails';
+import SlotView from '../../../components/client/pages/slotView';
+import Address from '../../../components/client/pages/address';
+import NewAddress from '../../../components/client/pages/newAddress';
 
 function AppRouting() {
   return (
@@ -34,11 +34,11 @@ function AppRouting() {
         <Route exact path="/cancel" component={Cancel}></Route>
         <Route exact path="/stripe" component={Stripe}></Route>
         <Route exact path="/payment" component={Payment}></Route>
-        {/* <Route exact path="/calendar" component={Schedule}></Route>
+        <Route exact path="/calendar" component={Schedule}></Route>
         <Route exact path="/slotdetails" component={SlotDetails}></Route>
         <Route exact path="/slotview" component={SlotView}></Route>
         <Route exact path="/pickupaddress" component={Address}></Route>
-        <Route exact path="/newaddress" component={NewAddress}></Route> */}
+        <Route exact path="/newaddress" component={NewAddress}></Route>
       </Switch>
     </>
   );

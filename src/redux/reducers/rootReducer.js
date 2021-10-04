@@ -9,7 +9,7 @@ import chooseReducer from "./choose"
 import userReducer from "./users"
 import instructorReducer from "./instructor"
 import slotReducer from "./slot"
-// import addressReducer from './addaddress'
+import addressReducer from './addaddress'
 // import hometestimonial from './hometestimonial';
 
 const rootReducer = combineReducers({
@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
     userReducer,
     instructorReducer,
     slotReducer,
-    // addressReducer,
+    addressReducer,
 });
 
 export default rootReducer;
