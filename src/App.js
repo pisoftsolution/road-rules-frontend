@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/admin" component={AdminRouting} />
-        <Route path="/" component={AppRouting} />
+        <Route path="/" component={AppRouting} /> 
       </Switch>
     </div>
   );
