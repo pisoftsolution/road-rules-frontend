@@ -1,25 +1,25 @@
-import { ADD_ABOUTCARDS, EDIT_ABOUTCARDS, GET_ABOUTCARDS } from "../constants";
+import { ADD_INSTRUCTOR, EDIT_INSTRUCTOR, GET_INSTRUCTOR } from "../constants";
 
-export default (state = { aboutcardsData: null }, action) => {
+export default (state = { instructorData: null }, action) => {
 
     switch (action.type) {
-        case GET_ABOUTCARDS:
+        case GET_INSTRUCTOR:
             console.log(action?.data);
             return {
                 ...state,
-                aboutcardsData: action?.data
+                instructorData: action?.data
             }
-        case ADD_ABOUTCARDS:
+        case ADD_INSTRUCTOR:
             console.log(action?.data);
             return {
                 ...state,
-                aboutcardsData: action?.data
+                instructorData: action?.data
             }
-        case EDIT_ABOUTCARDS:
+        case EDIT_INSTRUCTOR:
             console.log(action?.data);
             return {
                 ...state,
-                aboutcardsData: action?.data
+                instructorData: action?.data
             }
         default:
             return {
