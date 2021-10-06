@@ -1,0 +1,132 @@
+#tab {
+    width: 50%;
+    display: inline-table;
+    margin-left: -50%;
+}
+
+div#dat {
+    padding-right: 27px;
+}
+
+/* div#dat {
+    padding-right: 7px;
+} */
+
+.tim {
+    margin-left: 9px;
+}
+
+td.dateBody {
+    background-color: white;  
+    box-shadow: none;
+}
+
+h1.slothead {
+    margin-right: 162px;
+    margin-top: 20px;
+    color: slategrey;
+}
+
+.tableRow,tr:nth-child(even){
+    background-color: white;
+    box-shadow: #fff;
+}
+
+td.timeBody {
+    background-color: white;
+}
+td.timeBody {
+    background-color: white;
+    /* padding-left: 148px */
+    padding-left: 139px;
+}
+td.priceBody {
+    background-color: white;
+    box-shadow: none;
+    padding-left: 146px;
+}
+td.instructorBody {
+    background-color: white;  
+}
+.horizon{
+    width: 100vh;
+    display: inline-block; 
+}
+
+hr.line {
+    margin-top: 55px;
+    display: table-caption;
+    /* border-bottom: dashed; */
+}
+button.continu {
+    margin-top: 117px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: -329px;
+}
+
+button.linkview.btn.btn-primary {
+    margin-right: -125px;
+    margin-top: -26px;
+    text-decoration: underline;
+}
+
+  #sec7 {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-right: 300px!important;
+}
+
+#sec8 {
+    margin-right: -173px;
+    margin-top: 41px;
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    height: 329px;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+}
+
+h1.mainhead {
+    margin-top: 342px;
+    justify-content: center;
+    text-align-last: center;
+    margin-left: 10px;
+}
+
+input#rad {
+    margin-left: 45px;
+    margin-top: 48px;
+}
+
+p.sent {
+    margin-top: -18px;
+    margin-right: 289px;
+}
+
+button.pickadd {
+    margin-bottom: 399px;
+    margin-left: 26px;
+    margin-right: 34px;
+}
+
+p.newp {
+    margin-left: -207px;
+    margin-top: 23px;
+    margin-bottom: -23px;
+}
+
+a.newroute {
+    margin-left: -26px;
+    margin-bottom: -1px;
+    cursor: pointer;
+}

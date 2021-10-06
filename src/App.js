@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 import Signin from './components/client/auth/login/signin';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import history from './History';
@@ -28,9 +29,15 @@ import Classes from './components/common/items/classes';
 // import ContactLogo from './components/common/items/contactLogo';
 // import NavbarRouting from './components/common/navbarRouting';
 
+import { Route, Switch } from 'react-router-dom';
+import AppRouting from './components/admin/home/appRouting';
+import AdminRouting from './components/admin/home/adminRouting';
+
+
 function App() {
   return (
     <div className="App">
+
       <Navbars />
       <Router history={history}>
         {/* <NavbarRouting /> */}
@@ -54,6 +61,12 @@ function App() {
           <Route exact path="/classes" component={Classes}></Route>
         </Switch>
       </Router>
+
+      <Switch>
+        <Route path="/admin" component={AdminRouting} /> 
+        <Route path="/" component={AppRouting} />
+      </Switch>
+
     </div>
   );
 }
