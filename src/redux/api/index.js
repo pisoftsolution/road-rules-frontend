@@ -72,6 +72,11 @@ export const addChoose = (formData) => {
   return axios.post(`${url}/choose/add-choose`, formData);
 };
 
+
+export const addContact = (formData) => {
+  return axios.post(`${url}/contact/contact-us`, formData);
+};
+
 export const editChoose = (data, id) => {
   return axios.put(`${url}/choose/update-choose?id=${id}`, data);
 };
@@ -119,3 +124,4 @@ export const addAddress = (formData) => {
 // export const getClient = () => {
 //   return axios.get(`${url}/address/get-client`);
 // };
+

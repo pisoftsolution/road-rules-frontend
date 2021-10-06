@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './nav.css';
 import {
   Collapse,
@@ -12,7 +14,6 @@ import {
 
 function Navbars() {
   const [collapsed, setCollapsed] = useState(true);
-
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
@@ -39,19 +40,37 @@ function Navbars() {
               </a>
             </li>
             <li className="lli">
-              <a className="nav-link" href="/contact us">
+              <a className="nav-link" href="/contact">
                 Contact Us
               </a>
             </li>
-            <img
-              src="https://www.roadrules.info/images/profile_avatar.png"
-              className="img-fluid"
-              id="logo2"
-              alt="LOGO"
-            ></img>
+            <li>
+              <NavDropdown
+                title={
+                  <div className=" text-center">
+                    <img
+                      src="https://www.roadrules.info/images/profile_avatar.png"
+                      className="img-fluid"
+                      id="logo2"
+                      alt="LOGO"
+                    ></img>
+                  </div>
+                }
+              >
+                <NavDropdown.Item href="/UserProfile">
+                  &nbsp;User Profile
+                  {/* <div className="logas">&nbsp;User Profile</div> */}
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/classes">
+                  <div className="logas">&nbsp;My Classes</div>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <div className="logas">&nbsp;&nbsp;Logout</div>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </li>
           </ul>
         </div>
-
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>

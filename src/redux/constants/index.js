@@ -18,6 +18,10 @@ export const GET_TESTIMONIAL = 'GET_TESTIMONIAL';
 export const ADD_TESTIMONIAL = 'ADD_TESTIMONIAL';
 export const EDIT_TESTIMONIAL = 'EDIT_TESTIMONIAL';
 export const GET_CHOOSE = 'GET_CHOOSE';
+
+export const GET_ABOUT = 'GET_ABOUT';
+export const ADD_CONTACT = 'ADD_CONTACT';
+
 export const ADD_CHOOSE = 'ADD_CHOOSE';
 export const EDIT_CHOOSE = 'EDIT_CHOOSE';
 export const GET_USERS = 'GET_USERS';
@@ -32,3 +36,4 @@ export const GET_SLOT_BY_ID = 'GET_SLOT_BY_ID';
 // export const GET_CLIENT = 'GET_CLIENT';
 export const ADD_ADDRESS = 'ADD_ADDRESS';
 export const GETTESTIMONIAL = 'GETTESTIMONIAL';
+

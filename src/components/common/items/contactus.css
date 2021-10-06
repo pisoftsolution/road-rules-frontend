@@ -1,0 +1,79 @@
+/* #contactus {
+  display: flex;
+  justify-content: center;
+}
+#conus {
+  display: flex;
+}
+.text-muted.font-medium.font-16.text.mt-4 {
+  display: flex;
+  font-weight: 600;
+}
+p.text-muted {
+  display: flex;
+  margin-top: 8px;
+} */
+/* footer.container {
+  height: 387px;
+} */
+.contact {
+  min-height: 90vh;
+}
+div#contactus {
+  display: flex;
+  justify-content: center;
+}
+div#concard {
+  float: left;
+  display: contents;
+}
+.input-group mt-4 w-50 {
+  margin-right: 20px;
+}
+p#tem {
+  font-weight: normal !important;
+}
+p.text-muted {
+  display: flex;
+}
+.fomie.mt-3.d-flex {
+  width: 100%;
+}
+.input-group.mr-2 {
+  width: 100%;
+  /* padding-right: 17px; */
+}
+#fmc {
+  margin-right: 12px;
+}
+/* .App {
+  min-height: 500vh;
+} */
+
+.input-group.mt-4 {
+  padding: 0px -1px 0px 0px;
+  padding: 0px;
+  width: 100%;
+}
+textarea.form-control {
+  background-color: #e0f6ff;
+}
+.conbut {
+  display: flex;
+  justify-content: center;
+}
+button.btn.btn-primary.mt-5 {
+  width: 115px;
+}
+h1#conus {
+  color: #264861;
+  font-weight: 700;
+}
+.text-muted.font-medium.font-16.text.mt-4 {
+  text-align: initial;
+}
+.text-muted.font-medium.font-16.text.mt-4 {
+  text-align: initial;
+
+  font-weight: 500;
+}

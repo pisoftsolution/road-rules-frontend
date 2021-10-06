@@ -130,8 +130,8 @@ function Signup() {
               </div>
             </div>
             <div>
-              <button type="submit" id="signUp" className="btn signup">
-                Already a member
+              <button type="submit" id="mem" className="mt-4 signup">
+                Already a member?
                 <a id="signUp">Signin</a>
               </button>
             </div>
