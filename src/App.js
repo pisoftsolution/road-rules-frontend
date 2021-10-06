@@ -16,6 +16,10 @@ import Home from './components/client/home/home';
 import Navbars from './components/common/navbar/Navbar';
 import Booking from './components/common/navbar/booking';
 import Contact from './components/common/items/conatactUs';
+import ContactLogo from './components/common/items/contactLogo';
+import UserProfile from './components/common/items/userprofile';
+import AddAddress from './components/common/items/addaddress';
+import Classes from './components/common/items/classes';
 
 // import Navbar from './components/common/Navbar1/navbar';
 // import HomeItem from './components/common/items/homeItem';
@@ -44,6 +48,10 @@ function App() {
           <Route exact path="/otp" component={OTPBox}></Route>
           <Route exact path="/booking" component={Booking}></Route>
           <Route exact path="/contact" component={Contact}></Route>
+          <Route exact path="/ContactLogo" component={ContactLogo}></Route>
+          <Route exact path="/userprofile" component={UserProfile}></Route>
+          <Route exact path="/addadress" component={AddAddress}></Route>
+          <Route exact path="/classes" component={Classes}></Route>
         </Switch>
       </Router>
     </div>
