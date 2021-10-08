@@ -1,3 +1,7 @@
 svg.MuiSvgIcon-root {
     color: dodgerblue;
 }
+
+ul.MuiList-root.MuiList-padding {
+    display: block;
+}

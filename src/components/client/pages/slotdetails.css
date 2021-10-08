@@ -8,10 +8,6 @@ div#dat {
     padding-right: 27px;
 }
 
-/* div#dat {
-    padding-right: 7px;
-} */
-
 .tim {
     margin-left: 9px;
 }
@@ -27,9 +23,9 @@ h1.slothead {
     color: slategrey;
 }
 
-.tableRow,tr:nth-child(even){
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: currentColor;
     background-color: white;
-    box-shadow: #fff;
 }
 
 td.timeBody {
@@ -37,7 +33,6 @@ td.timeBody {
 }
 td.timeBody {
     background-color: white;
-    /* padding-left: 148px */
     padding-left: 139px;
 }
 td.priceBody {
@@ -46,8 +41,10 @@ td.priceBody {
     padding-left: 146px;
 }
 td.instructorBody {
-    background-color: white;  
+    background-color: white;
+    box-shadow: none;
 }
+
 .horizon{
     width: 100vh;
     display: inline-block; 
@@ -56,8 +53,8 @@ td.instructorBody {
 hr.line {
     margin-top: 55px;
     display: table-caption;
-    /* border-bottom: dashed; */
 }
+
 button.continu {
     margin-top: 117px;
     justify-content: center;
@@ -92,12 +89,17 @@ button.linkview.btn.btn-primary {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    height: 329px;
+    /* height: 329px; */
     box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
 }
 
+button.pickadd.btn.btn-primary {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
 h1.mainhead {
-    margin-top: 342px;
+    margin-top: 50px;
     justify-content: center;
     text-align-last: center;
     margin-left: 10px;
@@ -105,12 +107,25 @@ h1.mainhead {
 
 input#rad {
     margin-left: 45px;
-    margin-top: 48px;
+    margin-top: 37px;
+    margin-bottom: 17px;
 }
 
-p.sent {
+/* input#rad {
+    margin-left: 45px;
+    margin-top: 48px;
+} */
+
+/* p.sent {
     margin-top: -18px;
     margin-right: 289px;
+} */
+
+p.sent {
+    margin-top: -37px;
+    margin-left: 64px;
+    text-align: justify;
+    text-transform: capitalize;
 }
 
 button.pickadd {

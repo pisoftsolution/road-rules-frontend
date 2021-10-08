@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import jwt from 'jwt-decode';
-// import jwt_decode from "jwt-decode";
+import jwt from 'jwt-decode';
+
 import './newaddress.css';
 import { addAddress } from '../../../redux/actions/addaddress';
 
@@ -14,33 +14,18 @@ function NewAddress() {
   const dispatch = useDispatch();
   const addresses = useSelector((state) => state.addressReducer?.addressData?.b);
   console.log(addresses);
-// get the token from localstorage 
-// decode token using jwt library
-// 
-  // const handleRoute = () => {
-  //   history.push('/pickupaddress');
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token')  
     console.log(token);
-    dispatch(addAddress(formData, addresses));
+    var decoded = jwt(token);
+    console.log(formData);
+    
+    dispatch(addAddress({...formData, id:decoded.id}));
     setShouldCall(!shouldCall);
     history.push('/pickupaddress');
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   var token1 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTQ3YzQ5ZjBmNThmNDdhODQ5ODBmMiIsImVtYWlsIjoianVuYWlkYWxpMTUwLjdAZ21haWwuY29tIiwiaWF0IjoxNjMyOTI2ODY5LCJleHAiOjE2MzM5NjM2Njl9.H11l4nYOGqXEQHO5WqQM3m5r_ZGeitFuc6B1hfE0ENs";
-  //   var decoded = jwt.decode(token1);
-  //   console.log(decoded);
-  //   const token = localStorage.getItem('token',token)
-  //   console.log(token);
-  //   dispatch(addAddress(formData, addresses));
-  //   setShouldCall(!shouldCall);
-  //   history.push('/pickupaddress');
-  // };
 
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body2">

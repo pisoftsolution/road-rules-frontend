@@ -29,7 +29,6 @@ function SlotView() {
       <hr className="horizon" />
       <Table id="tab">
         <tbody>
-          {/* <tr  className="tableRow"> */}
           <tr>
             <td colSpan="2" className="dateBody mr-3">
               <div id="dat">Date</div>
