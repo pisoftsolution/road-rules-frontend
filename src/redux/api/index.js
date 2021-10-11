@@ -112,10 +112,8 @@ export const addAddress = (formData) => {
   return axios.post(`${url}/address/add-address`, formData);
 };
 
-// export const getAddress = () => {
-//   return axios.get(`${url}/address/get-address`);
-// };
+export const getAddressById = (id) => {
+  return axios.get(`${url}/address/get-address-by-id?id=${id}`);
+};
 
-// export const getClient = () => {
-//   return axios.get(`${url}/address/get-client`);
-// };
+

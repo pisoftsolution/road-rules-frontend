@@ -1,0 +1,65 @@
+  #sec7 {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-right: 300px!important;
+}
+
+#sec8 {
+    margin-right: -173px;
+    margin-top: 41px;
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 3%);
+}
+
+button.pickadd.btn.btn-primary {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+h1.mainhead {
+    margin-top: 50px;
+    justify-content: center;
+    text-align-last: center;
+    margin-left: 10px;
+}
+
+input#rads {
+    margin-left: 45px;
+    margin-top: 5px;
+    margin-bottom: 17px;
+}
+
+p.send {
+    margin-top: -37px;
+    margin-left: 64px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+button.pickadd {
+    margin-bottom: 399px;
+    margin-left: 26px;
+    margin-right: 34px;
+}
+
+p.newp {
+    margin-left: -207px;
+    margin-top: 23px;
+    margin-bottom: -23px;
+}
+
+a.newroute {
+    margin-left: -26px;
+    margin-bottom: -1px;
+    cursor: pointer;
+}

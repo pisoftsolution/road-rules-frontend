@@ -17,6 +17,7 @@ import SlotDetails from '../../../components/client/pages/slotDetails';
 import SlotView from '../../../components/client/pages/slotView';
 import Address from '../../../components/client/pages/address';
 import NewAddress from '../../../components/client/pages/newAddress';
+import PaymentMode from '../../client/pages/paymentmode';
 
 function AppRouting() {
   return (
@@ -39,6 +40,7 @@ function AppRouting() {
         <Route exact path="/slotview" component={SlotView}></Route>
         <Route exact path="/pickupaddress" component={Address}></Route>
         <Route exact path="/newaddress" component={NewAddress}></Route>
+        <Route exact path="/paymentmode" component={PaymentMode}></Route>
       </Switch>
     </>
   );
