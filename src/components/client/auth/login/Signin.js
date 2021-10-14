@@ -12,6 +12,7 @@ function Signin() {
     e.preventDefault();
     console.log(formData);
     dispatch(login(formData, history));
+    // setFormData(initialState);
   };
   const history = useHistory();
   const handleRoute = () => {

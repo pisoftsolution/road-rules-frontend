@@ -30,4 +30,3 @@ export const EDIT_SLOT = 'EDIT_SLOT';
 export const GET_SLOT_BY_ID = 'GET_SLOT_BY_ID';
 export const ADD_ADDRESS = 'ADD_ADDRESS';
 export const GET_ADDRESS_BY_ID = 'GET_ADDRESS_BY_ID'
-export const GETTESTIMONIAL = 'GETTESTIMONIAL';

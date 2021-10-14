@@ -10,7 +10,7 @@ import Success from '../../../components/client/Payment/success/success';
 import Cancel from '../../../components/client/Payment/Cancel/cancel';
 import Stripe from '../../../components/client/Payment/payment/stripe';
 import Payment from '../../../components/client/Payment/payment/payment';
-// import HomeUI from '../../../components/homeui/home';
+// import HomeUI from '../../../components/home/home';
 import Schedule from '../../../components/client/pages/calendar';
 import Navbar from '../../../components/common/navbar/Navbar';
 import SlotDetails from '../../../components/client/pages/slotDetails';
@@ -18,6 +18,7 @@ import SlotView from '../../../components/client/pages/slotView';
 import Address from '../../../components/client/pages/address';
 import NewAddress from '../../../components/client/pages/newAddress';
 import PaymentMode from '../../client/pages/paymentmode';
+import HomeUI from '../../client/home/home';
 
 function AppRouting() {
   return (
@@ -26,7 +27,7 @@ function AppRouting() {
       <Switch>
         <Route exact path="/" component={Signin}></Route>
         <Route exact path="/" component={Home} />
-        {/* <Route exact path="/home" component={HomeUI} /> */}
+        <Route exact path="/home" component={HomeUI} />
         <Route exact path="/signup" component={Signup}></Route>
         <Route exact path="/email-otp" component={EmailOtp}></Route>
         <Route exact path="/phoneotp" component={PhoneOtp}></Route>

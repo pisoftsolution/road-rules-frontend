@@ -1,28 +1,36 @@
+import swal from 'sweetalert';
 import * as api from '../api';
 import { SIGNUP, LOGIN, } from '../constants';
+import jwt from "jwt-decode";
 
 export const signup = (formData, history) => async (dispatch) => {
     try {
         const { data } = await api.signup(formData);
         dispatch({ type: SIGNUP, data });
-        alert("Signup successful");
+        swal("Signup successful");
         history.push('/verify/email');
         return data;
     } catch (e) {
-      alert(e?.response?.data?.msg);
+      swal(e?.response?.data?.msg);
     }
 };
 
 export const login = (formData, history) => async (dispatch) => {
     try {
         const { data } = await api.login(formData);
+        console.log(jwt(data.token));
         dispatch({ type: LOGIN, data });
-        alert("Login successful");
+        // swal("Login successful");
+        const role = jwt(data.token);
+        if (role === 'admin') {
+            history.push('/admin');
+          return;
+        }
         localStorage.setItem("token", data.token);
-        history.push('/');
+        history.push('/admin');
         return data;
     } catch (e) {
-        alert(e?.response?.data?.msg);
+        swal(e?.response?.data?.msg);
     }
 };
 
