@@ -2,14 +2,10 @@ import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import { useDispatch, useSelector } from 'react-redux';
 import './home.css';
-import { getTestimonial } from '../../../redux/actions/testimonial';
+import { getTestimonial } from '../../../redux/actions/hometestimonial';
 import { getAboutcards } from '../../../redux/actions/aboutcards';
 import { getAbout } from '../../../redux/actions/about';
 import { getChoose } from '../../../redux/actions/choose';
-// import { getTestimonial } from '../../../redux/actions/hometestimonial';
-// import { getAboutcards } from '../../../redux/actions/aboutcards';
-// import { getAbout } from '../../../redux/actions/about';
-// import { getChoose } from '../../../redux/actions/choose';
 
 function HomeUI() {
   var settings = {
@@ -50,23 +46,23 @@ function HomeUI() {
   };
   const dispatch = useDispatch();
   const testimonials = useSelector(
-    (state) => state.testimonialReducer?.testimonialData?.b
+    (state) => state.hometestimonial?.testimonialData?.b
   );
   useEffect(() => {
     dispatch(getTestimonial());
   }, []);
 
-  const aboutcard = useSelector((state) => state.aboutcardsReducer?.aboutcardsData?.b);
+  const aboutcard = useSelector((state) => state.aboutcards?.aboutcardsData?.b);
   useEffect(() => {
     dispatch(getAboutcards());
   }, []);
 
-  const abouts = useSelector((state) => state.aboutReducer?.aboutData?.b);
+  const abouts = useSelector((state) => state.about?.aboutData?.b);
   useEffect(() => {
     dispatch(getAbout());
   }, []);
 
-  const choice = useSelector((state) => state.chooseReducer?.chooseData?.b);
+  const choice = useSelector((state) => state.choose?.chooseData?.b);
   useEffect(() => {
     dispatch(getChoose());
   }, []);
@@ -88,7 +84,7 @@ function HomeUI() {
             //   })
             <div id="htext">
               <h1 id="ttext">Road Rules Driving School</h1>
-              {/* <p3 id="abt">{abouts[1].text}</p3> */}
+              <p3 id="abt">{abouts[1].text}</p3>
             </div>
           ) : (
             ''

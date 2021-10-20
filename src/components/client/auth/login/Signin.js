@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../../../../redux/actions/auth';
@@ -8,6 +8,8 @@ function Signin() {
   const initialState = { email: '', password: '' };
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
+  console.log(token);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -16,8 +18,15 @@ function Signin() {
   };
   const history = useHistory();
   const handleRoute = () => {
-    history.push(`/signup`);
+    history.push(`/signup`); 
   };
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    if (token) {
+      history.push('/home');
+    }
+  }, []);
+
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body">
       <div className="container mm">

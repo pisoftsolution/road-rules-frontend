@@ -20,14 +20,14 @@ export const login = (formData, history) => async (dispatch) => {
         const { data } = await api.login(formData);
         console.log(jwt(data.token));
         dispatch({ type: LOGIN, data });
-        // swal("Login successful");
-        const role = jwt(data.token);
-        if (role === 'admin') {
-            history.push('/admin');
-          return;
+        swal("Login successful");
+        const user = jwt(data.token);
+        if (user.role === 'admin' && user.roleadmin === 'admin') {
+            history.push('/admin');      
+        } else{
+            history.push('/home');
         }
         localStorage.setItem("token", data.token);
-        history.push('/admin');
         return data;
     } catch (e) {
         swal(e?.response?.data?.msg);

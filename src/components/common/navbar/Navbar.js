@@ -10,6 +10,11 @@ import {
   NavLink
 } from 'reactstrap';
 
+// useEffect(() => {
+//   const token = localStorage.getItem('token');
+
+// }, []);
+
 function Navbars() {
   const [collapsed, setCollapsed] = useState(true);
 
