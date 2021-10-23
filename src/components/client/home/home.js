@@ -7,7 +7,7 @@ import { getAboutcards } from '../../../redux/actions/aboutcards';
 import { getAbout } from '../../../redux/actions/about';
 import { getChoose } from '../../../redux/actions/choose';
 
-function Home() {
+function HomeUI() {
   var settings = {
     dots: true,
     infinite: true,
@@ -493,4 +493,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeUI;

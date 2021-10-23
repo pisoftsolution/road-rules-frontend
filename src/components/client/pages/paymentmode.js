@@ -6,7 +6,7 @@ function PaymentMode() {
   return (
     <>
       <div className="container" id="sec7">
-        <div className="card" id="sec8">
+        <div className="card" id="sec9"> 
           <h1 className="mainhead">Please select the payment Mode..</h1>
           <input type="radio" id="rads" name="fav_language" value="HTML" />
           <p className="send">Catch</p>

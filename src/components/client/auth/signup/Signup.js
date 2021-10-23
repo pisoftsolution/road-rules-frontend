@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './signup.css';
 import { useHistory } from 'react-router-dom';
@@ -9,6 +9,8 @@ function Signup() {
   const initialState = { email: '', password: '', phone: '', fullName: '' };
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
+  console.log(token);
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signup(formData, history)).then((res) => {
@@ -22,13 +24,19 @@ function Signup() {
   // const handleRoute = () => {
   //   history.push(`/phoneotp`);
   // };
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    if (token) {
+      history.push('/home');
+    }
+  }, []);
   return (
     <div className="container-fluid p-0 mt-5.5rem" id="body2">
       <div className="container mm">
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-6 ">
-            <div className="card box-shadow-lg bg-white" id="card2">
+            <div className="card box-shadow-lg bg-white" id="card3">
               <div>
                 <h4 className="mb-4 mt-5" id="signin2">
                   Welcome to Road-Rules, Signup here...
