@@ -4,9 +4,7 @@ import './otp.css';
 
 export default function App() {
   // const [code, setCode] = useState('');
-
   // const handleChange = (code) => setCode(code);
-
   return (
     <div className="Otp">
       <h1>Hello</h1>
@@ -20,7 +18,6 @@ export default function App() {
           shouldAutoFocus={true}
         /> */}
       </div>
-
       <input
         aria-label="Please enter verification code. Digit 1"
         isInputNum={true}

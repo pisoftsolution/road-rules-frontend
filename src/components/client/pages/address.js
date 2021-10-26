@@ -33,15 +33,22 @@ function Address() {
             ? address.map((b) => {
                 return (
                   <>
-                  <input type="radio" id="rad" name="fav_language" value="HTML" />
+                    <input
+                      type="radio"
+                      id="rad"
+                      name="fav_language"
+                      value="HTML"
+                    />
                     <p className="sent">
-                      {b.city},{b.province},{b.street},{b.postalCode} 
+                      {b.city},{b.province},{b.street},{b.postalCode}
                     </p>
                   </>
                 );
               })
             : ''}
-          <Button onClick={handleClick} className="pickadd">Continue</Button>
+          <Button onClick={handleClick} className="pickadd">
+            Continue
+          </Button>
         </div>
       </div>
       <p className="newp">Not in the list?</p>
