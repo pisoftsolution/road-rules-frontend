@@ -14,7 +14,7 @@ export const emailOtp = (email) => {
 };
 
 export const emailOtpVerify = (email, otp) => {
-  return axios.get(`${url}/verify/email-otp-verify?email=${email}&&otp=${otp}`); 
+  return axios.get(`${url}/verify/email-otp-verify?email=${email}&&otp=${otp}`);
 };
 
 export const phoneOtp = (phone) => {
@@ -115,5 +115,3 @@ export const addAddress = (formData) => {
 export const getAddressById = (id) => {
   return axios.get(`${url}/address/get-address-by-id?id=${id}`);
 };
-
-
