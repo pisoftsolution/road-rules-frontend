@@ -7,11 +7,9 @@ import Test2 from './test2';
 
 function Booking() {
   const [toggleState, setToggleState] = useState(1);
-
   const toggleTab = (index) => {
     setToggleState(index);
   };
-
   return (
     <div className="booki">
       <div className="bloc-tabs">

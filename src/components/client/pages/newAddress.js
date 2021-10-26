@@ -2,27 +2,28 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import jwt from 'jwt-decode';
-
 import './newaddress.css';
 import { addAddress } from '../../../redux/actions/addaddress';
 
 function NewAddress() {
-  const initialState = { city: '', province: '', street:'', postalCode:'' };
+  const initialState = { city: '', province: '', street: '', postalCode: '' };
   const [formData, setFormData] = useState(initialState);
   const [shouldCall, setShouldCall] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
-  const addresses = useSelector((state) => state.addressReducer?.addressData?.b);
+  const addresses = useSelector(
+    (state) => state.addressReducer?.addressData?.b
+  );
   console.log(addresses);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('token')  
+    const token = localStorage.getItem('token');
     console.log(token);
     var decoded = jwt(token);
     console.log(formData);
-    
-    dispatch(addAddress({...formData, id:decoded.id}));
+
+    dispatch(addAddress({ ...formData, id: decoded.id }));
     setShouldCall(!shouldCall);
     history.push('/pickupaddress');
   };
