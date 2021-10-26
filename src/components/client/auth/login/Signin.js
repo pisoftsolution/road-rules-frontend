@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login } from '../../../../redux/actions/auth';
@@ -8,7 +8,7 @@ function Signin() {
   const initialState = { email: '', password: '' };
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem('token');
   console.log(token);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,10 +18,10 @@ function Signin() {
   };
   const history = useHistory();
   const handleRoute = () => {
-    history.push(`/signup`); 
+    history.push(`/signup`);
   };
   useEffect(() => {
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem('token');
     if (token) {
       history.push('/home');
     }
