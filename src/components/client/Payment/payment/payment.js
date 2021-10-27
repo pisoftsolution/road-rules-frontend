@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { loadStripe } from '@stripe/stripe-js';
-
-//initializing the strip with loadstripe
 const stripePromise = loadStripe(
   'pk_test_51JQXbbSJLdxp0VOUVTomDEmGOfkVgd1RpkzHhza8TEWyYJNjHa9NhYf8UMsmVs7vcMK2zGipePyetTTgkVbbIwwI00vsIVC2Cb'
 );

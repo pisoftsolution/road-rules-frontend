@@ -16,7 +16,7 @@ function Slots() {
   const dispatch = useDispatch();
   const book = useSelector((state) => state.slotReducer?.slotData?.b);
   const instructors = useSelector(
-(state) => state.instructorReducer?.instructorData?.b
+    (state) => state.instructorReducer?.instructorData?.b
   );
 
   useEffect(() => {
@@ -27,8 +27,7 @@ function Slots() {
   const handleEditSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    dispatch(editSlot(formData, editId))
-    .then((res) => {
+    dispatch(editSlot(formData, editId)).then((res) => {
       setShouldCall(!shouldCall);
       console.log(res);
       setShow(false);
@@ -37,8 +36,7 @@ function Slots() {
   };
   const handleAddSubmit = (e) => {
     e.preventDefault();
-    dispatch(addSlot(formData, book))
-    .then((res) => {
+    dispatch(addSlot(formData, book)).then((res) => {
       console.log(res);
       setShouldCall(!shouldCall);
     });
@@ -51,7 +49,7 @@ function Slots() {
       date: date,
       time: time,
       clientLimit: clientLimit,
-      instructor: instructor,
+      instructor: instructor
     });
     setShow(true);
   };
@@ -132,28 +130,30 @@ function Slots() {
               </InputGroup>
               <label>Instructor</label>
               <select
-                    name="instructor"
-                    // value={formData.instructorName} 
-                    onChange={(e) => {
-                      setFormData({
-                        ...formData,
-                        [e.target.name]: e.target.value
-                      });
-                    }}
-                    required
-                    id="carss"
-                  >
-                    {instructors && instructors.length > 0
-                      ? instructors.map((b) => {
-                          return (
-                            <>
-                            <option value="" disabled selected hidden>select the options..</option>
-                              <option value={b._id}>{b.fullName}</option>
-                            </>
-                          );
-                        })
-                      : ''}
-                  </select>
+                name="instructor"
+                // value={formData.instructorName}
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value
+                  });
+                }}
+                required
+                id="carss"
+              >
+                {instructors && instructors.length > 0
+                  ? instructors.map((b) => {
+                      return (
+                        <>
+                          <option value="" disabled selected hidden>
+                            select the options..
+                          </option>
+                          <option value={b._id}>{b.fullName}</option>
+                        </>
+                      );
+                    })
+                  : ''}
+              </select>
               <Button className="sub" type="submit">
                 Save
               </Button>
@@ -239,14 +239,14 @@ function Slots() {
                       ? instructors.map((b) => {
                           return (
                             <>
-                              <option value="" disabled selected hidden>select the options..</option>
-                              <option value={b._id} 
-                              >{b.fullName}</option>
+                              <option value="" disabled selected hidden>
+                                select the options..
+                              </option>
+                              <option value={b._id}>{b.fullName}</option>
                             </>
                           );
                         })
                       : ''}
-                      
                   </select>
                 </div>
                 <Button className="sub" type="submit" onClick={handleCloses}>
@@ -287,7 +287,7 @@ function Slots() {
                           b.date,
                           b.time,
                           b.clientLimit,
-                          b.instructorName,
+                          b.instructorName
                           // b.instructor,
                         );
                       }}
